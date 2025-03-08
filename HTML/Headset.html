@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Tarea.css">
-    <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css">
     <title>Encabezado y Pie de Página con Menú y Redes Sociales</title>
 </head>
 <body>
     <header>
         
     </header>
+
     <nav>
         <ul>
             <li><a href="../Index.html">Inicio</a></li>
-            <li class="submenu"><a>Mapas</a>
+            <li class="submenu">
+                <a href="#">Mapas</a>
                 <ul>
                     <li><a href="./Factory.html">Factory</a></li>
                     <li><a href="./Woods.html">Woods</a></li>
@@ -25,42 +27,72 @@
                     <li><a href="./Thelab.html">The Lab</a></li>
                     <li><a href="./Lighthouse.html">Lighthouse</a></li>
                     <li><a href="./Streets.html">Streets</a></li>
-                    <li><a href="./Groundzero.html">Ground zero</a></li>
+                    <li><a href="./Groundzero.html">Ground Zero</a></li>
                 </ul>
             </li>
-            <li><a href="./Municion.html">Municion</a></li>
+            <li><a href="./Municion.html">Munición</a></li>
             <li><a href="./Headset.html">Headset</a></li>
             <li><a href="./Traders.html">Traders</a></li>
             <li><a href="./Contactos.html">Contacto</a></li>
         </ul>
     </nav>
-<main>
-   
-    <div class="gallery pattern1"> 
-        <img class="ImgGaleria" src="../IMAGENES/Auris/ComTac4.webp" alt="Imagen 1">
-        <img class="ImgGaleria" src="../IMAGENES/Auris/ops (1).webp" alt="Imagen 2">
-        <img class="ImgGaleria" src="../IMAGENES/Auris/excel.jpg" alt="Imagen 3">
-        <img class="ImgGaleria" src="../IMAGENES/Auris/PeltorTacticalSport.webp" alt="Imagen 2">
-        <p class="Headset1">Walk:76 Running:84</p> <p class="Headset1">Walk:71 Running:73</p> <p class="Headset1">Walk:69 Running:75</p> <p class="Headset1">Walk:65 Running:70</p>
-        <p class="Headset1">Price:+ 100.000₽ Availabity:Flea Market</p> <p class="Headset1">Price:55.198₽ Availabity:Peacekeeper level 3</p> <p class="Headset1">Price:55.000₽ Availabity:Flea Market</p> <p class="Headset1">Price:49.395₽ Availabity:Ragman level 4</p>
-    </div>
-    <div class="gallery2 pattern1"> 
-        <img class="ImgGaleria" src="../IMAGENES/Auris/SordinImage.webp" alt="Imagen 1">
-        <img class="ImgGaleria" src="../IMAGENES/Auris/WalkerRazorDigital.webp" alt="Imagen 2">
-        <img class="ImgGaleria" src="../IMAGENES/Auris/Earmorm32image.webp" alt="Imagen 3">
-        <img class="ImgGaleria" src="../IMAGENES/Auris/Peltor_ComTac_2_headset.webp" alt="Imagen 2">
-        <p class="Headset1">Walk:63 Running:66</p> <p class="Headset1">Walk:62 Running:69</p> <p class="Headset1">Walk:59 Running:64</p> <p class="Headset1">Walk:55 Running:60</p>
-        <p class="Headset1">Price:49.980₽ Availabity:Ragman level 2 and 3</p> <p class="Headset1">Price:40.000₽ Availabity:Flea Market</p> <p class="Headset1">Price:28.750₽ Availabity:Skier level 1</p> <p class="Headset1">Price:42.236₽ Availabity:Ragman level 2</p>
-    </div>
 
-</main>
+    <main>
+        <h1>Información de Headset</h1>
+        <section class="gallery">
+            <div class="item">
+                <img class="ImgGaleria" src="../IMAGENES/Auris/ComTac4.webp" alt="ComTac4">
+                <p>Walk: 76 | Running: 84</p>
+                <p>Price: +100.000₽ | Availability: Flea Market</p>
+            </div>
+            <div class="item">
+                <img class="ImgGaleria" src="../IMAGENES/Auris/ops (1).webp" alt="Ops Headset">
+                <p>Walk: 71 | Running: 73</p>
+                <p>Price: 55.198₽ | Availability: Peacekeeper Level 3</p>
+            </div>
+            <div class="item">
+                <img class="ImgGaleria" src="../IMAGENES/Auris/excel.jpg" alt="Excel Headset">
+                <p>Walk: 69 | Running: 75</p>
+                <p>Price: 55.000₽ | Availability: Flea Market</p>
+            </div>
+            <div class="item">
+                <img class="ImgGaleria" src="../IMAGENES/Auris/PeltorTacticalSport.webp" alt="Peltor Tactical">
+                <p>Walk: 65 | Running: 70</p>
+                <p>Price: 49.395₽ | Availability: Ragman Level 4</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="item">
+                <img class="ImgGaleria" src="../IMAGENES/Auris/SordinImage.webp" alt="Sordin Headset">
+                <p>Walk: 63 | Running: 66</p>
+                <p>Price: 49.980₽ | Availability: Ragman Level 2 y 3</p>
+            </div>
+            <div class="item">
+                <img class="ImgGaleria" src="../IMAGENES/Auris/WalkerRazorDigital.webp" alt="Walker Razor">
+                <p>Walk: 62 | Running: 69</p>
+                <p>Price: 40.000₽ | Availability: Flea Market</p>
+            </div>
+            <div class="item">
+                <img class="ImgGaleria" src="../IMAGENES/Auris/Earmorm32image.webp" alt="Earmor M32">
+                <p>Walk: 59 | Running: 64</p>
+                <p>Price: 28.750₽ | Availability: Skier Level 1</p>
+            </div>
+            <div class="item">
+                <img class="ImgGaleria" src="../IMAGENES/Auris/Peltor_ComTac_2_headset.webp" alt="ComTac 2">
+                <p>Walk: 55 | Running: 60</p>
+                <p>Price: 42.236₽ | Availability: Ragman Level 2</p>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <div class="social-icons">
-            <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook</a>
-            <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i>Twitter</a>
-            <a href="#" target="_blank"><i class="fi fi-brands-instagram"></i>Instagram</a>
+            <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i> Facebook</a>
+            <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i> Twitter</a>
+            <a href="#" target="_blank"><i class="fi fi-brands-instagram"></i> Instagram</a>
         </div>
-        <p>Autor: Ivan Crrera vila</p>
+        <p>Autor: Iván Carrera Vila</p>
     </footer>
 </body>
 </html>
