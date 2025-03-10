@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Tarea.css">
-    <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
-    <title>Encabezado y Pie de Página con Menú y Redes Sociales</title>
+    <link rel="stylesheet" href="./CSS/Tarea.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <title>Escape From Tarkov</title>
 </head>
 <body>
-    <header>
-        
-    </header>
+    <header></header>
     <nav>
         <ul>
             <li><a href="../Index.html">Inicio</a></li>
@@ -28,28 +26,44 @@
                     <li><a href="./HTML/Groundzero.html">Ground zero</a></li>
                 </ul>
             </li>
-            <li><a href="./HTML/Municion.html">Municion</a></li>
+            <li><a href="./HTML/Municion.html">Munición</a></li>
             <li><a href="./HTML/Headset.html">Headset</a></li>
             <li><a href="./HTML/Traders.html">Traders</a></li>
             <li><a href="./HTML/Contactos.html">Contacto</a></li>
         </ul>
+        <div class="auth-buttons">
+            <button onclick="abrirModal()">Iniciar Sesión</button>
+            <button onclick="window.location.href='./HTML/Register.html'">Registrarse</button>
+        </div>
     </nav>
-<main>
-   <h1>Informaciuon Sobre la Pagina</h1>
-   <p>La pagina contiene informacion sobre el videojuego extraction shooter llamado Escape From Tarkov.</p>
-   <p>La pagina contendra informacion tanto de los mapas tipo de municion y armas,</p>
-    <p>tambien contiene informacion de los distintos traders del videojuego.</p>
-
-    <h1>Trailer del Videojuego</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/8R5t3a2jT4A?si=mmmdbA-A-JUIDfso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</main>
+    <main>
+       <h1>Información Sobre la Página</h1>
+       <p>La página contiene información sobre el videojuego extraction shooter llamado Escape From Tarkov.</p>
+       <p>La página contendrá información tanto de los mapas, tipo de munición y armas,</p>
+       <p>también contiene información de los distintos traders del videojuego.</p>
+        <h1>Tráiler del Videojuego</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8R5t3a2jT4A" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </main>
     <footer>
         <div class="social-icons">
             <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook</a>
             <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i>Twitter</a>
             <a href="#" target="_blank"><i class="fi fi-brands-instagram"></i>Instagram</a>
         </div>
-        <p>Autor: Ivan Crrera vila</p>
+        <p>Autor: Ivan Carrera Vila</p>
     </footer>
+
+    <!-- Modal de inicio de sesión -->
+    <div class="overlay" id="overlay" onclick="cerrarModal()"></div>
+    <div class="modal" id="loginModal">
+        <span class="close-btn" onclick="cerrarModal()">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Acceder</button>
+        </form>
+    </div>
+    <script src="./Js/js.js"></script>
 </body>
 </html>

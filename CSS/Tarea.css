@@ -1,3 +1,4 @@
+/* Estilos generales del cuerpo */
 body{
     text-align: center;
     margin: 0px;
@@ -5,7 +6,7 @@ body{
     background: url(../IMAGENES/fondos/fondo.jpg)no-repeat;
     background-size: cover;
 }
-
+/* Estilos del encabezado */
 header{
     font-family: Georgia,serif;
     padding: 0px;
@@ -13,21 +14,90 @@ header{
     background: url(../IMAGENES/logos/logo5.png) ;
     background-size: cover;
     background-position: center;
-    font-family: sans-serif;
     height: 300px;
 }
-
+/* Estilos de la barra de navegación */
 nav  {
     font-family: Georgia,serif;
     color: whitesmoke ;
     background-color:  #0d0d0d  ;
-    padding: 0px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
+/* Contenedor para los botones de autenticación */
+.auth-buttons {
+    position: absolute;
+    right: 20px;
+}
+
+/* Estilos de los botones de autenticación */
+.auth-buttons button {
+    background-color: #0d0d0d;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: whitesmoke;
+    color: #0d0d0d;
+}
+/*Popup de inicio de sesion*/
+.overlay {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Se mantiene fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda la pantalla */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para oscurecer el fondo */
+}
+
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Se mantiene fijo en la pantalla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el modal en la pantalla */
+    background: white; /* Color de fondo del modal */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra alrededor del modal */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.close-btn {
+    float: right; /* Alinea el botón de cierre a la derecha */
+    cursor: pointer; /* Cambia el cursor al pasar sobre él */
+    font-size: 20px; /* Aumenta el tamaño de la 'X' */
+}
+
+.modal form input {
+    display: block; /* Asegura que los inputs ocupen todo el ancho */
+    width: 100%;
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Espacio entre los inputs */
+}
+
+.modal form button {
+    background: #161616; /* Color de fondo oscuro */
+    color: white; /* Texto en color blanco */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* El botón ocupa todo el ancho del formulario */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+/* Estilos generales de los párrafos */
 P{
     color: whitesmoke;
 }
-
+/* Estilos de los enlaces */
 a{
     text-decoration: none !important;
     display: block;
@@ -35,11 +105,11 @@ a{
     color: whitesmoke ;
     padding: 10px 20px;
 }
-
+/* Contenido principal */
 main{
     margin-bottom: 20%;
 }
-
+/* Pie de página */
 footer{
     font-family: Georgia,serif;
     color:whitesmoke ;
@@ -47,7 +117,7 @@ footer{
     padding: 1%;
     margin-top: 200px
 }
-
+/* Títulos principales */
 h1{
     margin: 0px;
     padding: 0px;
@@ -55,7 +125,7 @@ h1{
     margin-top: 15px;
     color: whitesmoke;
 }
-
+/* Formulario de contacto */
 .Formulario{
     margin-top: 5%;
     display: inline-block;
@@ -68,11 +138,11 @@ h1{
     color:whitesmoke;
     height: 30px;
 }
-
+/* Estilos del iframe (videos) */
 iframe{
     margin-top: 30px;
 }
-
+/* Contenedor de información de balas */
 .InfoBalas{
     display: inline-block;
     text-align:center;
@@ -83,7 +153,7 @@ iframe{
     margin-left:10% ;
     margin-right: 10%;
 }
-
+/* Estilos de las listas y submenús */
 ul{
     list-style: none;
     padding: 0;
@@ -114,65 +184,69 @@ ul ul li {
     display: block;
     width: 100%;
 }
-
+/* Estilos para la cabecera */
 .cabezera{
-    text-decoration: none !important;
-    background-color: #161616;
+    text-decoration: none !important; /* Evita que los textos tengan subrayado */
+    background-color: #161616; /* Fondo oscuro */
 }
 
+/* Estilos para las diferentes categorías de balas según su efectividad */
 .TierBalas{
     text-decoration: none !important;
-    color: #0d0d0d;
-    background-color: red; 
+    color: #0d0d0d; /* Texto en negro */
+    background-color: red; /* Categoría más baja (peor daño o penetración) */
 }
 
 .TierBalas1{
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color:rgb(255, 94, 0); 
+    background-color:rgb(255, 94, 0); /* Color naranja oscuro */
 }
 
 .TierBalas2{
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color: rgba(255, 153, 0, 0.952);
+    background-color: rgba(255, 153, 0, 0.952); /* Naranja más claro */
 }
 
 .TierBalas3{
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color: rgba(255, 208, 0, 0.952);
+    background-color: rgba(255, 208, 0, 0.952); /* Amarillo anaranjado */
 }
 
 .TierBalas4{
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color:yellow;
+    background-color:yellow; /* Amarillo */
 }
 
 .TierBalas5{
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color: greenyellow;
+    background-color: greenyellow; /* Verde claro */
 }
 
 .TierBalas6{
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color: green;
+    background-color: green; /* Verde oscuro, mejor categoría */
 }
 
+/* Contenedor principal de la información de balas */
 #DivBalas{
-    margin-left:20% ;
-    margin-right: 20%;
+    margin-left: 20%;
+    margin-right: 20%; /* Centra el contenido con márgenes laterales */
 }
 
+/* Sección general */
 section{
     padding-right: 5%;
     margin-left: 2%;
     margin-right: 2%;
 }
 
+/* Estilos para imágenes flotantes a la izquierda y derecha */
 #Foto{
     height: 350px;
     width: 275px;
@@ -181,7 +255,7 @@ section{
     padding-left: 3%;
     padding-right: 1%;
     padding-bottom: 0%;
-    float: left;
+    float: left; /* Alineado a la izquierda */
 }
 
 #Foto1{
@@ -192,9 +266,10 @@ section{
     padding-left: 3%;
     padding-right: 1%;
     padding-bottom: 0%;
-    float: right;
+    float: right; /* Alineado a la derecha */
 }
 
+/* Párrafos con márgenes */
 #ParrafoDerecha{
     margin-right: 5%;
     margin-left: 5%;
@@ -205,16 +280,19 @@ section{
     margin-left: 5%;
 }
 
+/* Contenedor de información de Traders */
 .DivTraders{
-    color: whitesmoke; 
+    color: whitesmoke; /* Texto en blanco */
 }
 
+/* Estilos de las imágenes de mapas */
 #ImagenesMapas{
     margin-top: 50px;
     height: 800px;
     width: 1100px;
 }
 
+/* Párrafos descriptivos de mapas */
 .ParrafoMapas{
     margin-left: 10%;
     margin-right: 10%;
@@ -222,26 +300,30 @@ section{
     color: whitesmoke;
 }
 
+/* Galería de imágenes con flexbox */
 .gallery, .gallery2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Distribuye los elementos en fila */
+    flex-wrap: wrap; /* Permite que se acomoden en varias líneas */
+    justify-content: center; /* Centra el contenido */
+    gap: 20px; /* Espaciado entre elementos */
     padding: 20px;
 }
 
+/* Estilos para las imágenes de la galería */
 .ImgGaleria{
     width: 200px;
     height: 200px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease-in-out;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease-in-out; /* Animación suave */
 }
 
+/* Efecto de zoom al pasar el cursor sobre las imágenes */
 .ImgGaleria:hover {
     transform: scale(1.1);
 }
 
+/* Centrado de elementos dentro de un contenedor */
 .Headset1{
     width: 100%;
     text-align: center;
