@@ -70,11 +70,12 @@
             </div>
             <button type="submit">Acceder</button>
             <div class="links-container">
-                <h5 class="registrarse" onclick="window.location.href='./HTML/Register.html'">Registrarse</h5>
-                <h5 class="contrasena" onclick="window.location.href='./HTML/ResetPassword.html'">¿Olvidaste tu Contraseña?</h5>
+                <h5 class="registrarse" onclick="mostrarModalRegistro()">Registrarse</h5>
+                <h5 class="contrasena" onclick="modalRecuperarContraseña()">¿Olvidaste tu Contraseña?</h5>
             </div>
         </form>
     </div>
+    <!-- Modal de Registrarse  -->
     <div class="modal" id="registerModal">
         <span class="close-btn" onclick="cerrarModal()">&times;</span>
         <h2>Registrarse</h2>
@@ -91,6 +92,17 @@
             <button type="submit">Registrarse</button>
         </form>
         <p id="registerMessage"></p>
+    </div>
+     <!-- Modal para Olvidaste tu Contraseña -->
+     <div class="modal" id="forgotPasswordModal">
+        <span class="close-btn" onclick="cerrarModal()">&times;</span>
+        <h2>Recuperar Contraseña</h2>
+        <form id="forgotPasswordForm">
+            <label for="forgotPasswordEmail">Correo Electrónico:</label>
+            <input type="email" id="forgotPasswordEmail" name="email" placeholder="Correo Electrónico" required>
+            <button type="submit">Recuperar Contraseña</button>
+        </form>
+        <p id="forgotPasswordMessage"></p>
     </div>
 
     <script src="./Js/js.js"></script>

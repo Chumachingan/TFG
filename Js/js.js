@@ -1,4 +1,3 @@
-// DOM
 document.addEventListener("DOMContentLoaded", () => {
     setupFormHandler("registerForm", "register.php", "registerMessage");
     setupFormHandler("loginForm", "login.php", "loginMessage");
@@ -6,7 +5,40 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loginBtn").addEventListener("click", () => abrirModal("loginModal"));
     document.getElementById("registerBtn").addEventListener("click", () => abrirModal("registerModal"));
 });
-// funcion para abrir el modal de regitro 
+
+// Función para abrir el modal de registro
+function mostrarModalRegistro() {
+    // Cerrar el modal de login
+    cerrarModal();
+
+    // Abrir el modal de registro
+    abrirModal("registerModal");
+}
+
+// Función para abrir el modal de recuperar contraseña
+function modalRecuperarContraseña() {
+    // Cerrar el modal de login
+    cerrarModal();
+
+    // Abrir el modal de registro
+    abrirModal("forgotPasswordModal");
+}
+
+// Función para abrir el modal
+function abrirModal(id) {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById(id).style.display = "block";
+}
+
+// Función para cerrar el modal
+function cerrarModal() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("loginModal").style.display = "none";
+    document.getElementById("registerModal").style.display = "none";
+    document.getElementById("forgotPasswordModal").style.display = "none";
+}
+
+// Función para manejar el envío del formulario
 function setupFormHandler(formId, url, messageId) {
     let form = document.getElementById(formId);
     if (!form) return; // Si el formulario no existe, no hace nada
@@ -28,15 +60,4 @@ function setupFormHandler(formId, url, messageId) {
             }
         });
     });
-}
-// Función para abrir el modal
-function abrirModal(id) {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById(id).style.display = "block";
-}
-// Función para cerrar el modal
-function cerrarModal() {
-    document.getElementById("overlay").style.display = "none";
-    document.getElementById("loginModal").style.display = "none";
-    document.getElementById("registerModal").style.display = "none";
 }
