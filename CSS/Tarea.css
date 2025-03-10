@@ -1,26 +1,28 @@
 /* Estilos generales del cuerpo */
-body{
+body {
     text-align: center;
     margin: 0px;
     padding: 0px;
     background: url(../IMAGENES/fondos/fondo.jpg)no-repeat;
     background-size: cover;
 }
+
 /* Estilos del encabezado */
-header{
-    font-family: Georgia,serif;
+header {
+    font-family: Georgia, serif;
     padding: 0px;
     margin: 0px;
-    background: url(../IMAGENES/logos/logo5.png) ;
+    background: url(../IMAGENES/logos/logo5.png);
     background-size: cover;
     background-position: center;
     height: 300px;
 }
+
 /* Estilos de la barra de navegación */
-nav  {
-    font-family: Georgia,serif;
-    color: whitesmoke ;
-    background-color:  #0d0d0d  ;
+nav {
+    font-family: Georgia, serif;
+    color: whitesmoke;
+    background-color: #0d0d0d;
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -48,7 +50,9 @@ nav  {
 .auth-buttons button:hover {
     background-color: whitesmoke;
     color: #0d0d0d;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
 }
+
 /*Popup de inicio de sesion y registro*/
 .overlay {
     display: none;
@@ -85,21 +89,26 @@ nav  {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinea a la izquierda */
+    justify-content: flex-start;
+    /* Alinea a la izquierda */
 }
+
 /*Tamaño del input del checkbox*/
-#remember-password{
+#remember-password {
     width: 10px;
     height: 10px;
 }
+
 /* Estilo para el texto del label */
 .modal form .remember-me label {
     font-size: 14px;
     color: white !important;
 }
+
 .modal form .remember-me input {
     margin-right: 10px;
-    transform: scale(1); /* Ajusta el tamaño del checkbox */
+    transform: scale(1);
+    /* Ajusta el tamaño del checkbox */
 }
 
 .modal form .remember-me label {
@@ -109,25 +118,27 @@ nav  {
 
 /* Textos debajo de acceder */
 .links-container {
-    display: flex; 
-    justify-content: space-between; 
-    width: 100%; 
-    margin-top: 10px; 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .links-container h5 {
     font-size: 14px;
-    color: #ffffff; 
-    cursor: pointer; 
-    margin: 0; 
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0;
 }
 
 .links-container .registrarse {
-    text-align: left; /* Alinea a la izquierda */
+    text-align: left;
+    /* Alinea a la izquierda */
 }
 
 .links-container .contrasena {
-    text-align: right; /* Alinea a la derecha */
+    text-align: right;
+    /* Alinea a la derecha */
 }
 
 .modal form input {
@@ -145,74 +156,83 @@ nav  {
     border: none;
     cursor: pointer;
 }
+
 /* Estilos generales de los párrafos */
-P{
+P {
     color: whitesmoke;
 }
+
 /* Estilos de los enlaces */
-a{
+a {
     text-decoration: none !important;
     display: block;
-    font-family: Georgia,serif;
-    color: whitesmoke ;
+    font-family: Georgia, serif;
+    color: whitesmoke;
     padding: 10px 20px;
 }
+
 /* Contenido principal */
-main{
+main {
     margin-bottom: 20%;
 }
+
 /* Pie de página */
-footer{
-    font-family: Georgia,serif;
-    color:whitesmoke ;
+footer {
+    font-family: Georgia, serif;
+    color: whitesmoke;
     background-color: #0d0d0d;
     padding: 1%;
     margin-top: 200px
 }
+
 /* Títulos principales */
-h1{
+h1 {
     margin: 0px;
     padding: 0px;
     font-size: 36px;
     margin-top: 15px;
     color: whitesmoke;
 }
+
 /* Formulario de contacto */
-.Formulario{
+.Formulario {
     margin-top: 5%;
     display: inline-block;
     text-align: left;
     color: whitesmoke;
 }
 
-#Enviar{
-    background-color:#0d0d0d ;
-    color:whitesmoke;
+#Enviar {
+    background-color: #0d0d0d;
+    color: whitesmoke;
     height: 30px;
 }
+
 /* Estilos del iframe (videos) */
-iframe{
+iframe {
     margin-top: 30px;
 }
+
 /* Contenedor de información de balas */
-.InfoBalas{
+.InfoBalas {
     display: inline-block;
-    text-align:center;
+    text-align: center;
     margin: 0px;
     border: rgb(0, 0, 0);
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     background-color: #2e2c2c;
-    margin-left:10% ;
+    margin-left: 10%;
     margin-right: 10%;
 }
+
 /* Estilos de las listas y submenús */
-ul{
+ul {
     list-style: none;
     padding: 0;
-    margin: 0;  
+    margin: 0;
 }
 
-li{
+li {
     display: inline-block;
     position: relative;
 }
@@ -221,85 +241,97 @@ ul ul {
     display: none;
     position: absolute;
     top: 100%;
-    background-color:#0d0d0d;
+    background-color: #0d0d0d;
 }
 
-li.submenu:hover > ul {
+li.submenu:hover>ul {
     display: block;
 }
 
 li.submenu:hover {
-    background-color:#0d0d0d;
+    background-color: #0d0d0d;
 }
 
 ul ul li {
     display: block;
     width: 100%;
 }
+
 /* Estilos para la cabecera */
-.cabezera{
-    text-decoration: none !important; /* Evita que los textos tengan subrayado */
-    background-color: #161616; /* Fondo oscuro */
+.cabezera {
+    text-decoration: none !important;
+    /* Evita que los textos tengan subrayado */
+    background-color: #161616;
+    /* Fondo oscuro */
 }
 
 /* Estilos para las diferentes categorías de balas según su efectividad */
-.TierBalas{
-    text-decoration: none !important;
-    color: #0d0d0d; /* Texto en negro */
-    background-color: red; /* Categoría más baja (peor daño o penetración) */
-}
-
-.TierBalas1{
+.TierBalas {
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color:rgb(255, 94, 0); /* Color naranja oscuro */
+    /* Texto en negro */
+    background-color: red;
+    /* Categoría más baja (peor daño o penetración) */
 }
 
-.TierBalas2{
+.TierBalas1 {
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color: rgba(255, 153, 0, 0.952); /* Naranja más claro */
+    background-color: rgb(255, 94, 0);
+    /* Color naranja oscuro */
 }
 
-.TierBalas3{
+.TierBalas2 {
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color: rgba(255, 208, 0, 0.952); /* Amarillo anaranjado */
+    background-color: rgba(255, 153, 0, 0.952);
+    /* Naranja más claro */
 }
 
-.TierBalas4{
+.TierBalas3 {
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color:yellow; /* Amarillo */
+    background-color: rgba(255, 208, 0, 0.952);
+    /* Amarillo anaranjado */
 }
 
-.TierBalas5{
+.TierBalas4 {
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color: greenyellow; /* Verde claro */
+    background-color: yellow;
+    /* Amarillo */
 }
 
-.TierBalas6{
+.TierBalas5 {
     text-decoration: none !important;
     color: #0d0d0d;
-    background-color: green; /* Verde oscuro, mejor categoría */
+    background-color: greenyellow;
+    /* Verde claro */
+}
+
+.TierBalas6 {
+    text-decoration: none !important;
+    color: #0d0d0d;
+    background-color: green;
+    /* Verde oscuro, mejor categoría */
 }
 
 /* Contenedor principal de la información de balas */
-#DivBalas{
+#DivBalas {
     margin-left: 20%;
-    margin-right: 20%; /* Centra el contenido con márgenes laterales */
+    margin-right: 20%;
+    /* Centra el contenido con márgenes laterales */
 }
 
 /* Sección general */
-section{
+section {
     padding-right: 5%;
     margin-left: 2%;
     margin-right: 2%;
 }
 
 /* Estilos para imágenes flotantes a la izquierda y derecha */
-#Foto{
+#Foto {
     height: 350px;
     width: 275px;
     margin-top: 1%;
@@ -307,10 +339,11 @@ section{
     padding-left: 3%;
     padding-right: 1%;
     padding-bottom: 0%;
-    float: left; /* Alineado a la izquierda */
+    float: left;
+    /* Alineado a la izquierda */
 }
 
-#Foto1{
+#Foto1 {
     height: 350px;
     width: 275px;
     margin-top: 1%;
@@ -318,34 +351,36 @@ section{
     padding-left: 3%;
     padding-right: 1%;
     padding-bottom: 0%;
-    float: right; /* Alineado a la derecha */
+    float: right;
+    /* Alineado a la derecha */
 }
 
 /* Párrafos con márgenes */
-#ParrafoDerecha{
+#ParrafoDerecha {
     margin-right: 5%;
     margin-left: 5%;
 }
 
-#ParrafoIzquierda{
+#ParrafoIzquierda {
     margin-right: 5%;
     margin-left: 5%;
 }
 
 /* Contenedor de información de Traders */
-.DivTraders{
-    color: whitesmoke; /* Texto en blanco */
+.DivTraders {
+    color: whitesmoke;
+    /* Texto en blanco */
 }
 
 /* Estilos de las imágenes de mapas */
-#ImagenesMapas{
+#ImagenesMapas {
     margin-top: 50px;
     height: 800px;
     width: 1100px;
 }
 
 /* Párrafos descriptivos de mapas */
-.ParrafoMapas{
+.ParrafoMapas {
     margin-left: 10%;
     margin-right: 10%;
     font-size: 20px;
@@ -353,21 +388,29 @@ section{
 }
 
 /* Galería de imágenes con flexbox */
-.gallery, .gallery2 {
-    display: flex; /* Distribuye los elementos en fila */
-    flex-wrap: wrap; /* Permite que se acomoden en varias líneas */
-    justify-content: center; /* Centra el contenido */
-    gap: 20px; /* Espaciado entre elementos */
+.gallery,
+.gallery2 {
+    display: flex;
+    /* Distribuye los elementos en fila */
+    flex-wrap: wrap;
+    /* Permite que se acomoden en varias líneas */
+    justify-content: center;
+    /* Centra el contenido */
+    gap: 20px;
+    /* Espaciado entre elementos */
     padding: 20px;
 }
 
 /* Estilos para las imágenes de la galería */
-.ImgGaleria{
+.ImgGaleria {
     width: 200px;
-    height: 200px; 
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    transition: transform 0.3s ease-in-out; /* Animación suave */
+    height: 200px;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
+    transition: transform 0.3s ease-in-out;
+    /* Animación suave */
 }
 
 /* Efecto de zoom al pasar el cursor sobre las imágenes */
@@ -376,7 +419,7 @@ section{
 }
 
 /* Centrado de elementos dentro de un contenedor */
-.Headset1{
+.Headset1 {
     width: 100%;
     text-align: center;
 }
