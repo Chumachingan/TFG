@@ -34,8 +34,8 @@
             <li><a href="./HTML/Contactos.html">Contacto</a></li>
         </ul>
         <div class="auth-buttons">
-            <button onclick="abrirModal()">Iniciar Sesión</button>
-            <button onclick="window.location.href='./HTML/Register.html'">Registrarse</button>
+            <button id="loginBtn">Iniciar Sesión</button>
+            <button id="registerBtn">Registrarse</button>
         </div>
     </nav>
     <main>
@@ -75,6 +75,24 @@
             </div>
         </form>
     </div>
+    <div class="modal" id="registerModal">
+        <span class="close-btn" onclick="cerrarModal()">&times;</span>
+        <h2>Registrarse</h2>
+        <form id="registerForm">
+            <label for="registerUsername">Usuario:</label>
+            <input type="text" id="registerUsername" name="username" placeholder="Usuario" required>
+            
+            <label for="registerEmail">Correo Electrónico:</label>
+            <input type="email" id="registerEmail" name="email" placeholder="Correo Electrónico" required>
+            
+            <label for="registerPassword">Contraseña:</label>
+            <input type="password" id="registerPassword" name="password" placeholder="Contraseña" required>
+            
+            <button type="submit">Registrarse</button>
+        </form>
+        <p id="registerMessage"></p>
+    </div>
+
     <script src="./Js/js.js"></script>
 </body>
 
