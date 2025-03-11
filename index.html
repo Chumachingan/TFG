@@ -38,8 +38,8 @@
             <button id="loginBtn">Iniciar Sesión</button>
             <button id="registerBtn">Registrarse</button>
         </div>
-
     </nav>
+
     <main>
         <h1>Información Sobre la Página</h1>
         <p>La página contiene información sobre el videojuego extraction shooter llamado Escape From Tarkov.</p>
@@ -49,6 +49,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/8R5t3a2jT4A" title="YouTube video player"
             frameborder="0" allowfullscreen></iframe>
     </main>
+
     <footer>
         <div class="social-icons">
             <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook</a>
@@ -58,56 +59,10 @@
         <p>Autor: Ivan Carrera Vila</p>
     </footer>
 
-    <!-- Modal de inicio de sesión -->
-    <div class="overlay" id="overlay" onclick="cerrarModal()"></div>
-    <div class="modal" id="loginModal">
-        <span class="close-btn" onclick="cerrarModal()">&times;</span>
-        <h2>Iniciar Sesión</h2>
-        <form>
-            <input type="email" placeholder="Correo Electrónico / Usuario" required>
-            <input type="password" placeholder="Contraseña" required>
-            <div class="remember-me">
-                <input type="checkbox" id="remember-password">
-                <label for="remember-password">Recordar contraseña</label>
-            </div>
-            <button type="submit">Acceder</button>
-            <div class="links-container">
-                <h5 class="registrarse" onclick="mostrarModalRegistro()">Registrarse</h5>
-                <h5 class="contrasena" onclick="modalRecuperarContraseña()">¿Olvidaste tu Contraseña?</h5>
-            </div>
-        </form>
-    </div>
-    <!-- Modal de Registrarse  -->
-    <div class="modal" id="registerModal">
-        <span class="close-btn" onclick="cerrarModal()">&times;</span>
-        <h2>Registrarse</h2>
-        <form id="registerForm">
-            <label for="registerUsername">Usuario:</label>
-            <input type="text" id="registerUsername" name="username" placeholder="Usuario" required>
+    <!-- Contenedor donde se insertarán los modales -->
+    <div id="modal-container"></div>
 
-            <label for="registerEmail">Correo Electrónico:</label>
-            <input type="email" id="registerEmail" name="email" placeholder="Correo Electrónico" required>
-
-            <label for="registerPassword">Contraseña:</label>
-            <input type="password" id="registerPassword" name="password" placeholder="Contraseña" required>
-
-            <button type="submit">Registrarse</button>
-        </form>
-        <p id="registerMessage"></p>
-    </div>
-    <!-- Modal para Olvidaste tu Contraseña -->
-    <div class="modal" id="forgotPasswordModal">
-        <span class="close-btn" onclick="cerrarModal()">&times;</span>
-        <h2>Recuperar Contraseña</h2>
-        <form id="forgotPasswordForm">
-            <label for="forgotPasswordEmail">Correo Electrónico:</label>
-            <input type="email" id="forgotPasswordEmail" name="email" placeholder="Correo Electrónico" required>
-            <button type="submit">Recuperar Contraseña</button>
-        </form>
-        <p id="forgotPasswordMessage"></p>
-    </div>
-
+    <!-- Scripts -->
     <script src="./Js/js.js"></script>
 </body>
-
 </html>

@@ -140,7 +140,13 @@ nav {
     text-align: right;
     /* Alinea a la derecha */
 }
-
+ 
+#registerForm label {
+    display: block;  /* Hace que los labels ocupen toda la línea */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-bottom: 5px; /* Espaciado inferior para separar del input */
+    font-weight: bold; /* Opcional: hace que el texto del label sea más visible */
+}
 .modal form input {
     display: block;
     width: 94%;
