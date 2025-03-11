@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 10-03-2025 a las 17:08:52
+-- Tiempo de generación: 11-03-2025 a las 16:19:30
 -- Versión del servidor: 8.3.0
 -- Versión de PHP: 8.2.18
 
@@ -131,7 +131,16 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   UNIQUE KEY `nombre_usuario` (`nombre_usuario`),
   UNIQUE KEY `correo` (`correo`),
   KEY `id_rol` (`id_rol`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre_usuario`, `correo`, `contraseña`, `id_rol`) VALUES
+(1, 'Dalvila', 'Vilaquintanadaniel@gmail.com', '$2y$10$cdclwvd14WlNKfHdN9WDkOtj4kvBn.EluWh2.goOK.TK4yQySkcKK', 2),
+(2, 'ivan', 'ivan@gmail.com', '$2y$10$4hZ.5ShBXgJdmveEYCrWXOZTU7pM7/7aUa7QVoUSM.efnJ7VVQuaC', 2),
+(3, 'VLAD', 'VLADLACHUPA@GMAIL.COM', '$2y$10$vkz3VHYS2x5k5VMGobq4lObmawrwauHOWLXarWUU.sHlDRWV/mRoy', 2);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
