@@ -40,4 +40,4 @@ function validarContraseña(contraseña) {
 }
 
 // Asociar la validación con el formulario de inicio de sesión
-document.getElementById("loginModal").querySelector("form").addEventListener("submit", validarLogin);
+document.getElementById("loginForm").addEventListener("submit", validarLogin);

@@ -18,9 +18,9 @@ function cargarModales() {
         <div class="modal" id="loginModal">
             <span class="close-btn" onclick="cerrarModal()">&times;</span>
             <h2>Iniciar Sesión</h2>
-            <form>
-                <input type="email" placeholder="Correo Electrónico / Usuario" required>
-                <input type="password" placeholder="Contraseña" required>
+            <form id="loginForm">
+                <input type="email" placeholder="Correo Electrónico / Usuario" name="email" required>
+                <input type="password" placeholder="Contraseña" name="password" required>
                 <div class="remember-me">
                     <input type="checkbox" id="remember-password">
                     <label for="remember-password">Recordar contraseña</label>
@@ -89,4 +89,20 @@ function mostrarModalRegistro() {
 function modalRecuperarContraseña() {
     cerrarModal();
     abrirModal("forgotPasswordModal");
+}
+
+// Función para manejar formularios y enviarlos mediante AJAX
+function setupFormHandler(formId, url, messageContainerId) {
+    const form = document.getElementById(formId);
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(text => document.getElementById(messageContainerId).innerHTML = text)
+        .catch(error => document.getElementById(messageContainerId).innerHTML = 'Error al enviar los datos.');
+    });
 }
