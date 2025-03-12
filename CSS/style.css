@@ -35,6 +35,9 @@ nav {
     position: absolute;
     right: 20px;
 }
+.auth-buttons #logoutBtn {
+    display: none;
+}
 
 /* Estilos de los botones de autenticación */
 .auth-buttons button {
@@ -221,14 +224,20 @@ iframe {
 
 /* Contenedor de información de balas */
 .InfoBalas {
-    display: inline-block;
-    text-align: center;
-    margin: 0px;
-    border: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    color: whitesmoke;
     background-color: #2e2c2c;
-    margin-left: 10%;
-    margin-right: 10%;
+}
+
+.InfoBalasFila {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
+}
+
+.InfoBalasFila:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Estilos de las listas y submenús */
@@ -273,60 +282,38 @@ ul ul li {
 
 /* Estilos para las diferentes categorías de balas según su efectividad */
 .TierBalas {
-    text-decoration: none !important;
-    color: #0d0d0d;
-    /* Texto en negro */
     background-color: red;
-    /* Categoría más baja (peor daño o penetración) */
 }
 
 .TierBalas1 {
-    text-decoration: none !important;
-    color: #0d0d0d;
     background-color: rgb(255, 94, 0);
-    /* Color naranja oscuro */
 }
 
 .TierBalas2 {
-    text-decoration: none !important;
-    color: #0d0d0d;
     background-color: rgba(255, 153, 0, 0.952);
-    /* Naranja más claro */
 }
 
 .TierBalas3 {
-    text-decoration: none !important;
-    color: #0d0d0d;
     background-color: rgba(255, 208, 0, 0.952);
-    /* Amarillo anaranjado */
 }
 
 .TierBalas4 {
-    text-decoration: none !important;
-    color: #0d0d0d;
     background-color: yellow;
-    /* Amarillo */
 }
 
 .TierBalas5 {
-    text-decoration: none !important;
-    color: #0d0d0d;
     background-color: greenyellow;
-    /* Verde claro */
 }
 
 .TierBalas6 {
-    text-decoration: none !important;
-    color: #0d0d0d;
     background-color: green;
-    /* Verde oscuro, mejor categoría */
 }
 
-/* Contenedor principal de la información de balas */
 #DivBalas {
-    margin-left: 20%;
-    margin-right: 20%;
-    /* Centra el contenido con márgenes laterales */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
 }
 
 /* Sección general */
