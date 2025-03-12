@@ -35,6 +35,9 @@ nav {
     position: absolute;
     right: 20px;
 }
+.auth-buttons #logoutBtn {
+    display: none;
+}
 
 /* Estilos de los botones de autenticación */
 .auth-buttons button {
