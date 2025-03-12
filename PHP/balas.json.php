@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: application/json');
+<<<<<<< HEAD
 
 // Incluir la conexión a la base de datos
 require $_SERVER['DOCUMENT_ROOT'] . '/TFG/PHP/db.php';
@@ -11,10 +12,16 @@ if (ob_get_length()) {
 
 // Consulta SQL
 $sql = "SELECT id, nombre, daño, distanciaMax, distanciaEf, precision_bala, penetracion, retroceso, frag_percent, tier_id FROM balas";
+=======
+require $_SERVER['DOCUMENT_ROOT'] . '/TFG/PHP/db.php';
+
+$sql = "SELECT * FROM balas";
+>>>>>>> 8cd29cf809cff5c0d7909929831e3fcacb3f76eb
 $result = $conn->query($sql);
 
 $balas = [];
 
+<<<<<<< HEAD
 // Verificar si la consulta fue exitosa
 if ($result) {
     while ($row = $result->fetch_assoc()) {
@@ -37,5 +44,13 @@ if ($result) {
 }
 
 // Enviar el JSON
+=======
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $balas[] = $row;
+    }
+}
+
+>>>>>>> 8cd29cf809cff5c0d7909929831e3fcacb3f76eb
 echo json_encode($balas, JSON_PRETTY_PRINT);
 ?>
