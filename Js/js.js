@@ -104,7 +104,7 @@ function setupFormHandler(formId, url, messageContainerId) {
     form.addEventListener("submit", event => {
         event.preventDefault();
         const formData = new FormData(form);
-        fetch(url, {
+        fetch(url,"http:localhost/TFG/PHP/login.php", {
             method: 'POST',
             body: formData
         })
