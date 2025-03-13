@@ -35,7 +35,6 @@ nav {
     position: absolute;
     right: 20px;
 }
-
 .auth-buttons #logoutBtn {
     display: none;
 }
@@ -144,18 +143,13 @@ nav {
     text-align: right;
     /* Alinea a la derecha */
 }
-
+ 
 #registerForm label {
-    display: block;
-    /* Hace que los labels ocupen toda la línea */
-    text-align: left;
-    /* Alinea el texto a la izquierda */
-    margin-bottom: 5px;
-    /* Espaciado inferior para separar del input */
-    font-weight: bold;
-    /* Opcional: hace que el texto del label sea más visible */
+    display: block;  /* Hace que los labels ocupen toda la línea */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-bottom: 5px; /* Espaciado inferior para separar del input */
+    font-weight: bold; /* Opcional: hace que el texto del label sea más visible */
 }
-
 .modal form input {
     display: block;
     width: 94%;
@@ -230,31 +224,6 @@ iframe {
 
 /* Contenedor de información de balas */
 .InfoBalas {
-<<<<<<< HEAD
-    width: 90%;
-    margin: auto;
-    border-collapse: collapse;
-    color: whitesmoke;
-    background-color: #2e2c2c;
-    text-align: center;
-}
-
-/* Ajuste de los bordes de las celdas */
-.InfoBalas {
-    width: 90%;
-    margin: auto;
-    border-collapse: collapse;
-    color: whitesmoke;
-    background-color: #2e2c2c;
-    text-align: center;
-}
-
-.InfoBalas th, .InfoBalas td {
-    border: 1px solid white;
-    padding: 8px;
-    text-align: center;
-    font-size: 14px;
-=======
     display: inline-block;
     text-align: center;
     margin: 0px;
@@ -263,26 +232,7 @@ iframe {
     background-color: #2e2c2c;
     margin-left: 10%;
     margin-right: 10%;
->>>>>>> 80d6c6c8ed80949124132ec72c7564cf0c518a58
 }
-
-/* Aplicar color SOLO en las columnas de Clases */
-.InfoBalas td:nth-child(10), 
-.InfoBalas td:nth-child(11), 
-.InfoBalas td:nth-child(12), 
-.InfoBalas td:nth-child(13), 
-.InfoBalas td:nth-child(14), 
-.InfoBalas td:nth-child(15) { 
-    font-weight: bold;
-    color: black;
-}
-
-.InfoBalas td:nth-child(10) { background-color: rgb(255, 94, 0); }  /* Clase1 */
-.InfoBalas td:nth-child(11) { background-color: rgba(255, 153, 0, 0.952); } /* Clase2 */
-.InfoBalas td:nth-child(12) { background-color: rgba(255, 208, 0, 0.952); } /* Clase3 */
-.InfoBalas td:nth-child(13) { background-color: yellow; } /* Clase4 */
-.InfoBalas td:nth-child(14) { background-color: greenyellow; } /* Clase5 */
-.InfoBalas td:nth-child(15) { background-color: green; } /* Clase6 */
 
 /* Estilos de las listas y submenús */
 ul {
@@ -318,19 +268,13 @@ ul ul li {
 
 /* Estilos para la cabecera */
 .cabezera {
+    text-decoration: none !important;
+    /* Evita que los textos tengan subrayado */
     background-color: #161616;
-    color: white;
-    font-weight: bold;
+    /* Fondo oscuro */
 }
+
 /* Estilos para las diferentes categorías de balas según su efectividad */
-<<<<<<< HEAD
-.TierBalas1 { background-color: rgb(255, 94, 0); }
-.TierBalas2 { background-color: rgba(255, 153, 0, 0.952); }
-.TierBalas3 { background-color: rgba(255, 208, 0, 0.952); }
-.TierBalas4 { background-color: yellow; }
-.TierBalas5 { background-color: greenyellow; }
-.TierBalas6 { background-color: green; }
-=======
 .TierBalas {
     text-decoration: none !important;
     color: #0d0d0d;
@@ -380,7 +324,6 @@ ul ul li {
     background-color: green;
     /* Verde oscuro, mejor categoría */
 }
->>>>>>> 80d6c6c8ed80949124132ec72c7564cf0c518a58
 
 /* Contenedor principal de la información de balas */
 #DivBalas {

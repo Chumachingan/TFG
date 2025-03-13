@@ -1,40 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("../PHP/balas.json.php")
-        .then(response => response.json())
-        .then(data => {
-            const tabla = document.getElementById("tablaBalas");
-            tabla.innerHTML = "";
-
-            if (!Array.isArray(data) || data.length === 0) {
-                tabla.innerHTML = "<tr><td colspan='10'>No hay datos disponibles</td></tr>";
-                return;
+    fetch("/TFG/PHP/balas.json.php")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error en la respuesta del servidor");
             }
+            return response.json();
+        })
+        .then(data => {
+            const contenedor = document.getElementById("DivBalas");
+            contenedor.innerHTML = ""; // Limpiar contenido antes de agregar las tablas
 
-            data.forEach(bala => {
-                let fila = document.createElement("tr");
-
-                fila.innerHTML = `
-                    <td>${bala.id}</td>
-                    <td>${bala.nombre}</td>
-                    <td>${bala.daño}</td>
-                    <td>${bala.penetracion}</td>
-                    <td>${bala.frag_percent}%</td>
-                    <td>${bala.retroceso}</td>
-                    <td>${bala.precision_bala}</td>
-                    <td>${bala.distanciaEf}</td>
-                    <td>${bala.distanciaMax}</td>
-                    <td>${bala.velocidad} m/s</td>
-                    <td>${bala.tier.nivel} - ${bala.tier.efectividad}</td>
-                    <td>${bala.clases.Clase1}</td>
-                    <td>${bala.clases.Clase2}</td>
-                    <td>${bala.clases.Clase3}</td>
-                    <td>${bala.clases.Clase4}</td>
-                    <td>${bala.clases.Clase5}</td>
-                    <td>${bala.clases.Clase6}</td>
+            let tablaIndex = 1;
+            for (let i = 0; i < data.length; i += 10) {
+                let subset = data.slice(i, i + 10); // Tomar 10 elementos
+                let tablaHTML = `
+                    <h2>Tabla ${tablaIndex}</h2>
+                    <table class="InfoBalas">
+                        <thead>
+                            <tr class="cabezera">
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Daño</th>
+                                <th>Distancia Máx</th>
+                                <th>Distancia Efectiva</th>
+                                <th>Precisión</th>
+                                <th>Penetración</th>
+                                <th>Retroceso</th>
+                                <th>Frag. %</th>
+                                <th>Tier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                 `;
 
-                tabla.appendChild(fila);
-            });
+                subset.forEach(bala => {
+                    tablaHTML += `
+                        <tr class="TierBalas${bala.tier_id}">
+                            <td>${bala.id}</td>
+                            <td>${bala.nombre}</td>
+                            <td>${bala.daño}</td>
+                            <td>${bala.distanciaMax}</td>
+                            <td>${bala.distanciaEf}</td>
+                            <td>${bala.precision_bala}</td>
+                            <td>${bala.penetracion}</td>
+                            <td>${bala.retroceso}</td>
+                            <td>${bala.frag_percent}</td>
+                            <td>${bala.tier_id}</td>
+                        </tr>
+                    `;
+                });
+
+                tablaHTML += `</tbody></table>`;
+                contenedor.innerHTML += tablaHTML;
+                tablaIndex++;
+            }
         })
         .catch(error => console.error("Error cargando los datos:", error));
 });
