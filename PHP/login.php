@@ -1,21 +1,27 @@
 <?php
 session_start();
-include("db.php"); // Asegúrate de que db.php tiene conexión a la base de datos
+include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $emailOrUsername = $_POST['email'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $stmt = $db->prepare("SELECT id, nombre_usuario, contraseña FROM usuarios WHERE correo = ? OR nombre_usuario = ?");
-    $stmt->execute([$emailOrUsername, $emailOrUsername]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt = $conn->prepare("SELECT id, nombre_usuario, contraseña, id_rol FROM Usuarios WHERE correo = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    $stmt->bind_result($id, $username, $hashed_password, $role);
 
-    if ($user && password_verify($password, $user['contraseña'])) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['username'] = $user['nombre_usuario'];
-        echo "Inicio de sesión exitoso";
+    if ($stmt->fetch() && password_verify($password, $hashed_password)) {
+        $_SESSION['user_id'] = $id;
+        $_SESSION['username'] = $username;
+        $_SESSION['role'] = $role;
+
+        echo "éxito";  // Mensaje clave para detectar en JS
     } else {
-        echo "Credenciales incorrectas";
+        echo "Credenciales incorrectas.";
     }
+    $stmt->close();
+    $conn->close();
 }
 ?>
