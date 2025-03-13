@@ -1,19 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetch("../PHP/balas.json.php")
-        .then(response => response.json())
-        .then(data => {
+        .then(res => res.json())
+        .then(balas => {
             const tabla = document.getElementById("tablaBalas");
             tabla.innerHTML = "";
 
-            if (!Array.isArray(data) || data.length === 0) {
-                tabla.innerHTML = "<tr><td colspan='10'>No hay datos disponibles</td></tr>";
-                return;
-            }
-
-            data.forEach(bala => {
-                let fila = document.createElement("tr");
-
-                fila.innerHTML = `
+            balas.forEach(bala => {
+                tabla.innerHTML += `
+                <tr>
                     <td>${bala.id}</td>
                     <td>${bala.nombre}</td>
                     <td>${bala.daño}</td>
@@ -23,18 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${bala.precision_bala}</td>
                     <td>${bala.distanciaEf}</td>
                     <td>${bala.distanciaMax}</td>
-                    <td>${bala.velocidad} m/s</td>
-                    <td>${bala.tier.nivel} - ${bala.tier.efectividad}</td>
-                    <td>${bala.clases.Clase1}</td>
-                    <td>${bala.clases.Clase2}</td>
-                    <td>${bala.clases.Clase3}</td>
-                    <td>${bala.clases.Clase4}</td>
-                    <td>${bala.clases.Clase5}</td>
-                    <td>${bala.clases.Clase6}</td>
-                `;
-
-                tabla.appendChild(fila);
+                    <td>${bala.velocidad}</td>
+                    <td>${bala.tier_nivel}</td>
+                    <td class="clase-${bala.clases.Clase1}">${bala.clases.Clase1 ?? '-'}</td>
+                    <td class="clase-${bala.clases.Clase2}">${bala.clases.Clase2 || '-'}</td>
+                    <td class="clase-${bala.clases.Clase3}">${bala.clases.Clase3 || '-'}</td>
+                    <td class="clase-${bala.clases.Clase4}">${bala.clases.Clase4 || '-'}</td>
+                    <td class="clase-${bala.clases.Clase4}">${bala.clases.Clase4 || '-'}</td>
+                    <td class="clase-${bala.clases.Clase5}">${bala.clases.Clase5 || '-'}</td>
+                </tr>`;
             });
         })
-        .catch(error => console.error("Error cargando los datos:", error));
+        .catch(err => console.log("Error:", err));
 });
