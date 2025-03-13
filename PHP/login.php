@@ -1,28 +1,21 @@
 <?php
 session_start();
-include 'db.php';
+include("db.php"); // Asegúrate de que db.php tiene conexión a la base de datos
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
+    $emailOrUsername = $_POST['email'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare("SELECT id, nombre_usuario, contraseña, id_rol FROM Usuarios WHERE correo = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $stmt->store_result();
-    $stmt->bind_result($id, $username, $hashed_password, $role);
+    $stmt = $db->prepare("SELECT id, nombre_usuario, contraseña FROM usuarios WHERE correo = ? OR nombre_usuario = ?");
+    $stmt->execute([$emailOrUsername, $emailOrUsername]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($stmt->fetch() && password_verify($password, $hashed_password)) {
-        $_SESSION['user_id'] = $id;
-        $_SESSION['username'] = $username;
-        $_SESSION['role'] = $role;
-
-        header("Location: ../Index.html");
-        exit();
+    if ($user && password_verify($password, $user['contraseña'])) {
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['nombre_usuario'];
+        echo "Inicio de sesión exitoso";
     } else {
-        echo "Credenciales incorrectas. <a href='login.html'>Intentar de nuevo</a>";
+        echo "Credenciales incorrectas";
     }
-    $stmt->close();
-    $conn->close();
 }
 ?>
