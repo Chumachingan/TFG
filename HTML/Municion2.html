@@ -1,0 +1,3620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Tarea.css">
+    <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <title>Encabezado y Pie de Página con Menú y Redes Sociales</title>
+</head>
+<body>
+    <header>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../Tarea.html">Inicio</a></li>
+            <li class="submenu"><a>Mapas</a>
+                <ul>
+                    <li><a href="./Factory.html">Factory</a></li>
+                    <li><a href="./Woods.html">Woods</a></li>
+                    <li><a href="./Customs.html">Customs</a></li>
+                    <li><a href="./Interchange.html">Interchange</a></li>
+                    <li><a href="./Reserve.html">Reserve</a></li>
+                    <li><a href="./Shoreline.html">Shoreline</a></li>
+                    <li><a href="./Thelab.html">The Lab</a></li>
+                    <li><a href="./Lighthouse.html">Lighthouse</a></li>
+                    <li><a href="./Streets.html">Streets</a></li>
+                    <li><a href="./Groundzero.html">Ground zero</a></li>
+                </ul>
+            </li>
+            <li><a href="./Municion.html">Municion</a></li>
+            <li><a href="./Headset.html">Headset</a></li>
+            <li><a href="./Traders.html">Traders</a></li>
+            <li><a href="./Contactos.html">Contacto</a></li>
+        </ul>
+    </nav>
+<main>
+
+    <h1>Info balas</h1>
+
+    <p>La tabla proporcionada a continuación tiene información del tier o listado de la clasificacio de las balas.</p>
+    <p>Las balas estan clasificadas desde el tier 0 las mas malas asta el tier 6 las mejores balas, tambien estan 
+        clasificadas por colore del rojo al verde.</p>  
+
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">Tier</td>
+                <td class="cabezera">Efectividad</td>
+                <td class="cabezera">Disparos detenidos por la armadura antes de matar</td>
+                <td class="cabezera">Descripcion</td>
+            </tr>
+            
+            <tr>
+                <td class="TierBalas">0</td>
+                <td>Inutil</td>
+                <td>20+ balas</td>
+                <td>No puede penetrar en una cantidad razonable de golpes</td>
+            </tr>
+            <tr>
+                <td class="TierBalas1">1</td>
+                <td>Es posible pero...</td>
+                <td>De 13 a 20 balas</td>
+                <td>No puede penetrar en una cantidad razonable de golpes,
+                 o comienza con una probabilidad muy baja y apenas aumenta</td>
+            </tr>
+
+            <tr>
+                <td class="TierBalas2">2</td>
+                <td>Solo Magdump</td>
+                <td>De 9 a 13 balas</td>
+                <td>Tiene una probabilidad muy baja o nula al principio
+                 y gana probabilidad muy lentamente</td>
+            </tr>
+            <tr>
+                <td class="TierBalas3">3</td>
+                <td>Ligeramente eficaz</td>
+                <td>De 5 a 9 balas</td>
+                <td>Tiene una probabilidad muy baja o nula al principio y gana 
+                probabilidad lentamente,o daña rapidamente la armadura hasta que penetrar</td>
+            </tr>
+            <tr> 
+                <td class="TierBalas4">4</td>
+                <td>Eficaz</td>
+                <td>De 3 a 5 balas</td>
+                <td>Comienza con una probabilidad de penetracion baja-media,
+                 pero aumente rapidamente </td>
+            </tr>
+            <tr>
+                <td class="TierBalas5">5</td>
+                <td>Muy eficaz</td>
+                <td>De 1 a 3 balas</td>
+                <td>Penetra un gran porcentaje de la veces inicialmete,
+                     a menudo llegando rapidamente al >90%</td>
+            </tr> 
+            <tr>
+                <td class="TierBalas6">6</td>
+                <td>Basicamente ignora</td>
+                <td> De 1 a 2 balas </td>
+                <td>Penetra inicialmente el 80% de las veces</td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+<br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">12 Gauge Shot</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>5.25MM BUCKSHOT</td>
+                <td>8x37</td>
+                <td>1</td>
+                <td>0%</td>
+                <td></td>
+                <td></td>
+                <td>108</td>
+                <td>9</td>
+                <td>330</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>8.5MM MAGNUM BUCKSHOT</td>
+                <td>8x50</td>
+                <td>2</td>
+                <td>0%</td>
+                <td>115 ▲</td>
+                <td>-15% ▼</td>
+                <td>80</td>
+                <td>116</td>
+                <td>385</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>6.5MM EXPRESS BUCKSHOT</td>
+                <td>9x35</td>
+                <td>3</td>
+                <td>0%</td>
+                <td></td>
+                <td>15% ▲</td>
+                <td>71</td>
+                <td>NUNCA</td>
+                <td>430</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>7MM BUCKSHOT</td>
+                <td>8x39</td>
+                <td>3</td>
+                <td>0%</td>
+                <td></td>
+                <td></td>
+                <td>39</td>
+                <td>3</td>
+                <td>415</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>PIRANHA</td>
+                <td>10x25</td>
+                <td>24</td>
+                <td>0%</td>
+                <td></td>
+                <td>-5%</td>
+                <td>-</td>
+                <td>-</td>
+                <td>310</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+            <tr>
+                <td>FLECHETTE</td>
+                <td>8x25</td>
+                <td>31</td>
+                <td>0%</td>
+                <td></td>
+                <td>-10% ▼</td>
+                <td>>1KM</td>
+                <td>Never</td>
+                <td>320</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">12 Gauge Slugs</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>RIP</td>
+                <td>265</td>
+                <td>2</td>
+                <td>100%</td>
+                <td>35 ▲</td>
+                <td>80% ▲</td>
+                <td>188</td>
+                <td>>1KM</td>
+                <td>410</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>SUPERFORMANCE HP SLUG</td>
+                <td>220</td>
+                <td>5</td>
+                <td>39%</td>
+                <td>-15 ▲</td>
+                <td>170% ▼</td>
+                <td>344</td>
+                <td>>1KM</td>
+                <td>390</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>GRIZZLY 40 SLUG</td>
+                <td>190</td>
+                <td>12</td>
+                <td>12%</td>
+                <td>20 ▲</td>
+                <td>80% ▲</td>
+                <td>840</td>
+                <td>>1KM</td>
+                <td>390</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>COPPER SABOT HP SLUG</td>
+                <td>206</td>
+                <td>14</td>
+                <td>38%</td>
+                <td>10 ▲</td>
+                <td>150% ▲</td>
+                <td>305</td>
+                <td>>1KM</td>
+                <td>442</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>LEAD SLUG</td>
+                <td>167</td>
+                <td>15</td>
+                <td>20%</td>
+                <td></td>
+                <td>120% ▲</td>
+                <td>487</td>
+                <td>>1KM</td>
+                <td>370</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">4</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>DUAL SABOT SLUG</td>
+                <td>2x85</td>
+                <td>17</td>
+                <td>10%</td>
+                <td>15 ▲</td>
+                <td>110% ▲</td>
+                <td>251</td>
+                <td>>1KM</td>
+                <td>415</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>POLEVA-3" SLUG</td>
+                <td>140</td>
+                <td>17</td>
+                <td>20%</td>
+                <td>-15 ▼</td>
+                <td>100% ▲</td>
+                <td>406</td>
+                <td>>1KM</td>
+                <td>410</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>FTX CUSTOM LITE SLUG</td>
+                <td>183</td>
+                <td>20</td>
+                <td>10%</td>
+                <td>-25 ▼</td>
+                <td>135% ▲</td>
+                <td>498</td>
+                <td>>1KM</td>
+                <td>480</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>POLEVA-6U" SLUG</td>
+                <td>150</td>
+                <td>20</td>
+                <td>15%</td>
+                <td>-10 ▼</td>
+                <td>115% ▲</td>
+                <td>181</td>
+                <td>>1KM</td>
+                <td>430</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>MAKESHIFT .50 BMG SLUG</td>
+                <td>197</td>
+                <td>26</td>
+                <td>5%</td>
+                <td>25 ▲</td>
+                <td>90% ▲</td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>410</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>AP-20 ARMOR-PIERCING SLUG</td>
+                <td>164</td>
+                <td>37</td>
+                <td>3%</td>
+                <td>50 ▲</td>
+                <td>80% ▲</td>
+                <td>905</td>
+                <td>>1KM</td>
+                <td>510</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">20 GAUGE</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>5.6MM BUCKSHOT</td>
+                <td>8x26</td>
+                <td>1</td>
+                <td>0%</td>
+                <td>10 ▲</td>
+                <td>-10% ▼</td>
+                <td>124</td>
+                <td>Never</td>
+                <td>340</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>6.2MM BUCKSHOT</td>
+                <td>8x22</td>
+                <td>2</td>
+                <td>0%</td>
+                <td>10 ▲</td>
+                <td>-10% ▼</td>
+                <td>124</td>
+                <td>NEVER</td>
+                <td>410</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>6.5MM EXPRESS BUCKSHOT</td>
+                <td>9x35</td>
+                <td>3</td>
+                <td>0%</td>
+                <td></td>
+                <td>15% ▲</td>
+                <td>71</td>
+                <td>NUNCA</td>
+                <td>430</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>7.5MM BUCKSHOT</td>
+                <td>8x25</td>
+                <td>3</td>
+                <td>0%</td>
+                <td></td>
+                <td></td>
+                <td>100</td>
+                <td>NEVER</td>
+                <td>475</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>7.3MM BUCKSHOT</td>
+                <td>8x25</td>
+                <td>3</td>
+                <td>0%</td>
+                <td></td>
+                <td></td>
+                <td>181</td>
+                <td>NEVER</td>
+                <td>474</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+            <tr>
+                <td>DEVASTATOR SLUG</td>
+                <td>198</td>
+                <td>5</td>
+                <td>100%</td>
+                <td>30 ▲</td>
+                <td>125% ▲</td>
+                <td>109</td>
+                <td>>1KM</td>
+                <td>405</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>POLEVA-3" SLUG</td>
+                <td>120</td>
+                <td>14</td>
+                <td>20%</td>
+                <td>-15 ▼</td>
+                <td>110% ▲</td>
+                <td>517</td>
+                <td>>1KM</td>
+                <td>425</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>STAR SLUG</td>
+                <td>154</td>
+                <td>16</td>
+                <td>10%</td>
+                <td>5 ▲</td>
+                <td>130% ▲</td>
+                <td>416</td>
+                <td>>1KM</td>
+                <td>415</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>POLEVA-6U" SLUG</td>
+                <td>135</td>
+                <td>17</td>
+                <td>15%</td>
+                <td>-10 ▼</td>
+                <td>110% ▲</td>
+                <td>438</td>
+                <td>>1KM</td>
+                <td>445</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">23x75mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>ZVEZDA" FLASHBANG ROUND</td>
+                <td>0</td>
+                <td>0</td>
+                <td>20%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>SHRAPNEL-25" BUCKSHOT</td>
+                <td>8x78</td>
+                <td>10</td>
+                <td>0%</td>
+                <td>10 ▲</td>
+                <td>20% ▲</td>
+                <td>83</td>
+                <td>>1KM</td>
+                <td>375</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>SHRAPNEL-10" BUCKSHOT</td>
+                <td>8x87</td>
+                <td>11</td>
+                <td>0%</td>
+                <td></td>
+                <td></td>
+                <td>106</td>
+                <td>>1KM</td>
+                <td>270</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>BARRIKADA" SLUG</td>
+                <td>192</td>
+                <td>39</td>
+                <td>20%</td>
+                <td>25 ▲</td>
+                <td>-5% ▼</td>
+                <td>974</td>
+                <td>>1KM</td>
+                <td>420</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">9x18mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>PM SP8 GZH</td>
+                <td>67</td>
+                <td>1</td>
+                <td>60%</td>
+                <td></td>
+                <td></td>
+                <td>412</td>
+                <td>>1KM</td>
+                <td>250</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>PM SP7 GZH</td>
+                <td>77</td>
+                <td>2</td>
+                <td>2%</td>
+                <td></td>
+                <td></td>
+                <td>229</td>
+                <td>>1KM</td>
+                <td>420</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM PSV</td>
+                <td>69</td>
+                <td>3</td>
+                <td>40%</td>
+                <td></td>
+                <td></td>
+                <td>606</td>
+                <td>>1KM</td>
+                <td>280</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM P GZH</td>
+                <td>50</td>
+                <td>5</td>
+                <td>25%</td>
+                <td></td>
+                <td></td>
+                <td>478</td>
+                <td>638</td>
+                <td>302</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM PSO GZH</td>
+                <td>54</td>
+                <td>5</td>
+                <td>35%</td>
+                <td></td>
+                <td>10% ▲</td>
+                <td>459</td>
+                <td>818</td>
+                <td>315</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM PS GS PPO</td>
+                <td>55</td>
+                <td>6</td>
+                <td>25%</td>
+                <td></td>
+                <td></td>
+                <td>467</td>
+                <td>>1KM</td>
+                <td>330</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM PRS GS</td>
+                <td>58</td>
+                <td>6</td>
+                <td>30%</td>
+                <td></td>
+                <td></td>
+                <td>478</td>
+                <td>>1KM</td>
+                <td>302</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM PPE GZH</td>
+                <td>61</td>
+                <td>7</td>
+                <td>17%</td>
+                <td></td>
+                <td></td>
+                <td>438</td>
+                <td>>1KM</td>
+                <td>297</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM PPT GZH</td>
+                <td>59</td>
+                <td>8</td>
+                <td>20%</td>
+                <td>-7 ▼</td>
+                <td>-5% ▼</td>
+                <td>495</td>
+                <td>>1KM</td>
+                <td>301</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM PST GZH</td>
+                <td>50</td>
+                <td>12</td>
+                <td>20%</td>
+                <td></td>
+                <td></td>
+                <td>462</td>
+                <td>615</td>
+                <td>298</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM RG028 GZH</td>
+                <td>65</td>
+                <td>12</td>
+                <td>2%</td>
+                <td></td>
+                <td></td>
+                <td>476</td>
+                <td>>1KM</td>
+                <td>330</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM BZHT GZH</td>
+                <td>53</td>
+                <td>18</td>
+                <td>17%</td>
+                <td></td>
+                <td></td>
+                <td>303</td>
+                <td>511</td>
+                <td>325</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PMM PSTM GZH</td>
+                <td>58</td>
+                <td>24</td>
+                <td>17%</td>
+                <td>5 ▲</td>
+                <td></td>
+                <td>322</td>
+                <td>919</td>
+                <td>420</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PM PBM GZH</td>
+                <td>40</td>
+                <td>28</td>
+                <td>16%</td>
+                <td>4 ▲</td>
+                <td></td>
+                <td>133</td>
+                <td>26</td>
+                <td>519</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">7.62x25mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>TT LRNPC</td>
+                <td>66</td>
+                <td>7</td>
+                <td>35%</td>
+                <td>-10 ▼</td>
+                <td>10% ▲</td>
+                <td>457</td>
+                <td>>1KM</td>
+                <td>385</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>TT LRN</td>
+                <td>64</td>
+                <td>8</td>
+                <td>35%</td>
+                <td>-5 ▲</td>
+                <td>5% ▲</td>
+                <td>579</td>
+                <td>>1KM</td>
+                <td>375</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>TT FMJ43</td>
+                <td>60</td>
+                <td>11</td>
+                <td>25%</td>
+                <td></td>
+                <td></td>
+                <td>175</td>
+                <td>595</td>
+                <td>427</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>TT P GL</td>
+                <td>58</td>
+                <td>14</td>
+                <td>25%</td>
+                <td></td>
+                <td></td>
+                <td>411</td>
+                <td>>1KM</td>
+                <td>430</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>TT PT GZH</td>
+                <td>55</td>
+                <td>18</td>
+                <td>17%</td>
+                <td></td>
+                <td>-10% ▼</td>
+                <td>426</td>
+                <td>966</td>
+                <td>415</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>TT PST GZH</td>
+                <td>50</td>
+                <td>25</td>
+                <td>20%</td>
+                <td></td>
+                <td></td>
+                <td>408</td>
+                <td>615</td>
+                <td>430</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">9x19mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>RIP</td>
+                <td>102</td>
+                <td>2</td>
+                <td>100%</td>
+                <td>5 ▼</td>
+                <td>10% ▲</td>
+                <td>290</td>
+                <td>>1KM</td>
+                <td>381</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>TT LRN</td>
+                <td>64</td>
+                <td>8</td>
+                <td>35%</td>
+                <td>-5 ▲</td>
+                <td>5% ▲</td>
+                <td>579</td>
+                <td>>1KM</td>
+                <td>375</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>QUAKEMAKER</td>
+                <td>85</td>
+                <td>8</td>
+                <td>10%</td>
+                <td>10 ▲</td>
+                <td>10% ▲</td>
+                <td>725</td>
+                <td>>1KM</td>
+                <td>290</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PSO GZH</td>
+                <td>59</td>
+                <td>10</td>
+                <td>25%</td>
+                <td></td>
+                <td></td>
+                <td>575</td>
+                <td>>1KM</td>
+                <td>340</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>LUGER CCI</td>
+                <td>70</td>
+                <td>10</td>
+                <td>25%</td>
+                <td></td>
+                <td></td>
+                <td>441</td>
+                <td>>1KM</td>
+                <td>420</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>M882</td>
+                <td>56</td>
+                <td>18</td>
+                <td>20%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>385</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PST GZH</td>
+                <td>54</td>
+                <td>20</td>
+                <td>15%</td>
+                <td></td>
+                <td></td>
+                <td>194</td>
+                <td>452</td>
+                <td>457</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>AP 6.3</td>
+                <td>52</td>
+                <td>30</td>
+                <td>5%</td>
+                <td></td>
+                <td></td>
+                <td>443</td>
+                <td>776</td>
+                <td>392</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas1">1</td>
+            </tr>
+            <tr>
+                <td>PBP GZH</td>
+                <td>52</td>
+                <td>39</td>
+                <td>5%</td>
+                <td>5 ▼</td>
+                <td>5% ▼</td>
+                <td>92</td>
+                <td>220</td>
+                <td>560</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">.45</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>ACP RIP</td>
+                <td>130</td>
+                <td>3</td>
+                <td>100%</td>
+                <td></td>
+                <td>-5% ▼</td>
+                <td>290</td>
+                <td>>1KM</td>
+                <td>293</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>ACP HYDRA-SHOK</td>
+                <td>100</td>
+                <td>13</td>
+                <td>50%</td>
+                <td></td>
+                <td></td>
+                <td>725</td>
+                <td>>1KM</td>
+                <td>274</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>ACP LASERMATCH FMJ</td>
+                <td>70</td>
+                <td>19</td>
+                <td>1%</td>
+                <td></td>
+                <td>10% ▲</td>
+                <td>575</td>
+                <td>>1KM</td>
+                <td>290</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>ACP MATCH FMJ</td>
+                <td>72</td>
+                <td>25</td>
+                <td>1%</td>
+                <td></td>
+                <td></td>
+                <td>441</td>
+                <td>>1KM</td>
+                <td>340</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>ACP AP</td>
+                <td>66</td>
+                <td>38</td>
+                <td>1%</td>
+                <td>7 ▲</td>
+                <td>-5% ▼</td>
+                <td>428</td>
+                <td>>1KM</td>
+                <td>299</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">9x21mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>PE GZH</td>
+                <td>80</td>
+                <td>15</td>
+                <td>35%</td>
+                <td>-5 ▼</td>
+                <td></td>
+                <td>194</td>
+                <td>452</td>
+                <td>415</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>P GZH</td>
+                <td>65</td>
+                <td>18</td>
+                <td>30%</td>
+                <td>-3 ▼</td>
+                <td></td>
+                <td>453</td>
+                <td>776</td>
+                <td>413</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PS GZH</td>
+                <td>65</td>
+                <td>18</td>
+                <td>30%</td>
+                <td>-3 ▼</td>
+                <td></td>
+                <td>453</td>
+                <td>776</td>
+                <td>413</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>7U4</td>
+                <td>47</td>
+                <td>27</td>
+                <td>25%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>300</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>BT GZH</td>
+                <td>49</td>
+                <td>32</td>
+                <td>20%</td>
+                <td>5 ▲</td>
+                <td>-5% ▼</td>
+                <td>292</td>
+                <td>>1KM</td>
+                <td>410</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+            </tr>
+            <tr>
+                <td>7N42</td>
+                <td>45</td>
+                <td>38</td>
+                <td>10%</td>
+                <td>10  ▲</td>
+                <td>-3% ▼</td>
+                <td></td>
+                <td></td>
+                <td>400</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">.45</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>ACP RIP</td>
+                <td>130</td>
+                <td>3</td>
+                <td>100%</td>
+                <td></td>
+                <td>-5% ▼</td>
+                <td>290</td>
+                <td>>1KM</td>
+                <td>293</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>ACP HYDRA-SHOK</td>
+                <td>100</td>
+                <td>13</td>
+                <td>50%</td>
+                <td></td>
+                <td></td>
+                <td>725</td>
+                <td>>1KM</td>
+                <td>274</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>ACP LASERMATCH FMJ</td>
+                <td>70</td>
+                <td>19</td>
+                <td>1%</td>
+                <td></td>
+                <td>10% ▲</td>
+                <td>575</td>
+                <td>>1KM</td>
+                <td>290</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>ACP MATCH FMJ</td>
+                <td>72</td>
+                <td>25</td>
+                <td>1%</td>
+                <td></td>
+                <td></td>
+                <td>441</td>
+                <td>>1KM</td>
+                <td>340</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>ACP AP</td>
+                <td>66</td>
+                <td>38</td>
+                <td>1%</td>
+                <td>7 ▲</td>
+                <td>-5% ▼</td>
+                <td>428</td>
+                <td>>1KM</td>
+                <td>299</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">.357 Magnum</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>SOFT POINT</td>
+                <td>108</td>
+                <td>12</td>
+                <td>20%</td>
+                <td>-29  ▼</td>
+                <td>27% ▲</td>
+                <td></td>
+                <td></td>
+                <td>455</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>HP</td>
+                <td>99</td>
+                <td>18</td>
+                <td>60%</td>
+                <td>15 ▼</td>
+                <td>15% ▲</td>
+                <td></td>
+                <td></td>
+                <td>481</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>JHP</td>
+                <td>88</td>
+                <td>24</td>
+                <td>60%</td>
+                <td>8 ▼</td>
+                <td>15% ▲</td>
+                <td></td>
+                <td></td>
+                <td>425</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>FMJ</td>
+                <td>70</td>
+                <td>35</td>
+                <td>1%</td>
+                <td>12 ▲</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>385</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">5.7x28</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>R37.F</td>
+                <td>98</td>
+                <td>8</td>
+                <td>100%</td>
+                <td></td>
+                <td></td>
+                <td>100</td>
+                <td>>1KM</td>
+                <td>729</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>SS198LF</td>
+                <td>70</td>
+                <td>17</td>
+                <td>80%</td>
+                <td></td>
+                <td></td>
+                <td>326</td>
+                <td>>1KM</td>
+                <td>792</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>R37.X</td>
+                <td>81</td>
+                <td>11</td>
+                <td>70%</td>
+                <td></td>
+                <td></td>
+                <td>100</td>
+                <td>>1KM</td>
+                <td>724/td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>SS197SR</td>
+                <td>62</td>
+                <td>25</td>
+                <td>50%</td>
+                <td></td>
+                <td></td>
+                <td>401</td>
+                <td>>1KM</td>
+                <td>594</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>L191 (TRACER)</td>
+                <td>53</td>
+                <td>33</td>
+                <td>20%</td>
+                <td></td>
+                <td>-4% ▼</td>
+                <td>358</td>
+                <td>>1KM</td>
+                <td>922</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+            <tr>
+                <td>SB193</td>
+                <td>59</td>
+                <td>27</td>
+                <td>20%</td>
+                <td>-15 ▼</td>
+                <td>5% ▲</td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>299</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>SS190</td>
+                <td>49</td>
+                <td>37</td>
+                <td>20%</td>
+                <td></td>
+                <td></td>
+                <td>325</td>
+                <td>463</td>
+                <td>715</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">4.6x30</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>ACTION SX</td>
+                <td>65</td>
+                <td>18</td>
+                <td>50%</td>
+                <td></td>
+                <td></td>
+                <td>245</td>
+                <td>>1KM</td>
+                <td>690</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>SUBSONIC SX</td>
+                <td>52</td>
+                <td>23</td>
+                <td>20%</td>
+                <td>-22 ▼</td>
+                <td>10% ▲</td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>290</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>JSP SX</td>
+                <td>46</td>
+                <td>32</td>
+                <td>30%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>579</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas1">1</td>
+            </tr>
+            <tr>
+                <td>FMJ SX</td>
+                <td>43</td>
+                <td>40</td>
+                <td>20%</td>
+                <td></td>
+                <td></td>
+                <td>367</td>
+                <td>189</td>
+                <td>620</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>AP SX</td>
+                <td>35</td>
+                <td>53</td>
+                <td>10%</td>
+                <td>10 ▲</td>
+                <td></td>
+                <td>198
+                </td>
+                <td>Never</td>
+                <td>680</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">9x39mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>FMJ</td>
+                <td>75</td>
+                <td>17</td>
+                <td>30%</td>
+                <td>-5 ▼</td>
+                <td>5% ▲
+                </td>
+                <td></td>
+                <td>>1KM</td>
+                <td>330</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>SP-5 GS</td>
+                <td>71</td>
+                <td>28</td>
+                <td>20%</td>
+                <td></td>
+                <td></td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>290</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>SPP GS</td>
+                <td>68</td>
+                <td>35</td>
+                <td>20%</td>
+                <td>7 ▲</td>
+                <td>10% ▲</td>
+                <td>887</td>
+                <td>>1KM</td>
+                <td>310</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+            <tr>
+                <td>PAB-9 GS</td>
+                <td>62</td>
+                <td>43</td>
+                <td>10%</td>
+                <td>10 ▲</td>
+                <td>-15% ▼</td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>320</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+            <tr>
+                <td>SP-6 GS</td>
+                <td>60</td>
+                <td>48</td>
+                <td>10%</td>
+                <td>5 ▲</td>
+                <td></td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>305</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+            <tr>
+                <td>BP GS</td>
+                <td>58</td>
+                <td>54</td>
+                <td>10%</td>
+                <td>15 ▲</td>
+                <td>10% ▲</td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>295</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">.366</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>TKM GEKSA</td>
+                <td>110</td>
+                <td>14</td>
+                <td>45%</td>
+                <td></td>
+                <td></td>
+                <td>484</td>
+                <td>>1KM</td>
+                <td>550</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>TKM FMJ</td>
+                <td>98</td>
+                <td>23</td>
+                <td>25%</td>
+                <td>10 ▲</td>
+                <td></td>
+                <td>363</td>
+                <td>>1KM</td>
+                <td>580</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>TKM EKO</td>
+                <td>73</td>
+                <td>30</td>
+                <td>20%</td>
+                <td>-15 ▼</td>
+                <td>-10% ▼</td>
+                <td>184</td>
+                <td>>1KM</td>
+                <td>770</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>TKM AP-M</td>
+                <td>90</td>
+                <td>42</td>
+                <td>1%</td>
+                <td>35 ▲</td>
+                <td>-28% ▼</td>
+                <td>633</td>
+                <td>>1KM</td>
+                <td>602</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">5.45x39mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>HP</td>
+                <td>76</td>
+                <td>9</td>
+                <td>35%</td>
+                <td>-3 ▼</td>
+                <td></td>
+                <td>368</td>
+                <td>>1KM</td>
+                <td>884</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>PRS GS</td>
+                <td>70</td>
+                <td>13</td>
+                <td>30%</td>
+                <td>-5 ▼</td>
+                <td></td>
+                <td>392</td>
+                <td>>1KM</td>
+                <td>866</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>SP</td>
+                <td>65</td>
+                <td>15</td>
+                <td>45%</td>
+                <td>-5 ▼</td>
+                <td>10% ▲</td>
+                <td>364</td>
+                <td>>1KM</td>
+                <td>873</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>US GS</td>
+                <td>63</td>
+                <td>17</td>
+                <td>10%</td>
+                <td>-15 ▼</td>
+                <td></td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>303</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>T GS</td>
+                <td>57</td>
+                <td>20</td>
+                <td>16%</td>
+                <td></td>
+                <td>-5% ▼</td>
+                <td>331</td>
+                <td>>1KM</td>
+                <td>883</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>FMJ</td>
+                <td>55</td>
+                <td>24</td>
+                <td>25%</td>
+                <td></td>
+                <td></td>
+                <td>400</td>
+                <td>>1KM</td>
+                <td>884</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PS GS</td>
+                <td>53</td>
+                <td>28</td>
+                <td>40%</td>
+                <td></td>
+                <td></td>
+                <td>352</td>
+                <td>466</td>
+                <td>890</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PP GS</td>
+                <td>50</td>
+                <td>34</td>
+                <td>17%</td>
+                <td>3 ▲</td>
+                <td></td>
+                <td>382</td>
+                <td>420</td>
+                <td>886</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+            </tr>
+            <tr>
+                <td>BT GS</td>
+                <td>48</td>
+                <td>37</td>
+                <td>16%</td>
+                <td>5 ▲</td>
+                <td>-2% ▼</td>
+                <td>310</td>
+                <td>252</td>
+                <td>880</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+            <tr>
+                <td>7N40</td>
+                <td>52</td>
+                <td>42</td>
+                <td>2%</td>
+                <td>-10 ▼</td>
+                <td>50% ▲</td>
+                <td>388</td>
+                <td>633</td>
+                <td>915</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>BP GS</td>
+                <td>46</td>
+                <td>45</td>
+                <td>16%</td>
+                <td>7 ▲</td>
+                <td>-3% ▼</td>
+                <td>378</td>
+                <td>455</td>
+                <td>890</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+            <tr>
+                <td>BS GS</td>
+                <td>43</td>
+                <td>54</td>
+                <td>17%</td>
+                <td>10 ▲</td>
+                <td>-3% ▼</td>
+                <td>363</td>
+                <td>179</td>
+                <td>830</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+            <tr>
+                <td>PPBS GS "IGOLNIK"</td>
+                <td>37</td>
+                <td>62</td>
+                <td>2%</td>
+                <td>15 ▲</td>
+                <td></td>
+                <td>430</td>
+                <td>85</td>
+                <td>905</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">5.56x45mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>WARMAGEDDON</td>
+                <td>88</td>
+                <td>3</td>
+                <td>90%</td>
+                <td>10 ▲</td>
+                <td>10% ▲</td>
+                <td>525</td>
+                <td>>1KM</td>
+                <td>936</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>HP</td>
+                <td>79</td>
+                <td>7</td>
+                <td>70%</td>
+                <td></td>
+                <td></td>
+                <td>327</td>
+                <td>>1KM</td>
+                <td>947</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>MK 255 MOD 0 (RRLP)</td>
+                <td>72</td>
+                <td>11</td>
+                <td>3%</td>
+                <td></td>
+                <td></td>
+                <td>525</td>
+                <td>>1KM</td>
+                <td>936</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>M856</td>
+                <td>64</td>
+                <td>18</td>
+                <td>33%</td>
+                <td>-2 ▼</td>
+                <td>-2% ▼</td>
+                <td>358</td>
+                <td>975</td>
+                <td>874</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>M855</td>
+                <td>57</td>
+                <td>31</td>
+                <td>40%</td>
+                <td></td>
+                <td></td>
+                <td>358</td>
+                <td>464</td>
+                <td>922</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>MK 318 MOD 0 (SOST)</td>
+                <td>55</td>
+                <td>33</td>
+                <td>35%</td>
+                <td>3 ▲</td>
+                <td>2% ▲</td>
+                <td>409</td>
+                <td>>1KM</td>
+                <td>902</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas1">1</td>
+            </tr>
+            <tr>
+                <td>M856A1</td>
+                <td>52</td>
+                <td>38</td>
+                <td>42%</td>
+                <td>4 ▲</td>
+                <td>-4% ▼</td>
+                <td>424</td>
+                <td>594</td>
+                <td>940</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+            <tr>
+                <td>M855A1</td>
+                <td>49</td>
+                <td>44</td>
+                <td>44%</td>
+                <td>5 ▲</td>
+                <td>-5% ▼</td>
+                <td>366</td>
+                <td>352</td>
+                <td>945</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+            <tr>
+                <td>M995</td>
+                <td>42</td>
+                <td>53</td>
+                <td>42%</td>
+                <td>8 ▲</td>
+                <td>-7% ▼</td>
+                <td>325</td>
+                <td>149</td>
+                <td>1013</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+            <tr>
+                <td>SSA AP</td>
+                <td>38</td>
+                <td>57</td>
+                <td>20%</td>
+                <td>6 ▲</td>
+                <td>-9% ▼</td>
+                <td>325</td>
+                <td>29</td>
+                <td>1013</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">7.62x39mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>HP</td>
+                <td>87</td>
+                <td>15</td>
+                <td>40%</td>
+                <td>5 ▲</td>
+                <td>-5% ▼</td>
+                <td>382</td>
+                <td>>1KM</td>
+                <td>754</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>SP</td>
+                <td>68</td>
+                <td>20</td>
+                <td>35%</td>
+                <td>-5 ▼</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>772</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>FMJ</td>
+                <td>63</td>
+                <td>26</td>
+                <td>30%</td>
+                <td>-2 ▼</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>775</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>US GZH</td>
+                <td>56</td>
+                <td>29</td>
+                <td>8%</td>
+                <td>-30 ▼</td>
+                <td>5% ▲</td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>300</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>T-45M1 GZH</td>
+                <td>64</td>
+                <td>30</td>
+                <td>12%</td>
+                <td>-6 ▼</td>
+                <td>-4% ▼</td>
+                <td>314</td>
+                <td>>1KM</td>
+                <td>720</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>PS GZH</td>
+                <td>57</td>
+                <td>35</td>
+                <td>20%</td>
+                <td></td>
+                <td></td>
+                <td>393</td>
+                <td>>1KM</td>
+                <td>700</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+            <tr>
+                <td>PP</td>
+                <td>55</td>
+                <td>41</td>
+                <td>15%</td>
+                <td>5 ▲</td>
+                <td>-1% ▼</td>
+                <td></td>
+                <td></td>
+                <td>732</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>BP GZH</td>
+                <td>58</td>
+                <td>47</td>
+                <td>12%</td>
+                <td>7 ▲</td>
+                <td>-3% ▼</td>
+                <td>387</td>
+                <td>>1KM</td>
+                <td>730</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+            <tr>
+                <td>MAI AP</td>
+                <td>47</td>
+                <td>58</td>
+                <td>5%</td>
+                <td>10 ▲</td>
+                <td>-5% ▼</td>
+                <td>387</td>
+                <td>405</td>
+                <td>730</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">.300 blk</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>BLACKOUT WHISPER</td>
+                <td>90</td>
+                <td>14</td>
+                <td>35%</td>
+                <td>-5 ▼</td>
+                <td>5% ▲</td>
+                <td>490</td>
+                <td>>1KM</td>
+                <td>853</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>BLACKOUT V-MAX</td>
+                <td>72</td>
+                <td>20</td>
+                <td>25%</td>
+                <td>-10 ▲</td>
+                <td>30% ▲</td>
+                <td>466</td>
+                <td>>1KM</td>
+                <td>723</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>BLACKOUT BCP FMJ</td>
+                <td>60</td>
+                <td>30</td>
+                <td>30%</td>
+                <td></td>
+                <td></td>
+                <td>563</td>
+                <td>>1KM</td>
+                <td>605</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>BLACKOUT M62 TRACER</td>
+                <td>54</td>
+                <td>36</td>
+                <td>20%</td>
+                <td>1 ▲</td>
+                <td></td>
+                <td>>1KM</td>
+                <td>>1KM</td>
+                <td>442</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+            <tr>
+                <td>BLACKOUT CBJ</td>
+                <td>58</td>
+                <td>43</td>
+                <td>15%</td>
+                <td>5 ▲</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>725</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>BBLACKOUT AP</td>
+                <td>51</td>
+                <td>48</td>
+                <td>30%</td>
+                <td>3 ▲</td>
+                <td></td>
+                <td>522</td>
+                <td>>1KM</td>
+                <td>635</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+        </tbody>
+    </table>
+    </div><br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">6.8x51mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>SIG FMJ</td>
+                <td>80</td>
+                <td>36</td>
+                <td>18%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>></td>
+                <td>899</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+             <tr>
+                <td>SIG HYBRID</td>
+                <td>72</td>
+                <td>47</td>
+                <td>12%</td>
+                <td>10 ▲</td>
+                <td>3% ▲</td>
+                <td></td>
+                <td>></td>
+                <td>914</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">7.62x51mm</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>ULTRA NOSLER</td>
+                <td>107</td>
+                <td>15</td>
+                <td>70%</td>
+                <td>-5 ▼</td>
+                <td>10% ▲</td>
+                <td>536</td>
+                <td>>1KM</td>
+                <td>822</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>TCW SP</td>
+                <td>87</td>
+                <td>30</td>
+                <td>35%</td>
+                <td>-3 ▼</td>
+                <td>-2% ▼</td>
+                <td>543</td>
+                <td>>1KM</td>
+                <td>808</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">2</td>
+                <td class="TierBalas">0</td>
+            </tr>
+            <tr>
+                <td>BCP FMJ</td>
+                <td>83</td>
+                <td>35</td>
+                <td>20%</td>
+                <td></td>
+                <td>-7% ▼</td>
+                <td>584</td>
+                <td>>1KM</td>
+                <td>840</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+            <tr>
+                <td>M80</td>
+                <td>80</td>
+                <td>41</td>
+                <td>17%</td>
+                <td></td>
+                <td></td>
+                <td>483</td>
+                <td>>1KM</td>
+                <td>833</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+            </tr>
+            <tr>
+                <td>M62 TRACER</td>
+                <td>79</td>
+                <td>44</td>
+                <td>14%</td>
+                <td>-1 ▲</td>
+                <td>-6% ▼</td>
+                <td>462</td>
+                <td>>1KM</td>
+                <td>816</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+            <tr>
+                <td>M61</td>
+                <td>70</td>
+                <td>64</td>
+                <td>13%</td>
+                <td>10  ▲</td>
+                <td>3% ▲</td>
+                <td>506</td>
+                <td>>1KM</td>
+                <td>849</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+            </tr>
+            <tr>
+                <td>M993</td>
+                <td>67</td>
+                <td>70</td>
+                <td>13%</td>
+                <td>8  ▲</td>
+                <td>5% ▲</td>
+                <td>445</td>
+                <td>>1KM</td>
+                <td>910</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">6</td>
+                <td class="TierBalas4">6</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br><br><br><br>
+    <div id="DivBalas">
+    <table border="1" class="InfoBalas">
+        <tbody>
+            <tr>
+                <td class="cabezera">7.62x54R</td>
+                <td class="cabezera">Daño</td>
+                <td class="cabezera">Penetracion</td>
+                <td class="cabezera">Frag%</td>
+                <td class="cabezera">Retroceso</td>
+                <td class="cabezera">Precision</td>
+                <td class="cabezera">Distancia Ef</td>
+                <td class="cabezera">Distancia Max</td>
+                <td class="cabezera">Velocidad m/s</td>
+                <td class="cabezera">Clase1</td>
+                <td class="cabezera">Clase2</td>
+                <td class="cabezera">Clase3</td>
+                <td class="cabezera">Clase4</td>
+                <td class="cabezera">Clase5</td>
+                <td class="cabezera">Clase6</td>
+            </tr>
+            <tr>
+                <td>HP BT (TRACER)</td>
+                <td>102</td>
+                <td>23</td>
+                <td>40%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>807</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">6</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas1">1</td>
+                <td class="TierBalas">0</td>
+                <td class="TierBalas">0</td>
+            </tr>
+             <tr>
+                <td>SP BT (TRACER)</td>
+                <td>92</td>
+                <td>27</td>
+                <td>24%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>703</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas2">2</td>
+                <td class="TierBalas1">1</td>
+            </tr>
+            <tr>
+                <td>FMJ</td>
+                <td>84</td>
+                <td>33</td>
+                <td>20%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>760</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">5</td>
+                <td class="TierBalas3">3</td>
+                <td class="TierBalas2">2</td>
+            </tr>
+            <tr>
+                <td>T-46M GZH</td>
+                <td>82</td>
+                <td>41</td>
+                <td>18%</td>
+                <td>-5 ▼</td>
+                <td>-1% ▼</td>
+                <td>406</td>
+                <td>>1KM</td>
+                <td>800</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>LPS GZH</td>
+                <td>81</td>
+                <td>42</td>
+                <td>18%</td>
+                <td></td>
+                <td>-5% ▼</td>
+                <td>492</td>
+                <td>>1KM</td>
+                <td>865</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas4">4</td>
+                <td class="TierBalas3">3</td>
+            </tr>
+            <tr>
+                <td>PS GZH</td>
+                <td>84</td>
+                <td>45</td>
+                <td>8%</td>
+                <td>8   ▲</td>
+                <td>10% ▲</td>
+                <td>510</td>
+                <td>>1KM</td>
+                <td>875</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">5</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+            <tr>
+                <td>BT GZH</td>
+                <td>78</td>
+                <td>55</td>
+                <td>8%</td>
+                <td>-4 ▼</td>
+                <td>-2% ▼</td>
+                <td>491</td>
+                <td>>1KM</td>
+                <td>875</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">6</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+            <tr>
+                <td>BT GZH</td>
+                <td>78</td>
+                <td>55</td>
+                <td>8%</td>
+                <td>-4 ▼</td>
+                <td>-2% ▼</td>
+                <td>491</td>
+                <td>>1KM</td>
+                <td>875</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas5">6</td>
+                <td class="TierBalas5">5</td>
+            </tr>
+            <tr>
+                <td>SNB GZH</td>
+                <td>75</td>
+                <td>62</td>
+                <td>8%</td>
+                <td>10 ▲</td>
+                <td>-2% ▼</td>
+                <td>510</td>
+                <td>>1KM</td>
+                <td>875</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+            </tr>
+            <tr>
+                <td>BS GS</td>
+                <td>72</td>
+                <td>70</td>
+                <td>8%</td>
+                <td></td>
+                <td></td>
+                <td>597</td>
+                <td>>1KM</td>
+                <td>785</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+                <td class="TierBalas6">6</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div><br><br><br><br>
+<div id="DivBalas">
+<table border="1" class="InfoBalas">
+    <tbody>
+        <tr>
+            <td class="cabezera">12.7x55mm</td>
+            <td class="cabezera">Daño</td>
+            <td class="cabezera">Penetracion</td>
+            <td class="cabezera">Frag%</td>
+            <td class="cabezera">Retroceso</td>
+            <td class="cabezera">Precision</td>
+            <td class="cabezera">Distancia Ef</td>
+            <td class="cabezera">Distancia Max</td>
+            <td class="cabezera">Velocidad m/s</td>
+            <td class="cabezera">Clase1</td>
+            <td class="cabezera">Clase2</td>
+            <td class="cabezera">Clase3</td>
+            <td class="cabezera">Clase4</td>
+            <td class="cabezera">Clase5</td>
+            <td class="cabezera">Clase6</td>
+        </tr>
+        <tr>
+            <td>PS12A</td>
+            <td>165</td>
+            <td>10</td>
+            <td>70%</td>
+            <td>-12 ▼</td>
+            <td>-15% ▼</td>
+            <td>439</td>
+            <td>>1KM</td>
+            <td>290</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+        </tr>
+         <tr>
+            <td>PS12</td>
+            <td>115</td>
+            <td>28</td>
+            <td>30%</td>
+            <td></td>
+            <td>10% ▲</td>
+            <td>>1KM</td>
+            <td>>1KM</td>
+            <td>285</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas5">5</td>
+            <td class="TierBalas2">2</td>
+            <td class="TierBalas1">1</td>
+            <td class="TierBalas">0</td>
+        </tr>
+        <tr>
+            <td>PS12B</td>
+            <td>102</td>
+            <td>46</td>
+            <td>30%</td>
+            <td>15  ▲</td>
+            <td></td>
+            <td>719</td>
+            <td>>1KM</td>
+            <td>300</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas5">5</td>
+            <td class="TierBalas4">4</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><br><br><br><br>
+<div id="DivBalas">
+<table border="1" class="InfoBalas">
+    <tbody>
+        <tr>
+            <td class="cabezera">.338 Lapua Magnum</td>
+            <td class="cabezera">Daño</td>
+            <td class="cabezera">Penetracion</td>
+            <td class="cabezera">Frag%</td>
+            <td class="cabezera">Retroceso</td>
+            <td class="cabezera">Precision</td>
+            <td class="cabezera">Distancia Ef</td>
+            <td class="cabezera">Distancia Max</td>
+            <td class="cabezera">Velocidad m/s</td>
+            <td class="cabezera">Clase1</td>
+            <td class="cabezera">Clase2</td>
+            <td class="cabezera">Clase3</td>
+            <td class="cabezera">Clase4</td>
+            <td class="cabezera">Clase5</td>
+            <td class="cabezera">Clase6</td>
+        </tr>
+        <tr>
+            <td>TAC-X</td>
+            <td>196</td>
+            <td>18</td>
+            <td>50%</td>
+            <td>5 ▲</td>
+            <td>10% ▲</td>
+            <td>716</td>
+            <td>>1KM</td>
+            <td>880</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas5">5</td>
+            <td class="TierBalas3">3</td>
+            <td class="TierBalas1">1</td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+        </tr>
+         <tr>
+            <td>UCW</td>
+            <td>142</td>
+            <td>32</td>
+            <td>60%</td>
+            <td></td>
+            <td>-5% ▼</td>
+            <td>702</td>
+            <td>>1KM</td>
+            <td>849</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas5">5</td>
+            <td class="TierBalas4">4</td>
+            <td class="TierBalas2">2</td>
+        </tr>
+        <tr>
+            <td>FMJ</td>
+            <td>122</td>
+            <td>47</td>
+            <td>20%</td>
+            <td></td>
+            <td></td>
+            <td>733</td>
+            <td>>1KM</td>
+            <td>900</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas5">5</td>
+            <td class="TierBalas5">5</td>
+        </tr>
+        <tr>
+            <td>AP</td>
+            <td>115</td>
+            <td>79</td>
+            <td>13%</td>
+            <td>10 ▲</td>
+            <td></td>
+            <td>696</td>
+            <td>>1KM</td>
+            <td>849</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><br><br><br><br>
+<div id="DivBalas">
+<table border="1" class="InfoBalas">
+    <tbody>
+        <tr>
+            <td class="cabezera">Mounted Weapons</td>
+            <td class="cabezera">Daño</td>
+            <td class="cabezera">Penetracion</td>
+            <td class="cabezera">Frag%</td>
+            <td class="cabezera">Retroceso</td>
+            <td class="cabezera">Precision</td>
+            <td class="cabezera">Distancia Ef</td>
+            <td class="cabezera">Distancia Max</td>
+            <td class="cabezera">Velocidad m/s</td>
+            <td class="cabezera">Clase1</td>
+            <td class="cabezera">Clase2</td>
+            <td class="cabezera">Clase3</td>
+            <td class="cabezera">Clase4</td>
+            <td class="cabezera">Clase5</td>
+            <td class="cabezera">Clase6</td>
+        </tr>
+        <tr>
+            <td>30MM GRENADE</td>
+            <td>199</td>
+            <td>1</td>
+            <td>0%</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>></td>
+            <td></td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+            <td class="TierBalas">0</td>
+        </tr>
+         <tr>
+            <td>12.7X108MM</td>
+            <td>182</td>
+            <td>88</td>
+            <td>17%</td>
+            <td></td>
+            <td></td>
+            <td>891</td>
+            <td>>1KM</td>
+            <td></td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+        </tr>
+        <tr>
+            <td>12.7X108MM TRACER</td>
+            <td>199</td>
+            <td>80</td>
+            <td>17%</td>
+            <td></td>
+            <td></td>
+            <td>446</td>
+            <td>>1KM</td>
+            <td></td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+            <td class="TierBalas6">6</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><br><br><br><br>
+<div id="DivBalas">
+<table border="1" class="InfoBalas">
+    <tbody>
+        <tr>
+            <td class="cabezera">Mounted Weapons</td>
+            <td class="cabezera">Daño</td>
+            <td class="cabezera">Penetracion</td>
+            <td class="cabezera">Frag%</td>
+            <td class="cabezera">Retroceso</td>
+            <td class="cabezera">Precision</td>
+            <td class="cabezera">Distancia Ef</td>
+            <td class="cabezera">Distancia Max</td>
+            <td class="cabezera">Velocidad m/s</td>
+            <td class="cabezera">Clase1</td>
+            <td class="cabezera">Clase2</td>
+            <td class="cabezera">Clase3</td>
+            <td class="cabezera">Clase4</td>
+            <td class="cabezera">Clase5</td>
+            <td class="cabezera">Clase6</td>
+        </tr>
+        <tr>
+            <td>40MM BUCKSHOT GRENADE</td>
+            <td>160</td>
+            <td>5</td>
+            <td>0%</td>
+            <td></td>
+            <td></td>
+            <td>994</td>
+            <td>>1KM</td>
+            <td></td>
+            <td class="TierBalas5">5</td>
+            <td class="TierBalas3">3</td>
+            <td class="TierBalas3">3</td>
+            <td class="TierBalas3">3</td>
+            <td class="TierBalas3">3</td>
+            <td class="TierBalas3">3</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+</main>
+    <footer>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook</a>
+            <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i>Twitter</a>
+            <a href="#" target="_blank"><i class="fi fi-brands-instagram"></i>Instagram</a>
+        </div>
+        <p>Autor: Ivan Crrera vila</p>
+    </footer>
+</body>
+</html>

@@ -6,13 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setupFormHandler("loginForm", "http://localhost/TFG/PHP/login.php", "loginMessage");
     setupFormHandler("registerForm", "http://localhost/TFG/PHP/register.php", "registerMessage");
-
-    // Comprobar si el usuario está autenticado
-    if (localStorage.getItem("isAuthenticated") === "true") {
-        mostrarBotonCerrarSesion(); // Mostrar el botón de cerrar sesión si ya está autenticado
-    }
-
-    document.getElementById("logoutBtn").addEventListener("click", cerrarSesion); // Agregar el evento de cerrar sesión
 });
 
 // Función para cargar los modales dinámicamente en el contenedor
@@ -37,6 +30,7 @@ function cargarModales() {
                     <h5 class="registrarse" onclick="mostrarModalRegistro()">Registrarse</h5>
                     <h5 class="contrasena" onclick="modalRecuperarContraseña()">¿Olvidaste tu Contraseña?</h5>
                 </div>
+                <p id="loginMessage"></p>
             </form>
         </div>
 
@@ -55,8 +49,8 @@ function cargarModales() {
                 <input type="password" id="registerPassword" name="password" placeholder="Contraseña" required>
 
                 <button type="submit">Registrarse</button>
+                <p id="registerMessage"></p>
             </form>
-            <p id="registerMessage"></p>
         </div>
 
         <!-- Modal para Olvidaste tu Contraseña -->
@@ -104,35 +98,20 @@ function setupFormHandler(formId, url, messageContainerId) {
     form.addEventListener("submit", event => {
         event.preventDefault();
         const formData = new FormData(form);
-        fetch(url,"http:localhost/TFG/PHP/login.php", {
+        fetch(url, {
             method: 'POST',
             body: formData
         })
         .then(response => response.text())
-        .then(text => document.getElementById(messageContainerId).innerHTML = text)
+        .then(text => {
+            document.getElementById(messageContainerId).innerHTML = text;
+            if(text.includes("éxito")){
+                alert("Inicio de sesión correcto.");
+                cerrarModal();
+            } else {
+                document.getElementById(messageContainerId).innerHTML = text;
+            }
+        })
         .catch(error => document.getElementById(messageContainerId).innerHTML = 'Error al enviar los datos.');
     });
-}
-
-// Función para mostrar los botones correspondientes cuando el usuario está autenticado
-function mostrarBotonCerrarSesion() {
-    document.getElementById("loginBtn").style.display = "none";
-    document.getElementById("registerBtn").style.display = "none";
-    document.getElementById("logoutBtn").style.display = "block";
-}
-
-// Función para iniciar sesión
-function iniciarSesion() {
-    // Aquí harías la validación de los datos del formulario de login
-    // Si la validación es correcta, almacenamos el estado de autenticación en el localStorage
-    localStorage.setItem("isAuthenticated", "true");
-    mostrarBotonCerrarSesion();
-}
-
-// Función para cerrar sesión
-function cerrarSesion() {
-    localStorage.removeItem("isAuthenticated"); // Removemos el estado de autenticación
-    document.getElementById("loginBtn").style.display = "block";
-    document.getElementById("registerBtn").style.display = "block";
-    document.getElementById("logoutBtn").style.display = "none";
 }
