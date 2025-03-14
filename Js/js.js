@@ -1,20 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
-    cargarModales(); // Cargar los modales dinámicamente
+    cargarModales();
+    verificarSesion();
 
-    document.getElementById("loginBtn").addEventListener("click", () => abrirModal("loginModal"));
-    document.getElementById("registerBtn").addEventListener("click", () => abrirModal("registerModal"));
+    // Verifica si los elementos existen antes de agregar el evento
+    const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (loginBtn) {
+        loginBtn.style.display = "block"; // Asegúrate de que el botón esté visible
+        loginBtn.addEventListener("click", () => abrirModal("loginModal"));
+    } else {
+        console.error("Elemento loginBtn no encontrado.");
+    }
+
+    if (registerBtn) {
+        registerBtn.style.display = "block"; // Asegúrate de que el botón esté visible
+        registerBtn.addEventListener("click", () => abrirModal("registerModal"));
+    } else {
+        console.error("Elemento registerBtn no encontrado.");
+    }
+
+    if (logoutBtn) {
+        logoutBtn.style.display = "none"; // Asegúrate de que el botón esté oculto inicialmente
+        logoutBtn.addEventListener("click", cerrarSesion);
+    } else {
+        console.error("Elemento logoutBtn no encontrado.");
+    }
 
     setupFormHandler("loginForm", "http://localhost/TFG/PHP/login.php", "loginMessage");
     setupFormHandler("registerForm", "http://localhost/TFG/PHP/register.php", "registerMessage");
 });
 
-// Función para cargar los modales dinámicamente en el contenedor
+// ================== FUNCIONES MODALES ================== //
 function cargarModales() {
     document.getElementById("modal-container").innerHTML = `
-        <!-- Overlay para los modales -->
         <div class="overlay" id="overlay" onclick="cerrarModal()"></div>
 
-        <!-- Modal de inicio de sesión -->
+        <!-- Modal Login -->
         <div class="modal" id="loginModal">
             <span class="close-btn" onclick="cerrarModal()">&times;</span>
             <h2>Iniciar Sesión</h2>
@@ -34,26 +57,23 @@ function cargarModales() {
             </form>
         </div>
 
-        <!-- Modal de registro -->
+        <!-- Modal Register -->
         <div class="modal" id="registerModal">
             <span class="close-btn" onclick="cerrarModal()">&times;</span>
             <h2>Registrarse</h2>
             <form id="registerForm">
                 <label for="registerUsername">Usuario:</label>
                 <input type="text" id="registerUsername" name="username" placeholder="Usuario" required>
-
                 <label for="registerEmail">Correo Electrónico:</label>
                 <input type="email" id="registerEmail" name="email" placeholder="Correo Electrónico" required>
-
                 <label for="registerPassword">Contraseña:</label>
                 <input type="password" id="registerPassword" name="password" placeholder="Contraseña" required>
-
                 <button type="submit">Registrarse</button>
                 <p id="registerMessage"></p>
             </form>
         </div>
 
-        <!-- Modal para Olvidaste tu Contraseña -->
+        <!-- Modal Recuperar Contraseña -->
         <div class="modal" id="forgotPasswordModal">
             <span class="close-btn" onclick="cerrarModal()">&times;</span>
             <h2>Recuperar Contraseña</h2>
@@ -67,13 +87,38 @@ function cargarModales() {
     `;
 }
 
-// Función para abrir el modal
+// ================== FUNCIONALIDAD SESIÓN ================== //
+function verificarSesion() {
+    const usuario = localStorage.getItem('sesionActiva');
+    console.log("Sesión Activa:", usuario); // Debugging line
+    const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (usuario) {
+        if (loginBtn) loginBtn.style.display = "none";
+        if (registerBtn) registerBtn.style.display = "none";
+        if (logoutBtn) logoutBtn.style.display = "block";
+    } else {
+        if (loginBtn) loginBtn.style.display = "block";
+        if (registerBtn) registerBtn.style.display = "block";
+        if (logoutBtn) logoutBtn.style.display = "none";
+    }
+}
+
+function cerrarSesion() {
+    localStorage.removeItem('sesionActiva');
+    alert("Sesión cerrada.");
+    verificarSesion();
+    location.reload();
+}
+
+// ================== FUNCIONES AUXILIARES ================== //
 function abrirModal(id) {
     document.getElementById("overlay").style.display = "block";
     document.getElementById(id).style.display = "block";
 }
 
-// Función para cerrar el modal
 function cerrarModal() {
     document.getElementById("overlay").style.display = "none";
     document.querySelectorAll(".modal").forEach(modal => {
@@ -81,7 +126,6 @@ function cerrarModal() {
     });
 }
 
-// Funciones para cambiar entre modales
 function mostrarModalRegistro() {
     cerrarModal();
     abrirModal("registerModal");
@@ -92,26 +136,27 @@ function modalRecuperarContraseña() {
     abrirModal("forgotPasswordModal");
 }
 
-// Función para manejar formularios y enviarlos mediante AJAX
 function setupFormHandler(formId, url, messageContainerId) {
     const form = document.getElementById(formId);
-    form.addEventListener("submit", event => {
-        event.preventDefault();
-        const formData = new FormData(form);
-        fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(text => {
-            document.getElementById(messageContainerId).innerHTML = text;
-            if(text.includes("éxito")){
-                alert("Inicio de sesión correcto.");
-                cerrarModal();
-            } else {
-                document.getElementById(messageContainerId).innerHTML = text;
-            }
-        })
-        .catch(error => document.getElementById(messageContainerId).innerHTML = 'Error al enviar los datos.');
-    });
+    if (form) {
+        form.addEventListener("submit", event => {
+            event.preventDefault();
+            const formData = new FormData(form);
+
+            // Simulación de login/registro exitoso
+            localStorage.setItem('sesionActiva', 'true');
+            console.log("Sesión iniciada."); // Debugging line
+
+            // Actualizar interfaz
+            document.getElementById(messageContainerId).innerHTML = "¡Operación exitosa!";
+            cerrarModal();
+            verificarSesion();
+            alert("Redirigiendo...");
+
+            // Limpiar formulario
+            form.reset();
+        });
+    } else {
+        console.error(`Formulario con ID ${formId} no encontrado.`);
+    }
 }
