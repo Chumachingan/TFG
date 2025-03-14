@@ -35,6 +35,7 @@ nav {
     position: absolute;
     right: 20px;
 }
+
 .auth-buttons #logoutBtn {
     display: none;
 }
@@ -143,13 +144,18 @@ nav {
     text-align: right;
     /* Alinea a la derecha */
 }
- 
+
 #registerForm label {
-    display: block;  /* Hace que los labels ocupen toda la línea */
-    text-align: left; /* Alinea el texto a la izquierda */
-    margin-bottom: 5px; /* Espaciado inferior para separar del input */
-    font-weight: bold; /* Opcional: hace que el texto del label sea más visible */
+    display: block;
+    /* Hace que los labels ocupen toda la línea */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    margin-bottom: 5px;
+    /* Espaciado inferior para separar del input */
+    font-weight: bold;
+    /* Opcional: hace que el texto del label sea más visible */
 }
+
 .modal form input {
     display: block;
     width: 94%;
@@ -222,17 +228,40 @@ iframe {
     margin-top: 30px;
 }
 
-/* Contenedor de información de balas */
+
+/* Estilos generales de tabla (opcional, si no los tienes) */
 .InfoBalas {
-    display: inline-block;
-    text-align: center;
-    margin: 0px;
-    border: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    color: whitesmoke;
     background-color: #2e2c2c;
-    margin-left: 10%;
-    margin-right: 10%;
+    text-align: center;
 }
+
+.InfoBalas th, .InfoBalas td {
+    border: 1px solid white;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* 
+.InfoBalas td:nth-child(10), 
+.InfoBalas td:nth-child(11), 
+.InfoBalas td:nth-child(12), 
+.InfoBalas td:nth-child(13), 
+.InfoBalas td:nth-child(14), 
+.InfoBalas td:nth-child(15) { 
+    font-weight: bold;
+    color: black;
+}
+
+.InfoBalas td:nth-child(10) { background-color: rgb(255, 94, 0); } 
+.InfoBalas td:nth-child(11) { background-color: rgba(255, 153, 0, 0.952); } 
+.InfoBalas td:nth-child(12) { background-color: rgba(255, 208, 0, 0.952); } 
+.InfoBalas td:nth-child(13) { background-color: yellow; } 
+.InfoBalas td:nth-child(14) { background-color: greenyellow; } 
+.InfoBalas td:nth-child(15) { background-color: green; }  */
 
 /* Estilos de las listas y submenús */
 ul {
@@ -268,68 +297,26 @@ ul ul li {
 
 /* Estilos para la cabecera */
 .cabezera {
-    text-decoration: none !important;
-    /* Evita que los textos tengan subrayado */
     background-color: #161616;
-    /* Fondo oscuro */
+    color: white;
+    font-weight: bold;
 }
-
 /* Estilos para las diferentes categorías de balas según su efectividad */
-.TierBalas {
-    text-decoration: none !important;
-    color: #0d0d0d;
-    /* Texto en negro */
-    background-color: red;
-    /* Categoría más baja (peor daño o penetración) */
-}
+/* Estilos específicos por valor (0-6) */
+.clase-0 { background-color: #C0C0C0; color: black; } /* Gris claro - inútil */
+.clase-1 { background-color: #FF3030; color: black; } /* Rojo fuerte */
+.clase-2 { background-color: #FF6347; color: black; } /* Rojo anaranjado */
+.clase-3 { background-color: #FF9800; color: black; } /* naranja medio */
+.clase-4 { background-color: #FFEB3B; color: black; } /* amarillo */
+.clase-5 { background-color: #8BC34A; color: black; } /* verde claro */
+.clase-6 { background-color: #4CAF50; color: white; } /* verde oscuro */
 
-.TierBalas1 {
-    text-decoration: none !important;
-    color: #0d0d0d;
-    background-color: rgb(255, 94, 0);
-    /* Color naranja oscuro */
-}
 
-.TierBalas2 {
-    text-decoration: none !important;
-    color: #0d0d0d;
-    background-color: rgba(255, 153, 0, 0.952);
-    /* Naranja más claro */
-}
-
-.TierBalas3 {
-    text-decoration: none !important;
-    color: #0d0d0d;
-    background-color: rgba(255, 208, 0, 0.952);
-    /* Amarillo anaranjado */
-}
-
-.TierBalas4 {
-    text-decoration: none !important;
-    color: #0d0d0d;
-    background-color: yellow;
-    /* Amarillo */
-}
-
-.TierBalas5 {
-    text-decoration: none !important;
-    color: #0d0d0d;
-    background-color: greenyellow;
-    /* Verde claro */
-}
-
-.TierBalas6 {
-    text-decoration: none !important;
-    color: #0d0d0d;
-    background-color: green;
-    /* Verde oscuro, mejor categoría */
-}
-
-/* Contenedor principal de la información de balas */
 #DivBalas {
-    margin-left: 20%;
-    margin-right: 20%;
-    /* Centra el contenido con márgenes laterales */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
 }
 
 /* Sección general */
