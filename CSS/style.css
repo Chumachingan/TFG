@@ -221,7 +221,7 @@ iframe {
     margin-top: 30px;
 }
 
-/* Estilos generales de tabla */
+/* Estilos generales de las tablas */
 .InfoBalas {
     width: 90%;
     margin: auto;
@@ -234,6 +234,7 @@ iframe {
 .InfoBalas th, .InfoBalas td {
     border: 1px solid white;
     padding: 8px;
+    text-align: center;
     font-size: 14px;
 }
 
@@ -277,13 +278,13 @@ ul ul li {
 }
 
 /* Estilos para las diferentes categorías de balas según su efectividad */
-.clase-0 { background-color: #C0C0C0; color: black; } /* Gris claro - inútil */
-.clase-1 { background-color: #FF3030; color: black; } /* Rojo fuerte */
-.clase-2 { background-color: #FF6347; color: black; } /* Rojo anaranjado */
-.clase-3 { background-color: #FF9800; color: black; } /* naranja medio */
-.clase-4 { background-color: #FFEB3B; color: black; } /* amarillo */
-.clase-5 { background-color: #8BC34A; color: black; } /* verde claro */
-.clase-6 { background-color: #4CAF50; color: white; } /* verde oscuro */
+.clase-0 { background-color: #FF3030; color: black; } /* Rojo fuerte */
+.clase-1 { background-color: #FF6347; color: black; } /* Rojo anaranjado */
+.clase-2 { background-color: #FF9800; color: black; } /* Naranja medio */
+.clase-3 { background-color: #FFEB3B; color: black; } /* Amarillo */
+.clase-4 { background-color: #8BC34A; color: black; } /* Verde claro */
+.clase-5 { background-color: #4CAF50; color: white; } /* Verde oscuro */
+.clase-6 { background-color: #006400; color: white; } /* Verde más oscuro */
 
 #DivBalas {
     margin-left: auto;
