@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             divContenedor.innerHTML = ""; // Limpiar contenido anterior
 
-            // 🔹 Mantener la generación de las tablas de balas
+            // 🔹 Generar las tablas de balas
             Object.keys(data.balas).forEach(tipo => {
                 const tablaHTML = `
                     <h2>${tipo}</h2>
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <th>Distancia Efectiva</th>
                                 <th>Distancia Máx</th>
                                 <th>Velocidad</th>
-                                <th>Tier</th>
                                 <th>Clase1</th>
                                 <th>Clase2</th>
                                 <th>Clase3</th>
@@ -42,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
 
                 divContenedor.innerHTML += tablaHTML;
-
                 const tbody = document.getElementById(`tabla-${tipo.replace(/\s/g, '')}`);
+
                 Object.values(data.balas[tipo]).forEach(bala => {
                     tbody.innerHTML += `
                         <tr>
@@ -57,12 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
                             <td>${bala.distanciaEf}</td>
                             <td>${bala.distanciaMax}</td>
                             <td>${bala.velocidad}</td>
-                            <td class="tier" data-tier="${bala.tier}">${bala.tier}</td>
-                            ${[1, 2, 3, 4, 5, 6].map(num => `
-                                <td class="clase-${bala.clases["Clase" + num] || 0}">
-                                    ${bala.clases["Clase" + num] ?? '-'}
-                                </td>
-                            `).join('')}
+                            ${[1, 2, 3, 4, 5, 6].map(num => {
+                                const valorClase = bala.clases && bala.clases[num] !== '-' ? bala.clases[num] : '-';
+                                return `
+                                    <td class="clase-${num}" style="background-color: ${obtenerColorPorValor(valorClase)}; color: black;">
+                                        ${valorClase}
+                                    </td>`;
+                            }).join('')}
                         </tr>`;
                 });
             });
@@ -84,14 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
 
             divContenedor.innerHTML += tablaTiersHTML;
-
             const tablaTiers = document.getElementById("tablaTiers");
             if (tablaTiers) {
                 data.tiers.forEach(tier => {
                     tablaTiers.innerHTML += `
                         <tr>
                             <td>${tier.id}</td>
-                            <td class="tier" data-tier="${tier.nivel}">${tier.nivel}</td>
+                            <td class="tier" data-tier="${tier.nivel}" style="background-color: ${obtenerColorPorNivel(tier.nivel)}; color: black;">${tier.nivel}</td>
                             <td>${tier.efectividad}</td>
                             <td>${tier.descripcion}</td>
                         </tr>`;
@@ -108,6 +107,19 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Error cargando los datos:", err));
 });
 
+// Función para asignar colores según el valor de clase
+function obtenerColorPorValor(valor) {
+    switch (parseInt(valor)) {
+        case 1: return "#ff4c4c"; // Rojo claro
+        case 2: return "#ff944c"; // Naranja
+        case 3: return "#ffc94c"; // Amarillo
+        case 4: return "#ffeb4c"; // Verde claro
+        case 5: return "#aaff4c"; // Verde
+        case 6: return "#2c9c2c"; // Verde Oscuro
+        default: return "transparent"; // Sin color
+    }
+}
+
 // Función para asignar colores según el nivel de tier
 function obtenerColorPorNivel(nivel) {
     switch (nivel) {
@@ -118,6 +130,6 @@ function obtenerColorPorNivel(nivel) {
         case 4: return "#aaff4c"; // Verde Claro
         case 5: return "#4cff4c"; // Verde
         case 6: return "#2c9c2c"; // Verde Oscuro
-        default: return "transparent"; // Sin color si no es válido
+        default: return "transparent"; // Sin color
     }
 }

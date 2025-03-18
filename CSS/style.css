@@ -253,8 +253,8 @@ iframe {
 
 .InfoBalas td[class^="clase-"] {
     font-weight: bold;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2); */
 }
 
 /* Espaciado para mejorar la visibilidad */
@@ -265,6 +265,8 @@ iframe {
 .InfoBalas td:last-child, .InfoBalas th:last-child {
     padding-right: 15px;
 }
+
+
 
 /* Estilos de las listas y submenús */
 ul {

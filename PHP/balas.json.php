@@ -44,14 +44,7 @@ while ($row = $result->fetch_assoc()) {
         "distanciaMax" => $row["distanciaMax"],
         "velocidad" => (int)$row["velocidad"],
         "tier" => (int)$row["tier_nivel"],
-        "clases" => [
-            "Clase1" => "-",
-            "Clase2" => "-",
-            "Clase3" => "-",
-            "Clase4" => "-",
-            "Clase5" => "-",
-            "Clase6" => "-"
-        ]
+        "clases" => [1 => '-', 2 => '-', 3 => '-', 4 => '-', 5 => '-', 6 => '-']
     ];
 }
 
@@ -62,12 +55,12 @@ $resClases = $conn->query($sqlClases);
 if ($resClases && $resClases->num_rows > 0) {
     while ($claseRow = $resClases->fetch_assoc()) {
         $idBala = $claseRow["bala_id"];
-        $clase = "Clase" . $claseRow["clase"];
+        $claseNum = (int)$claseRow["clase"];
         $valor = (int)$claseRow["valor"];
 
         foreach ($data["balas"] as $tipo => &$balasTipo) {
             if (isset($balasTipo[$idBala])) {
-                $balasTipo[$idBala]["clases"][$clase] = $valor;
+                $balasTipo[$idBala]["clases"][$claseNum] = $valor;
             }
         }
     }
