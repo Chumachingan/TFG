@@ -2,27 +2,26 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarModales();
     verificarSesion();
 
-    // Verifica si los elementos existen antes de agregar el evento
     const loginBtn = document.getElementById("loginBtn");
     const registerBtn = document.getElementById("registerBtn");
     const logoutBtn = document.getElementById("logoutBtn");
 
     if (loginBtn) {
-        loginBtn.style.display = "block"; // Asegúrate de que el botón esté visible
+        loginBtn.style.display = "block";
         loginBtn.addEventListener("click", () => abrirModal("loginModal"));
     } else {
         console.error("Elemento loginBtn no encontrado.");
     }
 
     if (registerBtn) {
-        registerBtn.style.display = "block"; // Asegúrate de que el botón esté visible
+        registerBtn.style.display = "block";
         registerBtn.addEventListener("click", () => abrirModal("registerModal"));
     } else {
         console.error("Elemento registerBtn no encontrado.");
     }
 
     if (logoutBtn) {
-        logoutBtn.style.display = "none"; // Asegúrate de que el botón esté oculto inicialmente
+        logoutBtn.style.display = "none";
         logoutBtn.addEventListener("click", cerrarSesion);
     } else {
         console.error("Elemento logoutBtn no encontrado.");
@@ -85,12 +84,15 @@ function cargarModales() {
             <p id="forgotPasswordMessage"></p>
         </div>
     `;
+
+    // Agregar el evento después de que los elementos estén en el DOM
+    document.getElementById("loginForm").addEventListener("submit", validarLogin);
 }
 
 // ================== FUNCIONALIDAD SESIÓN ================== //
 function verificarSesion() {
     const usuario = localStorage.getItem('sesionActiva');
-    console.log("Sesión Activa:", usuario); // Debugging line
+    console.log("Sesión Activa:", usuario);
     const loginBtn = document.getElementById("loginBtn");
     const registerBtn = document.getElementById("registerBtn");
     const logoutBtn = document.getElementById("logoutBtn");
@@ -143,17 +145,14 @@ function setupFormHandler(formId, url, messageContainerId) {
             event.preventDefault();
             const formData = new FormData(form);
 
-            // Simulación de login/registro exitoso
             localStorage.setItem('sesionActiva', 'true');
-            console.log("Sesión iniciada."); // Debugging line
+            console.log("Sesión iniciada.");
 
-            // Actualizar interfaz
             document.getElementById(messageContainerId).innerHTML = "¡Operación exitosa!";
             cerrarModal();
             verificarSesion();
             alert("Redirigiendo...");
 
-            // Limpiar formulario
             form.reset();
         });
     } else {

@@ -7,6 +7,7 @@ ini_set('display_errors', 1);
 
 if (ob_get_length()) ob_clean();
 
+// 🔹 Obtener todas las balas agrupadas por tipo
 $sql = "SELECT 
             b.id, b.nombre, b.daño, b.penetracion, b.frag_percent, 
             b.retroceso, b.precision_bala, b.distanciaEf, b.distanciaMax, 
@@ -17,20 +18,21 @@ $sql = "SELECT
 
 $result = $conn->query($sql);
 
-$balas = [];
+$data = ["balas" => [], "tiers" => []];
 
 if (!$result) {
     echo json_encode(["error" => "Error SQL: " . $conn->error]);
     exit;
 }
 
+// 🔹 Agrupar las balas por tipo
 while ($row = $result->fetch_assoc()) {
     $idBala = $row["id"];
-    if (!isset($balas[$row["tipo"]])) {
-        $balas[$row["tipo"]] = [];
+    if (!isset($data["balas"][$row["tipo"]])) {
+        $data["balas"][$row["tipo"]] = [];
     }
 
-    $balas[$row["tipo"]][$idBala] = [
+    $data["balas"][$row["tipo"]][$idBala] = [
         "id" => (int)$row["id"],
         "nombre" => $row["nombre"],
         "daño" => (int)$row["daño"],
@@ -41,35 +43,42 @@ while ($row = $result->fetch_assoc()) {
         "distanciaEf" => $row["distanciaEf"],
         "distanciaMax" => $row["distanciaMax"],
         "velocidad" => (int)$row["velocidad"],
-        "tier" => (int)$row["tier_nivel"],
-        "clases" => [
-            "Clase1" => "-",
-            "Clase2" => "-",
-            "Clase3" => "-",
-            "Clase4" => "-",
-            "Clase5" => "-",
-            "Clase6" => "-"
-        ]
+        "clases" => [1 => '-', 2 => '-', 3 => '-', 4 => '-', 5 => '-', 6 => '-']
     ];
 }
 
-// Obtener los datos de eficacia_clases
+// 🔹 Obtener los datos de eficacia_clases
 $sqlClases = "SELECT bala_id, clase, valor FROM eficacia_clases";
 $resClases = $conn->query($sqlClases);
 
 if ($resClases && $resClases->num_rows > 0) {
     while ($claseRow = $resClases->fetch_assoc()) {
         $idBala = $claseRow["bala_id"];
-        $clase = "Clase" . $claseRow["clase"];
+        $claseNum = (int)$claseRow["clase"];
         $valor = (int)$claseRow["valor"];
 
-        foreach ($balas as $tipo => &$balasTipo) {
+        foreach ($data["balas"] as $tipo => &$balasTipo) {
             if (isset($balasTipo[$idBala])) {
-                $balasTipo[$idBala]["clases"][$clase] = $valor;
+                $balasTipo[$idBala]["clases"][$claseNum] = $valor;
             }
         }
     }
 }
 
-echo json_encode($balas, JSON_PRETTY_PRINT);
+// 🔹 Obtener los datos de tiers ordenados por nivel (0 a 6)
+$sqlTiers = "SELECT id, nivel, efectividad, descripcion FROM tiers ORDER BY nivel ASC";
+$resTiers = $conn->query($sqlTiers);
+
+if ($resTiers && $resTiers->num_rows > 0) {
+    while ($tierRow = $resTiers->fetch_assoc()) {
+        $data["tiers"][] = [
+            "id" => (int)$tierRow["id"],
+            "nivel" => (int)$tierRow["nivel"],
+            "efectividad" => $tierRow["efectividad"],
+            "descripcion" => $tierRow["descripcion"]
+        ];
+    }
+}
+
+echo json_encode($data, JSON_PRETTY_PRINT);
 ?>

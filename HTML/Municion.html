@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Munición</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="icon" type="image/png" href="../IMAGENES/logos/Hideout.png">
+    <title>Municion - Escape From Tarkov</title>
 </head>
+
 <body>
     <header></header>
     <nav>
@@ -38,9 +41,24 @@
         </div>
     </nav>
     <main>
+        <div id="DivTiers">
+        <h2>Tiers de Balas</h2>
+        <table class="InfoBalas">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nivel</th>
+                    <th>Efectividad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody id="tablaTiers"></tbody>
+        </table>
+        </div>
+
         <div id="DivBalas"></div> <!-- Contenedor donde se generarán las tablas -->
     </main>
-    
+
     <!-- Contenedor donde se insertarán los modales -->
     <div id="modal-container"></div>
 
@@ -57,4 +75,5 @@
     <script src="../Js/Validaciones.js"></script>
     <script src="../JS/cargarBalas.js"></script>
 </body>
+
 </html>

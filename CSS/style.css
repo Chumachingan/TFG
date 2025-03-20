@@ -33,7 +33,7 @@ nav {
 .auth-buttons {
     position: absolute;
     right: 20px;
-    width: 250px; /* Modificado para análisis */
+    /* width: 250px; */
     display: flex;
     flex-direction: row; /* Se asegura la alineación horizontal */
     justify-content: space-between;
@@ -96,8 +96,8 @@ nav {
 
 /*Tamaño del input del checkbox*/
 #remember-password {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
 }
 
 /* Estilo para el texto del label */
@@ -109,11 +109,6 @@ nav {
 .modal form .remember-me input {
     margin-right: 10px;
     transform: scale(1);
-}
-
-.modal form .remember-me label {
-    font-size: 14px;
-    color: #666;
 }
 
 /* Textos debajo de acceder */
@@ -253,8 +248,6 @@ iframe {
 
 .InfoBalas td[class^="clase-"] {
     font-weight: bold;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Espaciado para mejorar la visibilidad */
@@ -305,15 +298,6 @@ ul ul li {
     font-weight: bold;
 }
 
-/* Estilos para las diferentes categorías de balas según su efectividad */
-.clase-0 { background-color: red; color: white; }
-.clase-1 { background-color: orange; color: black; }
-.clase-2 { background-color: yellow; color: black; }
-.clase-3 { background-color: gold; color: black; }
-.clase-4 { background-color: green; color: white; }
-.clase-5 { background-color: lightgreen; color: black; }
-.clase-6 { background-color: lime; color: black; }
-
 #DivBalas {
     margin-left: auto;
     margin-right: auto;
@@ -333,6 +317,87 @@ ul ul li {
     border-radius: 5px;      /* Bordes redondeados */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
     letter-spacing: 2px;     /* Espaciado entre letras */
+}
+
+#DivTiers {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+}
+/*Estilos para los titulos de las balas en municion.html*/
+#DivTiers h2 {
+    font-size: 24px;         /* Tamaño del texto */
+    font-weight: bold;       /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: #ffcc00;          /* Color amarillo dorado */
+    text-align: center;      /* Centrado */
+    margin: 20px 0;          /* Espaciado arriba y abajo */
+    padding: 10px;           /* Espaciado interno */
+    background: linear-gradient(to right, #333, #555); /* Fondo degradado */
+    border-radius: 5px;      /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    letter-spacing: 2px;     /* Espaciado entre letras */
+}
+
+/* Estilos para los contenedores desplegables */
+details {
+    width: 80%;
+    margin: 20px auto;
+    background: #1e1e1e; /* Fondo oscuro para que coincida con las tablas */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+/* Estilos para el título del desplegable */
+summary {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00; /* Amarillo dorado para coincidir con los títulos */
+    padding: 15px;
+    background: linear-gradient(to right, #333, #555);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efecto hover en el título del desplegable */
+summary:hover {
+    background: linear-gradient(to right, #444, #666);
+}
+
+/* Espaciado y animación al abrir el desplegable */
+details[open] {
+    animation: fadeIn 0.3s ease-in-out;
+} 
+
+/* Asegurar que las tablas dentro del desplegable ocupen todo el espacio */
+details table {
+    width: 100%;
+    border-radius: 0px;
+}
+
+/* Espaciado interno dentro de cada desplegable */
+details > table {
+    padding: 10px;
+}
+
+details summary::-webkit-details-marker {
+    display: none; /* Oculta la flecha predeterminada en navegadores Webkit */
+}
+
+summary::after {
+    content: " ▼"; /* Flecha personalizada */
+    font-size: 16px;
+    color: #ffcc00;
+    transition: transform 0.3s ease-in-out;
+}
+
+details[open] summary::after {
+    content: " ▲"; /* Cambia la flecha al abrir */
 }
 
 /* Sección general */
