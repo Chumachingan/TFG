@@ -43,10 +43,6 @@ while ($row = $result->fetch_assoc()) {
         "distanciaEf" => $row["distanciaEf"],
         "distanciaMax" => $row["distanciaMax"],
         "velocidad" => (int)$row["velocidad"],
-
-
-        "tier" => (int)$row["tier_nivel"],
-
         "clases" => [1 => '-', 2 => '-', 3 => '-', 4 => '-', 5 => '-', 6 => '-']
     ];
 }

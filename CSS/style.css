@@ -259,8 +259,6 @@ iframe {
     padding-right: 15px;
 }
 
-
-
 /* Estilos de las listas y submenús */
 ul {
     list-style: none;
@@ -341,7 +339,6 @@ ul ul li {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
     letter-spacing: 2px;     /* Espaciado entre letras */
 }
-
 
 /* Estilos para los contenedores desplegables */
 details {

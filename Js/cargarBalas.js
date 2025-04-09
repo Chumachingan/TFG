@@ -40,35 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             <tbody id="tabla-${tipo.replace(/\s/g, '')}"></tbody>
                         </table>
                     </details>
-                    
-            // 🔹 Generar las tablas de balas
-            Object.keys(data.balas).forEach(tipo => {
-                const tablaHTML = `
-                    <h2>${tipo}</h2>
-                    <table class="InfoBalas">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Daño</th>
-                                <th>Penetración</th>
-                                <th>Frag%</th>
-                                <th>Retroceso</th>
-                                <th>Precisión</th>
-                                <th>Distancia Efectiva</th>
-                                <th>Distancia Máx</th>
-                                <th>Velocidad</th>
-                                <th>Clase1</th>
-                                <th>Clase2</th>
-                                <th>Clase3</th>
-                                <th>Clase4</th>
-                                <th>Clase5</th>
-                                <th>Clase6</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabla-${tipo.replace(/\s/g, '')}"></tbody>
-                    </table>
-
                 `;
 
                 divContenedor.innerHTML += tablaHTML;
@@ -98,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
 
-
+            // 🔹 Agregar tabla de tiers con desplegable
             const tablaTiersHTML = `
                 <details>
                     <summary><strong>Tiers</strong></summary>
@@ -114,22 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         <tbody id="tablaTiers"></tbody>
                     </table>
                 </details>
-
-            // 🔹 Agregar tabla de tiers al final sin modificar las balas
-            const tablaTiersHTML = `
-                <h2>Tiers</h2>
-                <table class="InfoBalas">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nivel</th>
-                            <th>Efectividad</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaTiers"></tbody>
-                </table>
-
             `;
 
             divContenedor.innerHTML += tablaTiersHTML;
@@ -145,14 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         </tr>`;
                 });
             }
-
-            // Aplicar colores a la columna "Nivel"
-            document.querySelectorAll(".tier").forEach(td => {
-                const nivel = parseInt(td.getAttribute("data-tier"));
-                td.style.backgroundColor = obtenerColorPorNivel(nivel);
-                td.style.color = "black"; // Asegurar buen contraste
-            });
-
         })
         .catch(err => console.error("Error cargando los datos:", err));
 });
@@ -182,5 +129,4 @@ function obtenerColorPorNivel(nivel) {
         case 6: return "#2c9c2c"; // Verde Oscuro
         default: return "transparent"; // Sin color
     }
-
 }
