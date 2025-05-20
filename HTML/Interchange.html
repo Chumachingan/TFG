@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Tarea.css">
+    <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <title>Encabezado y Pie de Página con Menú y Redes Sociales</title>
+</head>
+<body>
+    <header>
+        <img class="header-img" src="../IMAGENES/logos/logo5.png" alt="Logo">
+    </header>
+    <nav class="nav-container">
+        <ul class="nav-menu">
+          <li><a href="../Index.html">Inicio</a></li>
+          <li class="submenu"><a href="#">Mapas</a>
+            <ul>
+              <li><a href="./Factory.html">Factory</a></li>
+              <li><a href="./Woods.html">Woods</a></li>
+              <li><a href="./Customs.html">Customs</a></li>
+              <li><a href="./Interchange.html">Interchange</a></li>
+              <li><a href="./Reserve.html">Reserve</a></li>
+              <li><a href="./Shoreline.html">Shoreline</a></li>
+              <li><a href="./Thelab.html">The Lab</a></li>
+              <li><a href="./Lighthouse.html">Lighthouse</a></li>
+              <li><a href="./Streets.html">Streets</a></li>
+              <li><a href="./Groundzero.html">Ground Zero</a></li>
+            </ul>
+          </li>
+          <li><a href="./Municion.html">Munición</a></li>
+          <li><a href="./Headset.html">Headset</a></li>
+          <li><a href="./Traders.html">Traders</a></li>
+          <li><a href="./Contactos.html">Contacto</a></li>
+        </ul>
+        <div class="nav-user-buttons">
+            <button id="btn-login" class="btn-acceso" onclick="document.getElementById('loginModal').style.display='block'">Iniciar sesión</button>
+            <button id="btn-register" class="btn-acceso" onclick="document.getElementById('registroModal').style.display='block'">Registrarse</button>
+            <form id="logout-form" method="POST" action="PHP/logout.php" style="display: none;">
+              <input type="submit" class="btn-acceso" value="Cerrar sesión">
+            </form>
+          </div>
+      </nav>
+<main>
+    <div class="ParrafoMapas">
+      <div class="TextoMapas">
+        <h1>Interchange</h1>
+        <p>Situado en un cruce crítico, el Intercambiador Sur une el puerto de Tarkov con sus afueras industriales. 
+            Dominando esta área se encuentra el enorme centro comercial ULTRA,
+             anteriormente el eje central de los esfuerzos de evacuación de EMERCOM.</p>
+             <p>Enlace video extracciones:<a href="https://www.youtube.com/watch?v=_LIdj6q9yqs" target="_blank">Enlace</a></p>
+      </div>
+        <img  src="../IMAGENES/Mapas/Interchange.png" id="ImagenesMapas">
+    </div>
+</main>
+    <footer>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook</a>
+            <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i>Twitter</a>
+            <a href="#" target="_blank"><i class="fi fi-brands-instagram"></i>Instagram</a>
+        </div>
+        <p>Autor: Ivan Crrera vila</p>
+    </footer>
+</body>
+</html>

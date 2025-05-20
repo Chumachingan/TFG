@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Tarea.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <title>Encabezado y Pie de Página con Menú y Redes Sociales</title>
+</head>
+
+<body>
+    <header>
+        <img class="header-img" src="../IMAGENES/logos/logo5.png" alt="Logo">
+    </header>
+    <nav class="nav-container">
+        <ul class="nav-menu">
+            <li><a href="../Index.html">Inicio</a></li>
+            <li class="submenu"><a href="#">Mapas</a>
+                <ul>
+                    <li><a href="./Factory.html">Factory</a></li>
+                    <li><a href="./Woods.html">Woods</a></li>
+                    <li><a href="./Customs.html">Customs</a></li>
+                    <li><a href="./Interchange.html">Interchange</a></li>
+                    <li><a href="./Reserve.html">Reserve</a></li>
+                    <li><a href="./Shoreline.html">Shoreline</a></li>
+                    <li><a href="./Thelab.html">The Lab</a></li>
+                    <li><a href="./Lighthouse.html">Lighthouse</a></li>
+                    <li><a href="./Streets.html">Streets</a></li>
+                    <li><a href="./Groundzero.html">Ground Zero</a></li>
+                </ul>
+            </li>
+            <li><a href="./Municion.html">Munición</a></li>
+            <li><a href="./Headset.html">Headset</a></li>
+            <li><a href="./Traders.html">Traders</a></li>
+            <li><a href="./Contactos.html">Contacto</a></li>
+        </ul>
+        <div class="nav-user-buttons">
+            <button id="btn-login" class="btn-acceso"
+                onclick="document.getElementById('loginModal').style.display='block'">Iniciar sesión</button>
+            <button id="btn-register" class="btn-acceso"
+                onclick="document.getElementById('registroModal').style.display='block'">Registrarse</button>
+            <form id="logout-form" method="POST" action="PHP/logout.php" style="display: none;">
+                <input type="submit" class="btn-acceso" value="Cerrar sesión">
+            </form>
+        </div>
+    </nav>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+            <form method="POST" action="PHP/login.php">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Entrar">
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="registroModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('registroModal').style.display='none'">&times;</span>
+            <form method="POST" action="PHP/registro.php">
+                <h2>Registro</h2>
+                <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <div class="TextoMunicion">
+            <h1>Info balas</h1>
+            <p>La tabla proporcionada a continuación tiene información del tier o listado de la clasificacio de las
+                balas.</p>
+            <p>Las balas estan clasificadas desde el tier 0 las mas malas asta el tier 6 las mejores balas, tambien
+                estan clasificadas por colore del rojo al verde.</p>
+        </div>
+        <div id="contenedor-tablas"></div>
+    
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook</a>
+            <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i>Twitter</a>
+            <a href="#" target="_blank"><i class="fi fi-brands-instagram"></i>Instagram</a>
+        </div>
+        <p>Autor: Ivan Crrera vila</p>
+    </footer>
+
+    <script src="../JS/validaciones.js"></script>
+    <script src="../JS/sesion.js"></script>
+    <script src="../JS/cargar_municion.js"></script>
+
+</body>
+
+</html>

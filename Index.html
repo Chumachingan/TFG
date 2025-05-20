@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escape From Tarkov Info</title>
+  <link rel="stylesheet" href="CSS/Tarea.css" />
+</head>
+
+<body>
+  <header>
+    <img class="header-img" src="./IMAGENES/logos/logo5.png" alt="Logo">
+  </header>
+  <nav class="nav-container">
+    <ul class="nav-menu">
+      <li><a href="Index.html">Inicio</a></li>
+      <li class="submenu"><a>Mapas</a>
+        <ul>
+          <li><a href="HTML/Factory.html">Factory</a></li>
+          <li><a href="HTML/Woods.html">Woods</a></li>
+          <li><a href="HTML/Customs.html">Customs</a></li>
+          <li><a href="HTML/Interchange.html">Interchange</a></li>
+          <li><a href="HTML/Reserve.html">Reserve</a></li>
+          <li><a href="HTML/Shoreline.html">Shoreline</a></li>
+          <li><a href="HTML/Thelab.html">The Lab</a></li>
+          <li><a href="HTML/Lighthouse.html">Lighthouse</a></li>
+          <li><a href="HTML/Streets.html">Streets</a></li>
+          <li><a href="HTML/Groundzero.html">Ground Zero</a></li>
+        </ul>
+      </li>
+      <li><a href="HTML/Municion.html">Munición</a></li>
+      <li><a href="HTML/Headset.html">Headset</a></li>
+      <li><a href="HTML/Traders.html">Traders</a></li>
+      <li><a href="HTML/Contactos.html">Contacto</a></li>
+    </ul>
+    <div class="nav-user-buttons">
+      <button id="btn-login" class="btn-acceso" onclick="document.getElementById('loginModal').style.display='block'">Iniciar sesión</button>
+      <button id="btn-register" class="btn-acceso" onclick="document.getElementById('registroModal').style.display='block'">Registrarse</button>
+      <form id="logout-form" method="POST" action="PHP/logout.php" style="display: none;">
+        <input type="submit" class="btn-acceso" value="Cerrar sesión">
+      </form>
+    </div>
+    
+    
+  </nav>
+  
+
+  <main>
+    <div class="ParrafoIndex">
+    <h1>Información sobre Escape From Tarkov</h1>
+    <p>La página contiene información sobre mapas, munición, armas y traders del videojuego Escape From Tarkov.</p>
+    <h2>Tráiler del juego</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8R5t3a2jT4A?si=mmmdbA-A-JUIDfso"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+      <form method="POST" action="PHP/login.php">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <input type="submit" value="Entrar">
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Registro -->
+  <div id="registroModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('registroModal').style.display='none'">&times;</span>
+      <form method="POST" action="PHP/registro.php">
+        <h2>Registro</h2>
+        <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <input type="submit" value="Registrarse">
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Autor: Ivan Carrera Vila</p>
+  </footer>
+
+  <script src="JS/validaciones.js"></script>
+  <script src="./JS/sesion.js"></script>
+</body>
+
+</html>
