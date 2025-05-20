@@ -1,6 +1,0 @@
-que se guarde el inicio de sesion al cambiar de html 
-arreglar municion 
-despues de iniciar sesion no se quite 
-el apartdo de administrador
-el como gestionar si es usuario registrado o no 
-html nuevo chat y que solo se pueda escribir si esta registrado  si no que salga mensaje de login 
