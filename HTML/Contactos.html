@@ -42,43 +42,20 @@
           </div>
       </nav>
 <main>
-    <h1>Formulario de Contacto</h1>
-    <p>Rellene el formulario para escribirnos de alguna falta de informacion,mal funcionamiento de la pagina, 
-        alguna queja.
-    </p>
-    <p>Gracias por la ayuda.</p>
+    <div class="TextoHeadset">
+        <h1>Contacto rápido</h1>
+        <p>¿Tienes dudas, sugerencias o quieres reportar un problema? Escríbenos directamente:</p>
+    </div>
+    <form class="Formulario" id="contact-form">
+        <label for="correoUsuario">Tu correo electrónico:</label>
+        <input type="email" id="correoUsuario" name="correoUsuario" placeholder="Tu correo" required>
 
-    <form class="Formulario" action="URL.php" method="get">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
 
-        <label for="Nombre">Nombre:</label>
-        <input type="text" placeholder="Nombre" id="Nombre"> </input>
-<br>
-
-        <label for="Apellido">Primer Apellido:</label>
-        <input type="text" placeholder="Apellido" id="Apellido"> </input>
-<br>
-
-        <label for="Apellido">Segundo Apellido:</label>
-        <input type="text" placeholder="Apellido" id="Apellido"> </input>
-<br>
-
-        <label for="Correo">Correo Electronico:</label>
-        <input type="email" placeholder="Correo Electronico" id="Correo"> </input>
-<br>
-
-        <label for="Fecha">Fecha de hoy:</label>
-        <input type="month" placeholder="Fecha" id="Fecha"></input>
-<br>
-        <p>Introduce la queja o el </p>
-        <textarea name="Incidente" id="Incidente" cols="20" rows="10"></textarea>
-<br>
-        
-<br>
-        <input type="submit" value="Enviar" id="Enviar"> 
-        
-      </form>
-
-    
+        <input type="submit" value="Enviar">
+        <p id="form-status" style="margin-top:10px;"></p>
+    </form>
 </main>
     <footer>
         <div class="social-icons">
@@ -88,5 +65,29 @@
         </div>
         <p>Autor: Ivan Crrera vila</p>
     </footer>
+    <script>
+/* Simple envío AJAX usando fetch a un endpoint PHP (debes crear el archivo PHP para enviar el correo) */
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const correo = document.getElementById('correoUsuario').value;
+    const mensaje = document.getElementById('mensaje').value;
+    const status = document.getElementById('form-status');
+    status.textContent = "Enviando...";
+    try {
+        const res = await fetch('../PHP/enviar_correo.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: `correoUsuario=${encodeURIComponent(correo)}&mensaje=${encodeURIComponent(mensaje)}`
+        });
+        const text = await res.text();
+        status.textContent = text;
+        if(res.ok) {
+            document.getElementById('contact-form').reset();
+        }
+    } catch {
+        status.textContent = "Error al enviar el mensaje. Intenta más tarde.";
+    }
+});
+</script>
 </body>
 </html>

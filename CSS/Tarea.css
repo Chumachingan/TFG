@@ -1,3 +1,10 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     text-align: center;
     background-image: url('../IMAGENES/fondos/fondo2.jpg');
@@ -128,16 +135,85 @@ h2 {
 }
 
 .Formulario {
-    margin-top: 5%;
-    display: inline-block;
-    text-align: left;
-    color: whitesmoke;
+    background: #232526;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.22), 0 1.5px 4px rgba(255,255,255,0.03) inset;
+    padding: 32px 36px 24px 36px;
+    margin: 40px auto 0 auto;
+    max-width: 420px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 1.08em;
+    opacity: 0.97;
 }
 
-#Enviar {
-    background-color: #0d0d0d;
-    color: whitesmoke;
-    height: 30px;
+.Formulario label {
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #ffcc00;
+    letter-spacing: 0.01em;
+}
+
+.Formulario input[type="text"],
+.Formulario input[type="email"],
+.Formulario input[type="month"],
+.Formulario textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1.5px solid #444;
+    background: #18191a;
+    color: #f3f3f3;
+    margin-bottom: 10px;
+    font-size: 1em;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.Formulario input[type="text"]:focus,
+.Formulario input[type="email"]:focus,
+.Formulario input[type="month"]:focus,
+.Formulario textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+    box-shadow: 0 0 8px #ffcc0040;
+}
+
+.Formulario textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.Formulario input[type="submit"] {
+    background: linear-gradient(90deg, #ffcc00 60%, #e6b800 100%);
+    color: #232526;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.08em;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.Formulario input[type="submit"]:hover {
+    background: linear-gradient(90deg, #ffe066 60%, #ffcc00 100%);
+    color: #18191a;
+    box-shadow: 0 4px 16px #ffcc0030;
+}
+
+.Formulario p {
+    color: #f3f3f3;
+    margin: 0 0 8px 0;
+    font-size: 1em;
+}
+
+.Formulario br {
+    display: none;
 }
 
 iframe {
@@ -471,6 +547,30 @@ section {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 10px #000;
+    transition: transform 0.4s cubic-bezier(.22,1,.36,1), box-shadow 0.4s;
+    opacity: 0;
+    transform: scale(0.92) rotate(-3deg);
+    animation: cascoFadeIn 0.7s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+@keyframes cascoFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.92) rotate(-3deg);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.04) rotate(2deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.casco-card:hover {
+    transform: scale(1.06) rotate(2deg);
+    box-shadow: 0 12px 36px #ffcc0033;
 }
 
 .casco-card img {
@@ -656,4 +756,48 @@ hr {
     border: none;
     border-top: 2px solid transparent;
     width: 90%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .TraderRow, .TraderRow.reverse {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 18px;
+    }
+    .TraderDescriptionDerecha, .TraderDescriptionIzquierda {
+        max-width: 98vw;
+        min-height: unset;
+        padding: 14px 4vw;
+    }
+    .TraderRow img {
+        margin-left: 0;
+        height: 160px;
+    }
+    .modal-content {
+        width: 96vw;
+        min-width: unset;
+        padding: 14px 4vw;
+    }
+    main {
+        padding: 14px 2vw 0 2vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .ParrafoIndex, .TextoMapas, .TextoMunicion, .TextoHeadset, .contacto-rapido-box {
+        max-width: 98vw;
+        padding: 12px 2vw;
+    }
+    .gallery, .gallery2, #contenedor-cascos {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .casco-card {
+        width: 98vw;
+        padding: 10px 2vw;
+    }
+    .tabla-municion {
+        font-size: 0.95em;
+    }
 }
