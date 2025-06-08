@@ -1,0 +1,19 @@
+{
+  "name": "tfg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chumachingan/TFG.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chumachingan/TFG/issues"
+  },
+  "homepage": "https://github.com/Chumachingan/TFG#readme",
+  "description": ""
+}

@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($usuario && password_verify($password, $usuario['password_hash'])) {
         $_SESSION['usuario'] = $usuario['nombre_usuario'];
+        $_SESSION['es_admin'] = $usuario['es_admin'];
         header("Location: ../Index.html?login=ok");
         exit();
     } else {
