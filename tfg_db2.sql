@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 20-05-2025 a las 20:52:57
+-- Tiempo de generación: 07-06-2025 a las 18:19:05
 -- Versión del servidor: 9.1.0
 -- Versión de PHP: 8.3.14
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `auriculares` (
   `descripcion` text NOT NULL,
   `imagen` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `auriculares`
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `municiones` (
   `clase5` tinyint DEFAULT NULL,
   `clase6` tinyint DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=167 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=167 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `municiones`
@@ -267,7 +267,7 @@ CREATE TABLE IF NOT EXISTS `tier_municion` (
   `disparos_detencion` varchar(100) DEFAULT NULL,
   `descripcion` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tier_municion`
@@ -295,20 +295,18 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `email` varchar(100) NOT NULL,
   `password_hash` varchar(255) NOT NULL,
   `fecha_registro` datetime DEFAULT CURRENT_TIMESTAMP,
+  `es_admin` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `nombre_usuario` (`nombre_usuario`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre_usuario`, `email`, `password_hash`, `fecha_registro`) VALUES
-(9, 'manolo', 'manolo@gmail.com', '$2y$10$7Gc86SjkHERkEtN15LO9NuCteSfTJYC3a1OYFO4pHt1TvtAaGcUPC', '2025-05-04 15:54:19'),
-(8, 'Saul', 'saul@gmail.com', '$2y$10$3qnk6pPlWT3GwtuvJJB.W.AuhzLyQeaABupxuyLH4rBVe4D7bdio.', '2025-05-04 15:14:30'),
-(7, 'Mario', 'mario@gmail.com', '$2y$10$rpfuwLO0nxSB46cgMzR1XuSgnV9pI9z/X/Z1RcQYuJ0ogNCC1ot6K', '2025-05-04 12:27:36'),
-(6, 'Ivan', 'ivan@gmail.com', '$2y$10$Rg.xUKwq/FKHzQdtfXUOX.XeEflxoMbJBnfKndRUYMKdWE1AOOAV6', '2025-05-03 15:00:59');
+INSERT INTO `usuarios` (`id`, `nombre_usuario`, `email`, `password_hash`, `fecha_registro`, `es_admin`) VALUES
+(1, 'Ivan', 'ivanvilac@gmail.com', '$2y$10$eTOSVzFw8PA8ramLA4G63uURL.qkmvm4PbIL4Tjvs3LTHvzTMHOJa', '2025-06-07 15:33:52', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

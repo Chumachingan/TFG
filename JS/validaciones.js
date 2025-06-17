@@ -1,7 +1,11 @@
+// Script para validación de formularios de registro y login
+
 document.addEventListener("DOMContentLoaded", function () {
+    // Obtiene referencias a los formularios
     const registroForm = document.querySelector('form[action="PHP/registro.php"]');
     const loginForm = document.querySelector('form[action="PHP/login.php"]');
 
+    // Configura validaciones para el formulario de registro
     if (registroForm) {
         registroForm.addEventListener("submit", function (e) {
             if (!validarFormularioRegistro(this)) {
@@ -12,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         añadirEventosTiempoReal(registroForm);
     }
 
+    // Configura validaciones para el formulario de login
     if (loginForm) {
         loginForm.addEventListener("submit", function (e) {
             if (!validarFormularioLogin(this)) {
@@ -22,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         añadirEventosTiempoReal(loginForm);
     }
 
+    // Funciones de validación
     function validarFormularioRegistro(form) {
         const nombre = form.querySelector('input[name="nombre_usuario"]');
         const email = form.querySelector('input[name="email"]');
@@ -75,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return valido;
     }
 
+    // Funciones de UI para mostrar/ocultar errores
     function mostrarError(input, mensaje) {
         input.classList.add("input-error");
         input.classList.remove("input-ok");
@@ -96,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (msg) msg.remove();
     }
 
+    // Validación en tiempo real mientras el usuario escribe
     function añadirEventosTiempoReal(form) {
         form.querySelectorAll("input").forEach(input => {
             input.addEventListener("input", () => {
@@ -116,3 +124,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+  window.onload = function () {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("error") === "1") {
+      // Mostrar el modal manualmente
+      const modal = document.getElementById("loginModal");
+      if (modal) {
+        modal.style.display = "block";
+      }
+
+      // Insertar mensaje de error dentro del modal
+      const errorDiv = document.getElementById("login-error");
+      if (errorDiv) {
+        errorDiv.textContent = "⚠️ Usuario o contraseña incorrectos.";
+      }
+    }
+  };

@@ -1,93 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Tarea.css">
-    <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
-    <title>Encabezado y Pie de Página con Menú y Redes Sociales</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <title>Contactos | Escape From Tarkov Wiki Info</title>
+    <link rel="icon" type="image/png" href="../IMAGENES/logos/Hideout.png" />
+    <link rel="stylesheet" href="../CSS/estilos-tema.css" />
 </head>
+
 <body>
     <header>
-        <img class="header-img" src="../IMAGENES/logos/logo5.png" alt="Logo">
+        <img class="header-img" src="../IMAGENES/logos/logo6.png" alt="Logo">
     </header>
     <nav class="nav-container">
         <ul class="nav-menu">
-          <li><a href="../Index.html">Inicio</a></li>
-          <li class="submenu"><a href="#">Mapas</a>
-            <ul>
-              <li><a href="./Factory.html">Factory</a></li>
-              <li><a href="./Woods.html">Woods</a></li>
-              <li><a href="./Customs.html">Customs</a></li>
-              <li><a href="./Interchange.html">Interchange</a></li>
-              <li><a href="./Reserve.html">Reserve</a></li>
-              <li><a href="./Shoreline.html">Shoreline</a></li>
-              <li><a href="./Thelab.html">The Lab</a></li>
-              <li><a href="./Lighthouse.html">Lighthouse</a></li>
-              <li><a href="./Streets.html">Streets</a></li>
-              <li><a href="./Groundzero.html">Ground Zero</a></li>
-            </ul>
-          </li>
-          <li><a href="./Municion.html">Munición</a></li>
-          <li><a href="./Headset.html">Headset</a></li>
-          <li><a href="./Traders.html">Traders</a></li>
-          <li><a href="./Contactos.html">Contacto</a></li>
+            <li><a href="./AdminPanel.html" id="nav-admin-link" style="display:none;">Admin</a></li>
+            <li><a href="../Index.html">Inicio</a></li>
+            <li class="submenu"><a href="#">Mapas</a>
+                <ul>
+                    <li><a href="./Factory.html">Factory</a></li>
+                    <li><a href="./Woods.html">Woods</a></li>
+                    <li><a href="./Customs.html">Customs</a></li>
+                    <li><a href="./Interchange.html">Interchange</a></li>
+                    <li><a href="./Reserve.html">Reserve</a></li>
+                    <li><a href="./Shoreline.html">Shoreline</a></li>
+                    <li><a href="./Thelab.html">The Lab</a></li>
+                    <li><a href="./Lighthouse.html">Lighthouse</a></li>
+                    <li><a href="./Streets.html">Streets</a></li>
+                    <li><a href="./Groundzero.html">Ground Zero</a></li>
+                </ul>
+            </li>
+            <li><a href="./Municion.html">Munición</a></li>
+            <li><a href="./Headset.html">Headset</a></li>
+            <li><a href="./Traders.html">Traders</a></li>
+            <li><a href="./Contactos.html">Contacto</a></li>
         </ul>
         <div class="nav-user-buttons">
-            <button id="btn-login" class="btn-acceso" onclick="document.getElementById('loginModal').style.display='block'">Iniciar sesión</button>
-            <button id="btn-register" class="btn-acceso" onclick="document.getElementById('registroModal').style.display='block'">Registrarse</button>
-            <form id="logout-form" method="POST" action="PHP/logout.php" style="display: none;">
-              <input type="submit" class="btn-acceso" value="Cerrar sesión">
+            <button id="btn-login" class="btn-acceso"
+                onclick="document.getElementById('loginModal').style.display='block'">Iniciar sesión</button>
+            <button id="btn-register" class="btn-acceso"
+                onclick="document.getElementById('registroModal').style.display='block'">Registrarse</button>
+            <form id="logout-form" method="POST" action="../PHP/logout.php" style="display: none;">
+                <input type="submit" class="btn-acceso" value="Cerrar sesión">
             </form>
-          </div>
-      </nav>
-<main>
-    <div class="TextoHeadset">
-        <h1>Contacto rápido</h1>
-        <p>¿Tienes dudas, sugerencias o quieres reportar un problema? Escríbenos directamente:</p>
-    </div>
-    <form class="Formulario" id="contact-form">
-        <label for="correoUsuario">Tu correo electrónico:</label>
-        <input type="email" id="correoUsuario" name="correoUsuario" placeholder="Tu correo" required>
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
-
-        <input type="submit" value="Enviar">
-        <p id="form-status" style="margin-top:10px;"></p>
-    </form>
-</main>
-    <footer>
-        <div class="social-icons">
-            <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook</a>
-            <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i>Twitter</a>
-            <a href="#" target="_blank"><i class="fi fi-brands-instagram"></i>Instagram</a>
         </div>
-        <p>Autor: Ivan Crrera vila</p>
+    </nav>
+    <main>
+        <div class="TextoHeadset">
+            <h1>Contacto rápido</h1>
+            <p>¿Tienes dudas, sugerencias o quieres reportar un problema? Escríbenos directamente:</p>
+        </div>
+        <form class="Formulario" id="contact-form">
+            <label for="correoUsuario">Tu correo electrónico:</label>
+            <input type="email" id="correoUsuario" name="correoUsuario" placeholder="Tu correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <input type="submit" value="Enviar">
+            <p id="form-status" style="margin-top:10px;"></p>
+        </form>
+    </main>
+    <!-- Modales de inicio de sesión y registro -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+            <form method="POST" action="../PHP/login.php">
+                <h2>Iniciar Sesión</h2>
+                <div id="login-error" style="color: red; font-weight: bold; margin-bottom: 10px;"></div>
+                <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Entrar">
+            </form>
+        </div>
+    </div>
+    <div id="registroModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('registroModal').style.display='none'">&times;</span>
+            <form method="POST" action="../PHP/registro.php">
+                <h2>Registro</h2>
+                <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+    </div>
+    <footer class="footer-enhanced">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../IMAGENES/logos/Hideout.png" alt="Logo" />
+                <h3>Escape From Tarkov Wiki</h3>
+            </div>
+            <div class="footer-links">
+                <a href="../Index.html">Inicio</a>
+                <a href="./Contactos.html">Contacto</a>
+                <a href="./Traders.html">Traders</a>
+                <a href="./Municion.html">Munición</a>
+            </div>
+            <div class="footer-social">
+                <!-- Gmail (redacción directa) -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wikiecapefromtarkov@gmail.com" target="_blank"
+                    title="Enviar correo">
+                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail"
+                        style="width:24px;height:24px;vertical-align:middle;margin-right:6px;">
+                </a>
+                <!-- Twitter perfil (puedes cambiar el @ si lo tienes) -->
+                <a href="https://twitter.com/" target="_blank" title="Twitter">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"
+                        style="width:24px;height:24px;vertical-align:middle;margin-right:6px;">
+                </a>
+                <!-- Instagram perfil (puedes cambiar el usuario si lo tienes) -->
+                <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"
+                        style="width:24px;height:24px;vertical-align:middle;margin-right:6px;">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Ivan Carrera Vila — Todos los derechos reservados</p>
+        </div>
     </footer>
+    <script src="../JS/validaciones.js"></script>
+    <script src="../JS/sesion.js"></script>
+    <script src="../Js/tema-toggle.js"></script>
     <script>
-/* Simple envío AJAX usando fetch a un endpoint PHP (debes crear el archivo PHP para enviar el correo) */
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const correo = document.getElementById('correoUsuario').value;
-    const mensaje = document.getElementById('mensaje').value;
-    const status = document.getElementById('form-status');
-    status.textContent = "Enviando...";
-    try {
-        const res = await fetch('../PHP/enviar_correo.php', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: `correoUsuario=${encodeURIComponent(correo)}&mensaje=${encodeURIComponent(mensaje)}`
+        document.getElementById("contact-form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const response = await fetch("../PHP/enviar_correo.php", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.text();
+            document.getElementById("form-status").innerText = result;
         });
-        const text = await res.text();
-        status.textContent = text;
-        if(res.ok) {
-            document.getElementById('contact-form').reset();
-        }
-    } catch {
-        status.textContent = "Error al enviar el mensaje. Intenta más tarde.";
-    }
-});
-</script>
+    </script>
 </body>
+<button id="toggle-style-btn" onclick="animarYcambiarEstilo()">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" style="width:20px;height:20px;">
+</button>
+
 </html>

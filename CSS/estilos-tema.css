@@ -1,0 +1,463 @@
+/* ----------- Estilo Global ----------- */
+.estilo2 {
+  color: #e0e6ed;
+  background-color: #121a24;
+}
+
+/* Enlaces */
+.estilo2 a {
+  color: #5aaeff !important;
+}
+
+/* Cabecera / nav / footer */
+.estilo2 header,
+.estilo2 nav,
+.estilo2 footer {
+  background-color: #1b2836 !important;
+  border-bottom: 1px solid #2d3a4b;
+}
+
+/* ----------- Botones de acceso ----------- */
+.estilo2 .btn-acceso {
+  background-color: #5aaeff;
+  color: #121a24;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  margin: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.estilo2 .btn-acceso:hover {
+  background-color: #3f8ad4;
+}
+
+/* ----------- Botón flotante ----------- */
+#toggle-style-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #ffffffdd;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#toggle-style-btn:hover {
+  background-color: #0077cc;
+}
+
+/* Animación previa en botones */
+.btn-acceso.destello {
+  animation: brillar 0.6s ease-in-out 2;
+}
+
+@keyframes brillar {
+  0%, 100% {
+    background-color: #ffd700;
+    color: #000;
+  }
+  50% {
+    background-color: #0077cc;
+    color: #fff;
+  }
+}
+
+.estilo2 #loginModal .modal-content input[type="submit"],
+.estilo2 #registroModal .modal-content input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #5aaeff 0%, #3f8ad4 100%);
+  color: #121a24;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.08em;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 2px 10px rgba(90, 174, 255, 0.3);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.estilo2 #loginModal .close,
+.estilo2 #registroModal .close {
+  color: #5aaeff;
+  transition: color 0.2s;
+}
+
+
+/* ----------- Contenido principal ----------- */
+.ParrafoIndex {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.estilo2 .ParrafoIndex {
+  background-color: #1f2b38;
+  color: #e0e6ed;
+  border: 1px solid #2d3a4b;
+}
+
+.ParrafoIndex h1,
+.ParrafoIndex h2 {
+  margin-bottom: 10px;
+}
+
+.ParrafoIndex p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.ParrafoIndex iframe {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ----------- Modales (modo oscuro) ----------- */
+.estilo2 .modal-content {
+  background-color: #1b2836 !important;
+  color: #dbe9f4 !important;
+  border: 1px solid #2d3a4b !important;
+}
+
+.estilo2 .modal-content h2 {
+  color: #5aaeff !important;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.estilo2 #login-error {
+  color: #ff6b6b !important;
+}
+
+.estilo2 .modal-content input[type="text"],
+.estilo2 .modal-content input[type="email"],
+.estilo2 .modal-content input[type="password"] {
+  background-color: #22313f !important;
+  color: #dbe9f4 !important;
+  border: 1px solid #3a4b5c !important;
+}
+
+.estilo2 .modal-content input:focus {
+  outline: none;
+  border-color: #5aaeff !important;
+  box-shadow: 0 0 4px #5aaeff66;
+}
+
+.estilo2 .modal-content .submit-btn {
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* ----------- TextoMapas ----------- */
+.estilo2 .TextoMapas {
+  background-color: #1f2b38;
+  color: #e0e6ed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  padding: 20px 25px;
+  border-radius: 12px;
+  border: 1px solid #2d3a4b;
+}
+
+.estilo2 .TextoMapas a {
+  color: #5aaeff;
+}
+
+/* ----------- Estilo para TextoMunicion ----------- */
+.estilo2 .TextoMunicion {
+  background-color: #1f2b38;
+  color: #e0e6ed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  padding: 20px 25px;
+  border-radius: 12px;
+  border: 1px solid #2d3a4b;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.estilo2 .TextoMunicion h1 {
+  font-size: 1.9em;
+  margin-bottom: 10px;
+}
+
+.estilo2 .TextoMunicion p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* ----------- Estilo para aviso restringido ----------- */
+.estilo2 #aviso-restringido {
+  position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 3000;
+    background: rgba(20,20,20,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.estilo2 .aviso-restringido-inner h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #f05d5e;
+}
+
+.estilo2 .aviso-restringido-inner p {
+  font-size: 1.1em;
+}
+
+.estilo2 .tabla-municion {
+  background-color: #1f2b38;
+  color: #e0e6ed;
+  border: 1px solid #3a4b5c;
+}
+
+.estilo2 .tabla-municion thead {
+  background-color: #2d3a4b;
+  color: #5aaeff;
+}
+
+.estilo2 .InfoBalas {
+  background-color: #1f2b38;
+  color: #e0e6ed;
+  border: 1px solid #3a4b5c;
+}
+
+.estilo2 .InfoBalas thead {
+  background-color: #2d3a4b;
+  color: #5aaeff;
+}
+
+.estilo2 #contenedor-tablas h2,
+.estilo2 .toggle-tabla {
+  background-color: #1f2b38;
+  color: #ffc107;
+  border-left: 4px solid #5aaeff;
+}
+
+/* === Modo oscuro para Headset === */
+
+/* Texto superior */
+.estilo2 .TextoHeadset {
+  background-color: #1f2b38;
+  color: #e0e6ed;
+  border: 1px solid #2d3a4b;
+  font-size: 17px;
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin: 40px auto;
+  width: 30%;
+  text-align: center;
+}
+
+/* Tarjetas de casco */
+.estilo2 .casco-card {
+  background-color: #232f3e;
+  color: #f3f3f3;
+  border: 1px solid #3a4b5c;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.estilo2 .casco-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 36px rgba(90, 174, 255, 0.3);
+}
+
+/* Imagen dentro del casco */
+.estilo2 .casco-card img {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Aviso restringido */
+.estilo2 .aviso-restringido-inner {
+  background: #1f2b38;
+  border: 2px solid #5aaeff;
+  color: #e0e6ed;
+  box-shadow: 0 0 32px #000, 0 2px 16px rgba(90,174,255,0.3);
+}
+
+.estilo2 .aviso-restringido-inner h2 {
+  color: #5aaeff;
+  text-shadow: 0 2px 6px #000a;
+}
+
+.estilo2 .aviso-restringido-inner p {
+  color: #dbe9f4;
+}
+
+/* === MODO OSCURO PARA TRADERS === */
+.estilo2 .TraderDescriptionDerecha,
+.estilo2 .TraderDescriptionIzquierda {
+  background: #1f2b38;
+  color: #e0e6ed;
+  border: 2px solid #3a4b5c;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  padding: 30px 25px;              /* más alto */
+  flex: 1;
+  min-width: 0;
+  min-height: 260px;              /* altura mínima coherente */
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.estilo2 .TraderDescriptionDerecha h2,
+.estilo2 .TraderDescriptionIzquierda h2 {
+  color: #5aaeff;
+}
+.estilo2 .TraderDescriptionDerecha h1,
+.estilo2 .TraderDescriptionIzquierda h1 {
+  color: #5aaeff;
+}
+
+/* Imágenes de los traders en modo oscuro */
+.estilo2 .TraderRow img {
+  filter: grayscale(10%) brightness(1.05) contrast(1.05) drop-shadow(0 0 6px #5aaeff55);
+  transition: all 0.3s ease;
+}
+
+.estilo2 .TraderRow img:hover {
+  filter: grayscale(0%) brightness(1.15) drop-shadow(0 0 12px #5aaeffaa);
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.estilo2 .Formulario {
+  background-color: #1f2b38;
+  color: #e0e6ed;
+  border: 1px solid #2d3a4b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.estilo2 .Formulario input[type="email"],
+.estilo2 .Formulario textarea {
+  background-color: #22313f;
+  color: #e0e6ed;
+  border: 1px solid #3a4b5c;
+}
+
+.estilo2 .Formulario input[type="email"]::placeholder,
+.estilo2 .Formulario textarea::placeholder {
+  color: #a3b6c7;
+}
+
+.estilo2 .Formulario input[type="submit"] {
+  background-color: #5aaeff;
+  color: #121a24;
+}
+
+.estilo2 .Formulario input[type="submit"]:hover {
+  background-color: #3f8ad4;
+}
+
+.estilo2 .Formulario label {
+  color: #5aaeff; 
+}
+
+.estilo2 .admin-panel {
+  background-color: #1f2b38;
+  color: #e0e6ed;
+  border: 1px solid #2d3a4b;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.estilo2 .admin-panel h2 {
+  color: #5aaeff;
+}
+
+.estilo2 .admin-panel input,
+.estilo2 .admin-panel textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  background-color: #22313f;
+  color: #e0e6ed;
+  border: 1px solid #3a4b5c;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.estilo2 .admin-panel input[type="submit"] {
+  background-color: #5aaeff;
+  color: #121a24;
+  font-weight: bold;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.estilo2 .admin-panel input[type="submit"]:hover {
+  background-color: #3f8ad4;
+}
+
+.estilo2 .admin-panel input[type="submit"] {
+  background: linear-gradient(90deg, #5aaeff 0%, #3f8ad4 100%);
+  color: #121a24;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.estilo2 .admin-panel input[type="submit"]:hover {
+  box-shadow: 0 0 10px rgba(90, 174, 255, 0.4);
+}
+
+.estilo2 .usuario-card {
+  background: linear-gradient(90deg, #1f2b38 0%, #263545 100%);
+  border-left: 4px solid #5aaeff;
+  padding: 12px 16px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95em;
+  transition: background 0.3s ease;
+  color: #e0e6ed;
+}
+
+.estilo2 .Formulario input[type="submit"] {
+  background: linear-gradient(90deg, #5aaeff 0%, #3f8ad4 100%);
+  color: #121a24;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  font-size: 1.08em;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 10px rgba(90, 174, 255, 0.3);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+

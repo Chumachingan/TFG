@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdminPanel | Escape From Tarkov Wiki Info</title>
+  <link rel="stylesheet" href="../CSS/Tarea.css">
+  <link rel="stylesheet" href="../CSS/estilos-tema.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../IMAGENES/logos/Hideout.png" />
+</head>
+
+<body>
+  <header>
+    <img class="header-img" src="../IMAGENES/logos/logo6.png" alt="Logo Escape from Tarkov Wiki Info">
+  </header>
+
+  <nav class="nav-container">
+    <ul class="nav-menu">
+      <li><a href="./AdminPanel.html" aria-label="Ir al panel de administrador">Admin</a></li>
+      <li><a href="../Index.html" aria-label="Ir a Inicio">Inicio</a></li>
+      <li><a href="./Municion.html" aria-label="Ir a Munición">Munición</a></li>
+      <li><a href="./Headset.html" aria-label="Ir a Headset">Headset</a></li>
+      <li><a href="./Traders.html" aria-label="Ir a Traders">Traders</a></li>
+      <li><a href="./Contactos.html" aria-label="Ir a Contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-user-buttons">
+      <button id="btn-login" class="btn-acceso" onclick="document.getElementById('loginModal').style.display='block'">
+        Iniciar sesión
+      </button>
+      <button id="btn-register" class="btn-acceso" onclick="document.getElementById('registroModal').style.display='block'">
+        Registrarse
+      </button>
+      <form id="logout-form" method="POST" action="../PHP/logout.php" style="display: none;">
+        <input type="submit" class="btn-acceso" value="Cerrar sesión">
+      </form>
+    </div>
+  </nav>
+
+  <main id="admin-content">
+    <div class="admin-grid">
+      <!-- Usuarios -->
+      <section class="Formulario admin-panel">
+        <h2>Gestión de Usuarios</h2>
+        <form id="form-usuarios" aria-label="Formulario para añadir usuarios">
+          <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required />
+          <input type="email" name="email" placeholder="Correo electrónico" required />
+          <input type="password" name="password" placeholder="Contraseña" required />
+          <input type="submit" value="Añadir Usuario" />
+        </form>
+        <div id="usuarios-lista" aria-live="polite"></div>
+      </section>
+
+      <!-- Municiones -->
+      <section class="Formulario admin-panel">
+        <h2>Gestión de Municiones</h2>
+        <form id="form-municiones" aria-label="Formulario para añadir municiones">
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input type="number" name="danio" placeholder="Daño" />
+          <input type="number" name="penetracion" placeholder="Penetración" />
+          <input type="text" name="frag" placeholder="Frag (%)" />
+          <input type="text" name="retroceso" placeholder="Retroceso" />
+          <input type="text" name="precision" placeholder="Precisión" />
+          <input type="text" name="distancia_efectiva" placeholder="Distancia efectiva" />
+          <input type="text" name="distancia_max" placeholder="Distancia máxima" />
+          <input type="number" name="velocidad" placeholder="Velocidad" />
+          <input type="text" name="tipo_municion" placeholder="Tipo de munición" required />
+          <input type="number" name="clase1" placeholder="Clase 1" />
+          <input type="number" name="clase2" placeholder="Clase 2" />
+          <input type="number" name="clase3" placeholder="Clase 3" />
+          <input type="number" name="clase4" placeholder="Clase 4" />
+          <input type="number" name="clase5" placeholder="Clase 5" />
+          <input type="number" name="clase6" placeholder="Clase 6" />
+          <input type="submit" value="Añadir Munición" />
+        </form>
+        <div id="municiones-lista" aria-live="polite"></div>
+      </section>
+
+      <!-- Auriculares -->
+      <section class="Formulario admin-panel">
+        <h2>Gestión de Auriculares</h2>
+        <form id="form-auriculares" aria-label="Formulario para añadir auriculares">
+          <input type="text" name="nombre" placeholder="Nombre del auricular" required />
+          <textarea name="descripcion" placeholder="Descripción" required></textarea>
+          <input type="text" name="imagen" placeholder="Ruta de la imagen (ej: ../IMAGENES/Auris/nombre.webp)" required />
+          <input type="submit" value="Añadir Auricular" />
+        </form>
+        <div id="auriculares-lista" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modales -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+      <form method="POST" action="../PHP/login.php" aria-label="Formulario de inicio de sesión">
+        <h2>Iniciar Sesión</h2>
+        <div id="login-error" style="color: red; font-weight: bold; margin-bottom: 10px;"></div>
+        <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <input type="submit" value="Entrar">
+      </form>
+    </div>
+  </div>
+
+  <div id="registroModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('registroModal').style.display='none'">&times;</span>
+      <form method="POST" action="../PHP/registro.php" aria-label="Formulario de registro">
+        <h2>Registro</h2>
+        <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <input type="submit" value="Registrarse">
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-enhanced">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../IMAGENES/logos/Hideout.png" alt="Logo Escape From Tarkov Wiki" />
+        <h3>Escape From Tarkov Wiki</h3>
+      </div>
+      <div class="footer-links">
+        <a href="../Index.html" aria-label="Ir a Inicio">Inicio</a>
+        <a href="./Contactos.html" aria-label="Ir a Contacto">Contacto</a>
+        <a href="./Traders.html" aria-label="Ir a Traders">Traders</a>
+        <a href="./Municion.html" aria-label="Ir a Munición">Munición</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wikiecapefromtarkov@gmail.com" target="_blank"
+          title="Enviar correo" aria-label="Enviar correo por Gmail">
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" style="width:24px;height:24px;">
+        </a>
+        <a href="https://twitter.com/" target="_blank" title="Twitter" aria-label="Ir a Twitter">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width:24px;height:24px;">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" title="Instagram" aria-label="Ir a Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width:24px;height:24px;">
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ivan Carrera Vila — Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../JS/validaciones.js"></script>
+  <script src="../JS/sesion.js"></script>
+  <script src="../JS/admin.js"></script>
+  <script src="../JS/tema-toggle.js"></script>
+
+  <!-- Botón flotante accesible -->
+  <button id="toggle-style-btn" onclick="animarYcambiarEstilo()" aria-label="Cambiar estilo visual">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Cambiar estilo" style="width:20px;height:20px;">
+  </button>
+</body>
+</html>

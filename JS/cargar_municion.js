@@ -1,3 +1,5 @@
+// Carga y muestra información de municiones en tablas dinámicas
+
 document.addEventListener("DOMContentLoaded", () => {
   fetch("../PHP/cargar_municiones.php")
     .then(response => response.json())
@@ -111,4 +113,16 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => {
       console.error("Error al cargar los datos:", error);
     });
+});
+
+// filepath: c:\wamp64\www\TFG\Js\cargar_cascos.js
+// Carga y muestra información de auriculares en tarjetas
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("../PHP/cargar_cascos.php")
+        .then(response => response.json())
+        .then(data => {
+            // Genera tarjetas de auriculares
+            // ...existing code...
+        });
 });

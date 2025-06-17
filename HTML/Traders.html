@@ -1,240 +1,338 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Tarea.css">
-    <link rel='stylesheet'href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
-    <title>Encabezado y Pie de Página con Menú y Redes Sociales</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <title>Traders | Escape From Tarkov Wiki Info</title>
+    <link rel="icon" type="image/png" href="../IMAGENES/logos/Hideout.png" />
+    <link rel="stylesheet" href="../CSS/estilos-tema.css" />
 </head>
+
 <body>
     <header>
-        <img class="header-img" src="../IMAGENES/logos/logo5.png" alt="Logo">
+        <img class="header-img" src="../IMAGENES/logos/logo6.png" alt="Logo">
     </header>
     <nav class="nav-container">
         <ul class="nav-menu">
-          <li><a href="../Index.html">Inicio</a></li>
-          <li class="submenu"><a href="#">Mapas</a>
-            <ul>
-              <li><a href="./Factory.html">Factory</a></li>
-              <li><a href="./Woods.html">Woods</a></li>
-              <li><a href="./Customs.html">Customs</a></li>
-              <li><a href="./Interchange.html">Interchange</a></li>
-              <li><a href="./Reserve.html">Reserve</a></li>
-              <li><a href="./Shoreline.html">Shoreline</a></li>
-              <li><a href="./Thelab.html">The Lab</a></li>
-              <li><a href="./Lighthouse.html">Lighthouse</a></li>
-              <li><a href="./Streets.html">Streets</a></li>
-              <li><a href="./Groundzero.html">Ground Zero</a></li>
-            </ul>
-          </li>
-          <li><a href="./Municion.html">Munición</a></li>
-          <li><a href="./Headset.html">Headset</a></li>
-          <li><a href="./Traders.html">Traders</a></li>
-          <li><a href="./Contactos.html">Contacto</a></li>
+            <li><a href="./AdminPanel.html" id="nav-admin-link" style="display:none;">Admin</a></li>
+            <li><a href="../Index.html">Inicio</a></li>
+            <li class="submenu"><a href="#">Mapas</a>
+                <ul>
+                    <li><a href="./Factory.html">Factory</a></li>
+                    <li><a href="./Woods.html">Woods</a></li>
+                    <li><a href="./Customs.html">Customs</a></li>
+                    <li><a href="./Interchange.html">Interchange</a></li>
+                    <li><a href="./Reserve.html">Reserve</a></li>
+                    <li><a href="./Shoreline.html">Shoreline</a></li>
+                    <li><a href="./Thelab.html">The Lab</a></li>
+                    <li><a href="./Lighthouse.html">Lighthouse</a></li>
+                    <li><a href="./Streets.html">Streets</a></li>
+                    <li><a href="./Groundzero.html">Ground Zero</a></li>
+                </ul>
+            </li>
+            <li><a href="./Municion.html">Munición</a></li>
+            <li><a href="./Headset.html">Headset</a></li>
+            <li><a href="./Traders.html">Traders</a></li>
+            <li><a href="./Contactos.html">Contacto</a></li>
         </ul>
         <div class="nav-user-buttons">
-            <button id="btn-login" class="btn-acceso" onclick="document.getElementById('loginModal').style.display='block'">Iniciar sesión</button>
-            <button id="btn-register" class="btn-acceso" onclick="document.getElementById('registroModal').style.display='block'">Registrarse</button>
-            <form id="logout-form" method="POST" action="PHP/logout.php" style="display: none;">
-              <input type="submit" class="btn-acceso" value="Cerrar sesión">
+            <button id="btn-login" class="btn-acceso"
+                onclick="document.getElementById('loginModal').style.display='block'">Iniciar sesión</button>
+            <button id="btn-register" class="btn-acceso"
+                onclick="document.getElementById('registroModal').style.display='block'">Registrarse</button>
+            <form id="logout-form" method="POST" action="../PHP/logout.php" style="display: none;">
+                <input type="submit" class="btn-acceso" value="Cerrar sesión">
             </form>
-          </div>
-      </nav>
-<main>
-    <section>
-  
-        <article class="texto">
-            
+        </div>
+    </nav>
+    <main>
+        <section>
 
-          <br><br><hr>
+            <article class="texto">
 
-    <div class="DivTraders">
-    <div class="TraderRow">
-        <img id="Foto" src="../IMAGENES/Traders/Prapor.webp" alt="Prapor">
-        <div class="TraderDescriptionDerecha">
-            <h1>Prapor</h1>
-            <br>
-            <p>El suboficial a cargo de los almacenes de suministros en la base de sostenimiento que hace cumplir el 
-                bloqueo de la región de Norvinsk.Secretamente suministró a los operadores de BEAR PMC armas, municiones y varias otras 
-                provisiones que tenía a su disposición durante las Guerras por Contrato.</p>
-            <br>
-            <h2>Mercancias</h2>
-            <p>Armas, equipo, cargadores, municiones, granadas, mods del bloque postsoviético</p>
-            <h2>Compra</h2>
-            <p>Chalecos antibalas, Armas, Granadas, Munición, Modificaciones, Medicamentos, Provisiones (Vodka, Alcohol ilegal),
-                Llaves mecánicas, Artículos de trueque (Otros, Materiales de construcción,
-                Latas de combustible, Herramientas)</p>
+
+                <br><br>
+                <hr>
+
+                <div class="DivTraders">
+                    <div class="TraderRow">
+                        <img id="Foto" src="../IMAGENES/Traders/Prapor.webp" alt="Prapor">
+                        <div class="TraderDescriptionDerecha">
+                            <h1>Prapor</h1>
+                            <br>
+                            <p>El suboficial a cargo de los almacenes de suministros en la base de sostenimiento que
+                                hace cumplir el
+                                bloqueo de la región de Norvinsk.Secretamente suministró a los operadores de BEAR PMC
+                                armas, municiones y varias otras
+                                provisiones que tenía a su disposición durante las Guerras por Contrato.</p>
+                            <br>
+                            <h2>Mercancias</h2>
+                            <p>Armas, equipo, cargadores, municiones, granadas, mods del bloque postsoviético</p>
+                            <h2>Compra</h2>
+                            <p>Chalecos antibalas, Armas, Granadas, Munición, Modificaciones, Medicamentos, Provisiones
+                                (Vodka, Alcohol ilegal),
+                                Llaves mecánicas, Artículos de trueque (Otros, Materiales de construcción,
+                                Latas de combustible, Herramientas)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <hr>
+
+                <div class="DivTraders">
+                    <div class="TraderRow reverse">
+                        <img id="Foto1" src="../IMAGENES/Traders/Therapist.webp" alt="Therapist">
+                        <div class="TraderDescriptionIzquierda">
+                            <h1>Therapist</h1>
+                            <br>
+                            <p>Jefe del Departamento de Traumatología del Hospital de la Ciudad Central de Tarkov.</p>
+                            <br>
+                            <h2>Mercancias</h2>
+                            <p>Medicamentos, Provisiones, Llaves, Contenedores de almacenamiento, Mapas</p>
+                            <h2>Compra</h2>
+                            <p>Medicamentos, Provisiones, Llaves, Artículos de trueque, Contenedores de almacenamiento,
+                                Mapas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <hr>
+
+                <div class="DivTraders">
+                    <div class="TraderRow">
+                        <img id="Foto" src="../IMAGENES/Traders/Fence.webp" alt="Fence">
+                        <div class="TraderDescriptionDerecha">
+                            <h1>Fence</h1>
+                            <br>
+                            <p>Apenas había comenzado el conflicto cuando Fence comenzó a establecer puntos de venta
+                                anónimos para comprar y vender productos. Sin embargo, manteniéndose de incógnito,
+                                logró armar una red de contrabandistas bien organizada, que operaba en toda la región de
+                                Norvinsk.</p>
+                            <br>
+                            <h2>Mercancias</h2>
+                            <p>Cualquier cosa que se le vendiera</p>
+                            <h2>Compra</h2>
+                            <p>Todo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <hr>
+
+                <div class="DivTraders">
+                    <div class="TraderRow reverse">
+                        <img id="Foto1" src="../IMAGENES/Traders/Skier.webp" alt="Skier">
+                        <div class="TraderDescriptionIzquierda">
+                            <h1>Skier</h1>
+                            <br>
+                            <p>Anteriormente era un empleado de la terminal aduanera de la zona portuaria, que
+                                inicialmente supervisaba las transacciones de las mercancías de la terminal.
+                                En el transcurso del conflicto,reunió a una banda de matones para apoderarse de todo lo
+                                de valor que pudiera tener en las inmediaciones de la terminal.</p>
+                            <br>
+                            <h2>Mercancias</h2>
+                            <p>Armas, Cargadores, Munición, Mods, Contenedores de almacenamiento, Euros</p>
+                            <h2>Compra</h2>
+                            <p>Gear, Weapons, Grenades, Ammo, Mods, Stimulants, Barter items(Others, Electronics,
+                                Valuables)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <hr>
+
+                <div class="DivTraders">
+                    <div class="TraderRow">
+                        <img id="Foto" src="../IMAGENES/Traders/Peacekeeper.webp" alt="Peacekeeper">
+                        <div class="TraderDescriptionDerecha">
+                            <h1>Peacekeeperomb</h1>
+                            <br>
+                            <p>Oficial de suministros de la ONU en Tarkov, Peacekeeper comercia armas, municiones y
+                                equipo militar occidental a cambio de objetos valiosos.</p>
+                            <br>
+                            <h2>Mercancias</h2>
+                            <p>Armas occidentales/de la OTAN, equipo, cargadores, municiones, granadas, mods,
+                                contenedores, dólares</p>
+                            <h2>Compra</h2>
+                            <p>Equipo blindado, armas, munición, modificaciones, tarjetas de acceso, artículos de
+                                trueque (electrónica,
+                                elementos de energía, objetos de valor), artículos de información, equipo especial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <hr>
+
+                <div class="DivTraders">
+                    <div class="TraderRow reverse">
+                        <img id="Foto1" src="../IMAGENES/Traders/Mechanic.webp" alt="Mechanic">
+                        <div class="TraderDescriptionIzquierda">
+                            <h1>Mechanic</h1>
+                            <br>
+                            <p>Un antiguo capataz de una planta química, que desde el principio del conflicto se dedicó
+                                a la modificación de armas, la reparación y el mantenimiento de equipos y tecnología
+                                complejos.
+                                Prefiere la vida clandestina en solitario y opera discretamente, al tiempo que coloca
+                                las tareas complejas y desafiantes por encima de todo.</p>
+                            <br>
+                            <h2>Mercancias</h2>
+                            <p>Armas occidentales/OTAN, Cargadores, Munición, Modificaciones, Tarjetas de acceso, Equipo
+                                especial, Contenedores de almacenamiento</p>
+                            <h2>Compra</h2>
+                            <p>Armas, Munición, Mods, Tarjetas de acceso, Artículos de trueque (Electrónica, Elementos
+                                de energía, Herramientas), Equipo especial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <hr>
+
+                <div class="DivTraders">
+                    <div class="TraderRow">
+                        <img id="Foto" src="../IMAGENES/Traders/Ragman.webp" alt="Ragman">
+                        <div class="TraderDescriptionDerecha">
+                            <h1>Ragman</h1>
+                            <br>
+                            <p>Anteriormente, trabajó como director en un centro comercial ubicado en los suburbios de
+                                Tarkov.
+                                Ahora se trata principalmente de artículos relacionados con la ropa y el equipo,
+                                desde gafas de sol hasta chalecos antibalas.</p>
+                            <br>
+                            <h2>Mercancias</h2>
+                            <p>Ropa táctica, equipo (armaduras, aparejos tácticos, sombreros, mochilas, otros)</p>
+                            <h2>Compra</h2>
+                            <p>Equipo, Mochilas, Contenedores de almacenamiento, Tela (Cordura, Ripstop, Fleece),
+                                Paracord</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <hr>
+
+                <div class="DivTraders">
+                    <div class="TraderRow reverse">
+                        <img id="Foto1" src="../IMAGENES/Traders/Jaeger.webp" alt="Jaeger">
+                        <div class="TraderDescriptionIzquierda">
+                            <h1>Jaeger</h1>
+                            <br>
+                            <p>Jaeger es un cazador profesional y experto en supervivencia que protege la reserva
+                                natural de Tarkov y comercia equipo de caza y supervivencia.</p>
+                            <br>
+                            <h2>Mercancias</h2>
+                            <p>Bloque postsoviético Armas, Cargadores, Munición, Modificaciones, Equipo, Equipo
+                                especial, Contenedores de almacenamiento</p>
+                            <h2>Compra</h2>
+                            <p>Aparejos tácticos, mochilas, armas (escopetas, rifles de francotirador, rifles de
+                                francotirador, armas cuerpo a cuerpo), mods (miras, cañones, culatas),
+                                Medicamentos,(materiales de construcción, elementos energéticos, suministros médicos)
+                                , contenedores de almacenamiento, contenedores seguros</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <hr>
+
+                <div class="DivTraders">
+                    <div class="TraderRow">
+                        <img id="Foto" src="../IMAGENES/Traders/Lightkeeper.webp" alt="Lightkeeper">
+                        <div class="TraderDescriptionDerecha">
+                            <h1>Lightkeeper</h1>
+                            <br>
+                            <p>El actual guardián del faro de Tarkov, especialista en dispositivos electrónicos de radio
+                                y navales.</p>
+                            <br>
+                            <h2>Mercancias</h2>
+                            <p>Actualmente ninguno</p>
+                            <h2>Compra</h2>
+                            <p>Actualmente nada</p>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br><br>
+                <hr>
+
+            </article>
+        </section>
+    </main>
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+            <form method="POST" action="../PHP/login.php">
+                <h2>Iniciar Sesión</h2>
+                <div id="login-error" style="color: red; font-weight: bold; margin-bottom: 10px;"></div>
+                <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Entrar">
+            </form>
         </div>
     </div>
-</div>
-
-<br><br><hr>
-
-<div class="DivTraders">
-    <div class="TraderRow reverse">
-      <img id="Foto1" src="../IMAGENES/Traders/Therapist.webp" alt="Therapist">
-        <div class="TraderDescriptionIzquierda">
-            <h1>Therapist</h1>
-            <br>
-            <p>Jefe del Departamento de Traumatología del Hospital de la Ciudad Central de Tarkov.</p>
-            <br>
-            <h2>Mercancias</h2>
-            <p>Medicamentos, Provisiones, Llaves, Contenedores de almacenamiento, Mapas</p>
-            <h2>Compra</h2>
-            <p>Medicamentos, Provisiones, Llaves, Artículos de trueque, Contenedores de almacenamiento, Mapas</p>
-        </div> 
-    </div>
-</div>
-
-<br><br><hr>
-
-<div class="DivTraders">
-    <div class="TraderRow">
-        <img id="Foto" src="../IMAGENES/Traders/Fence.webp" alt="Fence">
-        <div class="TraderDescriptionDerecha">
-            <h1>Fence</h1>
-            <br>
-            <p>Apenas había comenzado el conflicto cuando Fence comenzó a establecer puntos de venta anónimos para comprar y vender productos. Sin embargo, manteniéndose de incógnito,
-                logró armar una red de contrabandistas bien organizada, que operaba en toda la región de Norvinsk.</p>
-            <br>
-            <h2>Mercancias</h2>
-            <p>Cualquier cosa que se le vendiera</p>
-            <h2>Compra</h2>
-            <p>Todo</p>
+    <!-- Modal de Registro -->
+    <div id="registroModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('registroModal').style.display='none'">&times;</span>
+            <form method="POST" action="../PHP/registro.php">
+                <h2>Registro</h2>
+                <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Registrarse">
+            </form>
         </div>
     </div>
-</div>
-
-<br><br><hr>
-
-<div class="DivTraders">
-    <div class="TraderRow reverse">
-      <img id="Foto1" src="../IMAGENES/Traders/Skier.webp" alt="Skier">
-        <div class="TraderDescriptionIzquierda">
-            <h1>Skier</h1>
-            <br>
-            <p>Anteriormente era un empleado de la terminal aduanera de la zona portuaria, que inicialmente supervisaba las transacciones de las mercancías de la terminal. 
-                En el transcurso del conflicto,reunió a una banda de matones para apoderarse de todo lo de valor que pudiera tener en las inmediaciones de la terminal.</p>
-            <br>
-            <h2>Mercancias</h2>
-            <p>Armas, Cargadores, Munición, Mods, Contenedores de almacenamiento, Euros</p>
-            <h2>Compra</h2>
-            <p>Gear, Weapons, Grenades, Ammo, Mods, Stimulants, Barter items(Others, Electronics, Valuables)</p>
+    <footer class="footer-enhanced">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../IMAGENES/logos/Hideout.png" alt="Logo" />
+                <h3>Escape From Tarkov Wiki</h3>
+            </div>
+            <div class="footer-links">
+                <a href="../Index.html">Inicio</a>
+                <a href="./Contactos.html">Contacto</a>
+                <a href="./Traders.html">Traders</a>
+                <a href="./Municion.html">Munición</a>
+            </div>
+            <div class="footer-social">
+                <!-- Gmail (redacción directa) -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wikiecapefromtarkov@gmail.com" target="_blank"
+                    title="Enviar correo">
+                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail"
+                        style="width:24px;height:24px;vertical-align:middle;margin-right:6px;">
+                </a>
+                <!-- Twitter perfil (puedes cambiar el @ si lo tienes) -->
+                <a href="https://twitter.com/" target="_blank" title="Twitter">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"
+                        style="width:24px;height:24px;vertical-align:middle;margin-right:6px;">
+                </a>
+                <!-- Instagram perfil (puedes cambiar el usuario si lo tienes) -->
+                <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"
+                        style="width:24px;height:24px;vertical-align:middle;margin-right:6px;">
+                </a>
+            </div>
         </div>
-    </div>
-</div>
-
-<br><br><hr>
-
-<div class="DivTraders">
-    <div class="TraderRow">
-        <img id="Foto" src="../IMAGENES/Traders/Peacekeeper.webp" alt="Peacekeeper">
-        <div class="TraderDescriptionDerecha">
-            <h1>Peacekeeperomb</h1>
-            <br>
-            <p>Oficial de suministros de la Fuerza de Mantenimiento de la Paz de las Naciones Unidas, con base en uno de los puestos de control centrales que conducen a la zona portuaria de Tarkov. Desde el principio del conflicto,
-                se ha visto a los cascos azules metiendo la cabeza en pequeños negocios, comprando todo lo que tiene valor a cambio de armas occidentales, municiones y todo tipo de equipo militar.</p>
-            <br>
-            <h2>Mercancias</h2>
-            <p>Armas occidentales/de la OTAN, equipo, cargadores, municiones, granadas, mods, contenedores, dólares</p>
-            <h2>Compra</h2>
-            <p>Equipo blindado, armas, munición, modificaciones, tarjetas de acceso, artículos de trueque (electrónica, 
-                elementos de energía, objetos de valor), artículos de información, equipo especial</p>
+        <div class="footer-bottom">
+            <p>© 2025 Ivan Carrera Vila — Todos los derechos reservados</p>
         </div>
-    </div>
-</div>
-
-<br><br><hr>
-
-<div class="DivTraders">
-    <div class="TraderRow reverse">
-      <img id="Foto1" src="../IMAGENES/Traders/Mechanic.webp" alt="Mechanic">
-        <div class="TraderDescriptionIzquierda">
-            <h1>Mechanic</h1>
-            <br>
-            <p>Un antiguo capataz de una planta química, que desde el principio del conflicto se dedicó a la modificación de armas, la reparación y el mantenimiento de equipos y tecnología complejos. 
-                Prefiere la vida clandestina en solitario y opera discretamente, al tiempo que coloca las tareas complicadas y desafiantes por encima de todo.</p>
-            <br>
-            <h2>Mercancias</h2>
-            <p>Armas occidentales/OTAN, Cargadores, Munición, Modificaciones, Tarjetas de acceso, Equipo especial, Contenedores de almacenamiento</p>
-            <h2>Compra</h2>
-            <p>Armas, Munición, Mods, Tarjetas de acceso, Artículos de trueque (Electrónica, Elementos de energía, Herramientas), Equipo especial</p>
-        </div>
-    </div>
-</div>
-
-<br><br><hr>
-
-<div class="DivTraders">
-    <div class="TraderRow">
-        <img id="Foto" src="../IMAGENES/Traders/Ragman.webp" alt="Ragman">
-        <div class="TraderDescriptionDerecha">
-            <h1>Ragman</h1>
-            <br>
-            <p>Anteriormente, trabajó como director en un centro comercial ubicado en los suburbios de Tarkov. 
-                Ahora se trata principalmente de artículos relacionados con la ropa y el equipo,
-                desde gafas de sol hasta chalecos antibalas.</p>
-            <br>
-            <h2>Mercancias</h2>
-            <p>Ropa táctica, equipo (armaduras, aparejos tácticos, sombreros, mochilas, otros)</p>
-            <h2>Compra</h2>
-            <p>Equipo, Mochilas, Contenedores de almacenamiento, Tela (Cordura, Ripstop, Fleece), Paracord</p>
-        </div>
-    </div>
-</div>
-
-<br><br><hr>
-
-<div class="DivTraders">
-    <div class="TraderRow reverse">
-      <img id="Foto1" src="../IMAGENES/Traders/Jaeger.webp" alt="Jaeger">
-        <div class="TraderDescriptionIzquierda">
-            <h1>Jaeger</h1>
-            <br>
-            <p>Antes del conflicto, trabajaba como cazador en la Reserva Natural de Priozersk bajo el Servicio Estatal de Caza. 
-                Cazador profesional y especialista en supervivencia.
-                Incluso ahora, sigue protegiendo los cotos de caza de la reserva de varios individuos agresivos.</p>
-            <br>
-            <h2>Mercancias</h2>
-            <p>Bloque postsoviético Armas, Cargadores, Munición, Modificaciones, Equipo, Equipo especial, Contenedores de almacenamiento</p>
-            <h2>Compra</h2>
-            <p>Aparejos tácticos, mochilas, armas (escopetas, rifles de francotirador, rifles de francotirador, armas cuerpo a cuerpo), mods (miras, monturas, cañones, culatas), 
-                Medicamentos, provisiones, artículos de trueque (materiales de construcción, elementos energéticos, materiales inflamables, suministros médicos)
-                , contenedores de almacenamiento, contenedores seguros</p>
-        </div>
-    </div>
-</div>
-
-<br><br><hr>
-
-<div class="DivTraders">
-    <div class="TraderRow">
-        <img id="Foto" src="../IMAGENES/Traders/Lightkeeper.webp" alt="Lightkeeper">
-        <div class="TraderDescriptionDerecha">
-            <h1>Lightkeeper</h1>
-            <br>
-            <p>El actual guardián del faro de Tarkov, especialista en dispositivos electrónicos de radio y navales.</p>
-            <br>
-            <h2>Mercancias</h2>
-            <p>Actualmente ninguno</p>
-            <h2>Compra</h2>
-            <p>Actualmente nada</p>
-        </div>
-    </div>
-</div>
-<br><br><br><br><br><hr>
-
-        </article>
-    </section>
-</main>
-    <footer>
-        <div class="social-icons">
-            <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook</a>
-            <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i>Twitter</a>
-            <a href="#" target="_blank"><i class="fi fi-brands-instagram"></i>Instagram</a>
-        </div>
-        <p>Autor: Ivan Crrera vila</p>
     </footer>
+    <script src="../JS/validaciones.js"></script>
+    <script src="../JS/sesion.js"></script>
+    <script src="../Js/tema-toggle.js"></script>
 </body>
+<button id="toggle-style-btn" onclick="animarYcambiarEstilo()">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" style="width:20px;height:20px;">
+</button>
+
 </html>

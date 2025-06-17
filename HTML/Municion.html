@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Tarea.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
-    <title>Encabezado y Pie de Página con Menú y Redes Sociales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <title>Municion | Escape From Tarkov Wiki Info</title>
+    <link rel="icon" type="image/png" href="../IMAGENES/logos/Hideout.png" />
+    <link rel="stylesheet" href="../CSS/estilos-tema.css" />
 </head>
 
 <body>
     <header>
-        <img class="header-img" src="../IMAGENES/logos/logo5.png" alt="Logo">
+        <img class="header-img" src="../IMAGENES/logos/logo6.png" alt="Logo">
     </header>
     <nav class="nav-container">
         <ul class="nav-menu">
+            <li><a href="./AdminPanel.html" id="nav-admin-link" style="display:none;">Admin</a></li>
             <li><a href="../Index.html">Inicio</a></li>
             <li class="submenu"><a href="#">Mapas</a>
                 <ul>
@@ -40,7 +44,7 @@
                 onclick="document.getElementById('loginModal').style.display='block'">Iniciar sesión</button>
             <button id="btn-register" class="btn-acceso"
                 onclick="document.getElementById('registroModal').style.display='block'">Registrarse</button>
-            <form id="logout-form" method="POST" action="PHP/logout.php" style="display: none;">
+            <form id="logout-form" method="POST" action="../PHP/logout.php" style="display: none;">
                 <input type="submit" class="btn-acceso" value="Cerrar sesión">
             </form>
         </div>
@@ -50,8 +54,9 @@
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
-            <form method="POST" action="PHP/login.php">
+            <form method="POST" action="../PHP/login.php">
                 <h2>Iniciar Sesión</h2>
+                <div id="login-error" style="color: red; font-weight: bold; margin-bottom: 10px;"></div>
                 <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
                 <input type="password" name="password" placeholder="Contraseña" required>
                 <input type="submit" value="Entrar">
@@ -63,7 +68,7 @@
     <div id="registroModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('registroModal').style.display='none'">&times;</span>
-            <form method="POST" action="PHP/registro.php">
+            <form method="POST" action="../PHP/registro.php">
                 <h2>Registro</h2>
                 <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
                 <input type="email" name="email" placeholder="Correo electrónico" required>
@@ -73,7 +78,7 @@
         </div>
     </div>
 
-    <main>
+    <main id="contenido-restringido">
         <div class="TextoMunicion">
             <h1>Info balas</h1>
             <p>La tabla proporcionada a continuación tiene información del tier o listado de la clasificacio de las
@@ -82,21 +87,46 @@
                 estan clasificadas por colore del rojo al verde.</p>
         </div>
         <div id="contenedor-tablas"></div>
-    
     </main>
-    <footer>
-        <div class="social-icons">
-            <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook</a>
-            <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i>Twitter</a>
-            <a href="#" target="_blank"><i class="fi fi-brands-instagram"></i>Instagram</a>
+    <div id="aviso-restringido" class="aviso-restringido" style="display:none;">
+        <div class="aviso-restringido-inner">
+            <h2>Contenido restringido</h2>
+            <p>Debes iniciar sesión para ver esta sección.</p>
         </div>
-        <p>Autor: Ivan Crrera vila</p>
+    </div>
+    
+    <footer class="footer-enhanced">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../IMAGENES/logos/Hideout.png" alt="Logo" />
+                <h3>Escape From Tarkov Wiki</h3>
+            </div>
+            <div class="footer-links">
+                <a href="../Index.html">Inicio</a>
+                <a href="./Contactos.html">Contacto</a>
+                <a href="./Traders.html">Traders</a>
+                <a href="./Municion.html">Munición</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fi fi-brands-facebook"></i></a>
+                <a href="#"><i class="fi fi-brands-twitter-alt-circle"></i></a>
+                <a href="#"><i class="fi fi-brands-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Ivan Carrera Vila — Todos los derechos reservados</p>
+        </div>
     </footer>
 
     <script src="../JS/validaciones.js"></script>
     <script src="../JS/sesion.js"></script>
     <script src="../JS/cargar_municion.js"></script>
+    <script src="../JS/restriccionSesion.js"></script>
+    <script src="../Js/tema-toggle.js"></script>
 
 </body>
+<button id="toggle-style-btn" onclick="animarYcambiarEstilo()">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" style="width:20px;height:20px;">
+</button>
 
 </html>
